@@ -3,6 +3,7 @@ CREATE TABLE "HypoxicCR"."public"."DEPORTE" (
   "nombre" VARCHAR(50) NOT NULL,
   PRIMARY KEY ("id")
 );
+-- don't allow DEPORTE to be deleted for relational integrity (ri)
 
 CREATE TABLE "HypoxicCR"."public"."ENTRENADOR" (
   "id" INTEGER NOT NULL,
