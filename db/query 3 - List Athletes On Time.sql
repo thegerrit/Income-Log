@@ -9,4 +9,6 @@ INNER JOIN "HypoxicCR"."public"."ENTRENADOR" e
 ON paq."id_entrenador"=e."id"
 INNER JOIN "HypoxicCR"."public"."DEPORTE" d
 ON paq."id_deporte"=d."id"
-WHERE pag."mes_cancelado"='5'; --Change month here
+WHERE pag."mes_cancelado"='5' --Change month here
+AND a."retirado"=FALSE
+ORDER BY deporte, entrenador_apellidos, apellidos;

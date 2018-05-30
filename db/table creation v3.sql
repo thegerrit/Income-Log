@@ -39,7 +39,7 @@ CREATE TABLE "HypoxicCR"."public"."ATLETA" (
   "email" VARCHAR(100) NOT NULL,
   "id_paquete" INTEGER NOT NULL,
   "id_patrocinador" INTEGER,
-  "retirado" BOOLEAN,
+  "retirado" BOOLEAN DEFAULT FALSE,
   PRIMARY KEY ("cedula"),
   FOREIGN KEY ("id_paquete") REFERENCES "PAQUETE"("id") ON DELETE RESTRICT,
   FOREIGN KEY ("id_patrocinador") REFERENCES "PATROCINADOR"("id") ON DELETE RESTRICT
