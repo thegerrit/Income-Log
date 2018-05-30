@@ -55,6 +55,7 @@ CREATE TABLE "PAGO" (
   "año_cancelado" INTEGER NOT NULL,
   "monto" INTEGER NOT NULL,
   "diferencia" INTEGER NOT NULL,
+  "activo" BOOLEAN DEFAULT TRUE,
   PRIMARY KEY ("id"),
   FOREIGN KEY ("cedula_atleta") REFERENCES "ATLETA"("cedula") ON DELETE RESTRICT,
   FOREIGN KEY ("id_paquete") REFERENCES "PAQUETE"("id") ON DELETE RESTRICT,
