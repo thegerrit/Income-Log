@@ -1,7 +1,6 @@
 CREATE TABLE "DEPORTE" (
-  "id" SERIAL,
   "nombre" VARCHAR(50) NOT NULL,
-  PRIMARY KEY ("id")
+  PRIMARY KEY ("nombre")
 );
 
 CREATE TABLE "ENTRENADOR" (
@@ -25,10 +24,10 @@ CREATE TABLE "PAQUETE" (
   "id" SERIAL,
   "nombre" VARCHAR(50) NOT NULL,
   "precio" INTEGER NOT NULL,
-  "id_deporte" INTEGER NOT NULL,
+  "deporte" VARCHAR(50) NOT NULL,
   "id_entrenador" INTEGER NOT NULL,
   PRIMARY KEY ("id"),
-  FOREIGN KEY ("id_deporte") REFERENCES "DEPORTE"("id") ON DELETE RESTRICT,
+  FOREIGN KEY ("deporte") REFERENCES "DEPORTE"("nombre") ON DELETE RESTRICT,
   FOREIGN KEY ("id_entrenador") REFERENCES "ENTRENADOR"("id") ON DELETE RESTRICT
 );
 

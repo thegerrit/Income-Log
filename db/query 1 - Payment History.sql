@@ -12,7 +12,7 @@ SELECT
   INNER JOIN "PAQUETE" paq
     ON pag."id_paquete"= paq."id"
   INNER JOIN "DEPORTE" d
-    ON d."id"=paq."id_deporte"
+    ON d."nombre"=paq."deporte"
   -- WHERE pag."cedula_atleta"='123456789'  --change athlete cedula here
   -- uncomment line to look at individual athletes
   ORDER BY a."apellidos";

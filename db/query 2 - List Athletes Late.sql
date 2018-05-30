@@ -14,7 +14,7 @@ SELECT DISTINCT
   INNER JOIN "ENTRENADOR" e
     ON paq."id_entrenador"=e."id"
   INNER JOIN "DEPORTE" d
-    ON paq."id_deporte"=d."id"
+    ON paq."deporte"=d."nombre"
   WHERE pag."mes_cancelado"<>'5' --Change month here
     AND a."retirado"=FALSE
   OR pag."id" IS NULL
@@ -36,7 +36,7 @@ SELECT DISTINCT
     INNER JOIN "ENTRENADOR" e
       ON paq."id_entrenador"=e."id"
     INNER JOIN "DEPORTE" d
-      ON paq."id_deporte"=d."id"
+      ON paq."deporte"=d."nombre"
     WHERE pag."mes_cancelado"='5'
   ORDER BY
     deporte,

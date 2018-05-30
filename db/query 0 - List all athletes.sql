@@ -15,7 +15,7 @@ SELECT
   LEFT JOIN "PAQUETE" paq
     ON a."id_paquete"=paq."id"
   LEFT JOIN "DEPORTE" d
-    ON paq."id_deporte"=d."id"
+    ON paq."deporte"=d."nombre"
   LEFT JOIN "ENTRENADOR" e
     ON paq."id_entrenador"=e."id"
   LEFT JOIN "PATROCINADOR" pat

@@ -66,43 +66,43 @@ INSERT INTO "PATROCINADOR" (
 INSERT INTO "PAQUETE" (
   "nombre",
   "precio",
-  "id_deporte",
+  "deporte",
   "id_entrenador"
 )
     VALUES (
       'Bronce',
       '37000',
-      '1',
+      'Carrera de Fondo',
       '1'
     ),(
       'Plata',
       '45000',
-      '1',
+      'Carrera de Fondo',
       '1'
     ),(
       'Bronce',
       '37000',
-      '1',
+      'Carrera de Fondo',
       '2'
     ),(
       'Bronce',
       '38000',
-      '2',
+      'Ciclismo',
       '3'
     ),(
       'Plata',
       '48000',
-      '2',
+      'Ciclismo',
       '4'
     ),(
       'Bronce',
       '40000',
-      '3',
+      'Triatlón',
       '5'
     ),(
       'Plata',
       '55000',
-      '3',
+      'Triatlón',
       '6'
     );
 
