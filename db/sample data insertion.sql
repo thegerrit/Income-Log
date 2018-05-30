@@ -1,4 +1,4 @@
-INSERT INTO "HypoxicCR"."public"."DEPORTE" ("nombre") VALUES (
+INSERT INTO "DEPORTE" ("nombre") VALUES (
 'Carrera de Fondo'
 ),(
 'Ciclismo'
@@ -6,7 +6,7 @@ INSERT INTO "HypoxicCR"."public"."DEPORTE" ("nombre") VALUES (
 'Triatlón'
 );
 
-INSERT INTO "HypoxicCR"."public"."ENTRENADOR" ("nombre","apellidos","email") VALUES (
+INSERT INTO "ENTRENADOR" ("nombre","apellidos","email") VALUES (
 'Jennifer',
 'Aniston',
 'jennifer@sample.com'
@@ -32,7 +32,7 @@ INSERT INTO "HypoxicCR"."public"."ENTRENADOR" ("nombre","apellidos","email") VAL
 'matt@sample.com'
 );
 
-INSERT INTO "HypoxicCR"."public"."PATROCINADOR" ("nombre_organizacion","nombre","apellidos","email") VALUES (
+INSERT INTO "PATROCINADOR" ("nombre_organizacion","nombre","apellidos","email") VALUES (
 'How I Met Your Mother',
 'Neil Patrick',
 'Harris',
@@ -49,7 +49,7 @@ INSERT INTO "HypoxicCR"."public"."PATROCINADOR" ("nombre_organizacion","nombre",
 'josh@sample.com'
 );
 
-INSERT INTO "HypoxicCR"."public"."PAQUETE" ("nombre","precio","id_deporte","id_entrenador") VALUES (
+INSERT INTO "PAQUETE" ("nombre","precio","id_deporte","id_entrenador") VALUES (
 'Bronce',
 '37000',
 '1',
@@ -86,7 +86,7 @@ INSERT INTO "HypoxicCR"."public"."PAQUETE" ("nombre","precio","id_deporte","id_e
 '6'
 );
 
-INSERT INTO "HypoxicCR"."public"."ATLETA" ("cedula","nombre", "apellidos", "email","id_paquete","id_patrocinador") VALUES (
+INSERT INTO "ATLETA" ("cedula","nombre", "apellidos", "email","id_paquete","id_patrocinador") VALUES (
 '123456789',
 'Michael',
 'Richards',
@@ -144,7 +144,7 @@ NULL
 NULL
 );
 
-INSERT INTO "HypoxicCR"."public"."PAGO" ("cedula_atleta", "id_paquete", "id_patrocinador", "fecha_pago","fecha_creacion","mes_cancelado","año_cancelado","monto","diferencia") VALUES (
+INSERT INTO "PAGO" ("cedula_atleta", "id_paquete", "id_patrocinador", "fecha_pago","fecha_creacion","mes_cancelado","año_cancelado","monto","diferencia") VALUES (
 '123456789',
 '1',
 '3',

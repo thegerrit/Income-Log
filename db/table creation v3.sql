@@ -1,10 +1,10 @@
-CREATE TABLE "HypoxicCR"."public"."DEPORTE" (
+CREATE TABLE "DEPORTE" (
   "id" SERIAL,
   "nombre" VARCHAR(50) NOT NULL,
   PRIMARY KEY ("id")
 );
 
-CREATE TABLE "HypoxicCR"."public"."ENTRENADOR" (
+CREATE TABLE "ENTRENADOR" (
   "id" SERIAL,
   "nombre" VARCHAR(50) NOT NULL,
   "apellidos" VARCHAR(50) NOT NULL,
@@ -12,7 +12,7 @@ CREATE TABLE "HypoxicCR"."public"."ENTRENADOR" (
   PRIMARY KEY ("id")
 );
 
-CREATE TABLE "HypoxicCR"."public"."PATROCINADOR" (
+CREATE TABLE "PATROCINADOR" (
   "id" SERIAL,
   "nombre_organizacion" VARCHAR(50),
   "nombre" VARCHAR(50),
@@ -21,7 +21,7 @@ CREATE TABLE "HypoxicCR"."public"."PATROCINADOR" (
   PRIMARY KEY ("id")
 );
 
-CREATE TABLE "HypoxicCR"."public"."PAQUETE" (
+CREATE TABLE "PAQUETE" (
   "id" SERIAL,
   "nombre" VARCHAR(50) NOT NULL,
   "precio" INTEGER NOT NULL,
@@ -32,7 +32,7 @@ CREATE TABLE "HypoxicCR"."public"."PAQUETE" (
   FOREIGN KEY ("id_entrenador") REFERENCES "ENTRENADOR"("id") ON DELETE RESTRICT
 );
 
-CREATE TABLE "HypoxicCR"."public"."ATLETA" (
+CREATE TABLE "ATLETA" (
   "cedula" BIGINT NOT NULL,
   "nombre" VARCHAR(50) NOT NULL,
   "apellidos" VARCHAR(100) NOT NULL,
@@ -45,7 +45,7 @@ CREATE TABLE "HypoxicCR"."public"."ATLETA" (
   FOREIGN KEY ("id_patrocinador") REFERENCES "PATROCINADOR"("id") ON DELETE RESTRICT
 );
 
-CREATE TABLE "HypoxicCR"."public"."PAGO" (
+CREATE TABLE "PAGO" (
   "id" SERIAL,
   "cedula_atleta" BIGINT NOT NULL,
   "id_paquete" INTEGER NOT NULL,
