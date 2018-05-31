@@ -13,7 +13,7 @@ CREATE TABLE "ENTRENADOR" (
 
 CREATE TABLE "PATROCINADOR" (
   "id" SERIAL,
-  "nombre_organizacion" VARCHAR(50),
+  "organizacion" BOOLEAN,
   "nombre" VARCHAR(50) NOT NULL,
   "email" VARCHAR(100) NOT NULL,
   PRIMARY KEY ("id")

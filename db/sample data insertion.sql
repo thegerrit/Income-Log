@@ -41,21 +41,21 @@ INSERT INTO "ENTRENADOR" (
     );
 
 INSERT INTO "PATROCINADOR" (
-  "nombre_organizacion",
+  "organizacion",
   "nombre",
   "email"
 )
     VALUES (
+      TRUE,
       'How I Met Your Mother',
-      'Neil Patrick',
-      'neil@sample.com'
+      'HIMYM@sample.com'
     ),(
-      'org2',
-      'Cobie',
+      FALSE,
+      'Cobie Smolders',
       'cobie@sample.com'
     ),(
-      'How I Met Your Mother',
-      'Josh',
+      FALSE,
+      'Josh Radnor',
       'josh@sample.com'
     );
 
