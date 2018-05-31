@@ -1,6 +1,5 @@
 SELECT
     pat."nombre",
-    pat."apellidos",
     pat."nombre_organizacion",
     pat."email",
     a."nombre" AS "atleta_nombre",

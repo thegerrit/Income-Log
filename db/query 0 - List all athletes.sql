@@ -3,7 +3,6 @@ SELECT
     a."nombre",
     a."cedula",
     a."email",
-    pat."apellidos" AS "patrocinador_apellidos",
     pat."nombre" AS "patrocinador_nombre",
     pat."nombre_organizacion" AS "patrocinador_organizacion",
     pat."email" AS "patrocinador_email",

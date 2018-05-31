@@ -43,23 +43,19 @@ INSERT INTO "ENTRENADOR" (
 INSERT INTO "PATROCINADOR" (
   "nombre_organizacion",
   "nombre",
-  "apellidos",
   "email"
 )
     VALUES (
       'How I Met Your Mother',
       'Neil Patrick',
-      'Harris',
       'neil@sample.com'
     ),(
       'org2',
       'Cobie',
-      'Smulders',
       'cobie@sample.com'
     ),(
       'How I Met Your Mother',
       'Josh',
-      'Radnor',
       'josh@sample.com'
     );
 
