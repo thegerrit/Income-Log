@@ -4,7 +4,7 @@ SELECT
     a."cedula",
     a."email",
     pat."nombre" AS "patrocinador_nombre",
-    pat."nombre_organizacion" AS "patrocinador_organizacion",
+    pat."organizacion",
     pat."email" AS "patrocinador_email",
     d."nombre" AS "deporte",
     paq."nombre",
