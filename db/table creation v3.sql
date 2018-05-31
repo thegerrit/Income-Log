@@ -14,7 +14,7 @@ CREATE TABLE "ENTRENADOR" (
 CREATE TABLE "PATROCINADOR" (
   "id" SERIAL,
   "nombre_organizacion" VARCHAR(50),
-  "nombre" VARCHAR(50),
+  "nombre" VARCHAR(50) NOT NULL,
   "apellidos" VARCHAR(50),
   "email" VARCHAR(100) NOT NULL,
   PRIMARY KEY ("id")
