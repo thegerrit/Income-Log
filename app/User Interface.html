@@ -8,342 +8,182 @@
   <body>
       <h1>Hypoxic Database</h1>
       <div id="left-side">
-        <div id="search-bar" >
-          <h2> Pagos <button>Añadir atleta</button></h2><n>
+        <div id="search-bar">
+          <h2> Pagos </h2>
+          <button class="block">Añadir atleta</button>
           <input type="text" placeholder="buscar atleta"></input>
           <button>[ICON]</button>
         </div>
-        <div id="atleta">
-          <p>Cédula <input type="text"><br>
-          Nombre <input type="text"><br>
-          Apellidos <input type="text"><br>
-          Correo Electrónico <input type="text"><br>
-          Disciplina <input type="text"><br>
-          Paquete <input type="text"><br>
-          Entrenador <input type="text"></p>
+        <div id="ATLETA">
+          <p class="block"><label>Cédula <input type="text"></label>
+          <label class="block">Nombre <input type="text"></label>
+          <label class="block">Apellidos <input type="text"></label>
+          <label class="block">Correo Electrónico <input type="text"></label>
+          <label class="block">Disciplina <input type="text"></label>
+          <label class="block">Paquete <input type="text"></label>
+          <label class="block">Entrenador <input type="text"></label></p>
         </div>
-        <div id="patrocinador">
-          <p>Patrocinador <br>
-             <label>Organización<input type="radio" name="org"></lable>
-              <label>Individuo<input type="radio" name="org"></lable><br>
-              Nombre <input type="text"><br>
-              Correo Electrónico <input type="text"><br>
+        <div id="PATROCINADOR">
+          <p><span class="block">Patrocinador</span>
+             <label class="block">Organización<input type="radio" name="org"></label>
+              <label class="block">Individuo<input type="radio" name="org"></label>
+              <span class="block">Nombre <input type="text"></span>
+              <span class="block">Correo Electrónico <input type="text"></span>
             </p>
 
         </div>
-        <div id="fecha">
-          <table>
-            <tr class="t_row">
-              <tb><button>Anterior</button></tb>
-              <tb></tb>
-              <tb>2018</tb>
-              <tb><button>Siguente</button></p></tb>
-            </tr><br>
-              <tr class="t_row">
-                <tb>Fecha de Pago</tb>
-                <tb> </tb>
-                <tb>Monto</tb>
-                <tb><label>Inactivo<input type="checkbox"></label></tb>
-              </tr><br>
-              <tr class="t_row">
-                <tb><input type="text" class="i_fecha"></tb>
-                <tb>Enero</tb>
-                <tb><input type="text" class="i_monto"></tb>
-                <tb><input type="checkbox"></input></tb>
-              </tr><br>
-              <tr class="t_row">
-                <tb><input type="text" class="i_fecha"></tb>
-                <tb>Febrero</tb>
-                <tb><input type="text" class="i_monto"></tb>
-                <tb><input type="checkbox"></input></tb>
-              </tr><br>
-              <tr class="t_row">
-                <tb><input type="text" class="i_fecha"></tb>
-                <tb>Marzo</tb>
-                <tb><input type="text" class="i_monto"></tb>
-                <tb><input type="checkbox"></input></tb>
-              </tr><br>
-              <tr class="t_row">
-                <tb><input type="text" class="i_fecha"></tb>
-                <tb>Abril</tb>
-                <tb><input type="text" class="i_monto"></tb>
-                <tb><input type="checkbox"></input></tb>
-              </tr><br>
-              <tr class="t_row">
-                <tb><input type="text" class="i_fecha"></tb>
-                <tb>Mayo</tb>
-                <tb><input type="text" class="i_monto"></tb>
-                <tb><input type="checkbox"></input></tb>
-              </tr><br>
-              <tr class="t_row">
-                <tb><input type="text" class="i_fecha"></tb>
-                <tb>Junio</tb>
-                <tb><input type="text" class="i_monto"></tb>
-                <tb><input type="checkbox"></input></tb>
-              </tr><br>
-              <tr class="t_row">
-                <tb><input type="text" class="i_fecha"></tb>
-                <tb>Julio</tb>
-                <tb><input type="text" class="i_monto"></tb>
-                <tb><input type="checkbox"></input></tb>
-              </tr><br>
-              <tr class="t_row">
-                <tb><input type="text" class="i_fecha"></tb>
-                <tb>Agosto</tb>
-                <tb><input type="text" class="i_monto"></tb>
-                <tb><input type="checkbox"></input></tb>
-              </tr><br>
-              <tr class="t_row">
-                <tb><input type="text" class="i_fecha"></tb>
-                <tb>Setiembre</tb>
-                <tb><input type="text" class="i_monto"></tb>
-                <tb><input type="checkbox"></input></tb>
-              </tr><br>
-              <tr class="t_row">
-                <tb><input type="text" class="i_fecha"></tb>
-                <tb>Octubre</tb>
-                <tb><input type="text" class="i_monto"></tb>
-                <tb><input type="checkbox"></input></tb>
-              </tr><br>
-              <tr class="t_row">
-                <tb><input type="text" class="i_fecha small-bar"></tb>
-                <tb>Nobiembre</tb>
-                <tb><input type="text" class="i_monto"></tb>
-                <tb><input type="checkbox"></input></tb>
-              </tr><br>
-              <tr class="t_row">
-                <tb><input type="text" class="i_fecha"></tb>
-                <tb>Diciembre</tb>
-                <tb><input type="text" class="i_monto"></tb>
-                <tb><input type="checkbox"></input></tb>
+        <div id="PAGO">
+          <span class="block"><button>Anterior</button>
+          2018 <button>Siguente</button></span>
+
+            <table class="tg">
+              <tr>
+                <th class="pago_cell"><span style="font-weight:bold">Fecha de Pago</span></th>
+                <th class="pago_cell"></th>
+                <th class="pago_cell"><span style="font-weight:bold">Monto</span></th>
+                <th class="pago_cell"><span style="font-weight:bold">Inactivo <input type="checkbox"></span></th>
               </tr>
+              <tr>
+                <td class="pago_cell"><input type="text" class="i_fecha"></td>
+                <td class="pago_cell">Enero</td>
+                <td class="pago_cell"><input type="text" class="i_monto"></td>
+                <td class="pago_cell"><input type="checkbox"></td>
+              </tr>
+              <tr>
+                <td class="pago_cell"><input type="text" class="i_fecha"></td>
+                <td class="pago_cell">Febrero</td>
+                <td class="pago_cell"><input type="text" class="i_monto"></td>
+                <td class="pago_cell"><input type="checkbox"></td>
+              </tr>
+              <tr>
+                <td class="pago_cell"><input type="text" class="i_fecha"></td>
+                <td class="pago_cell">Marzo</td>
+                <td class="pago_cell"><input type="text" class="i_monto"></td>
+                <td class="pago_cell"><input type="checkbox"></td>
+              </tr>
+              <tr>
+                <td class="pago_cell"><input type="text" class="i_fecha"></td>
+                <td class="pago_cell">Abril</td>
+                <td class="pago_cell"><input type="text" class="i_monto"></td>
+                <td class="pago_cell"><input type="checkbox"></td>
+              </tr>
+              <tr>
+                <td class="pago_cell"><input type="text" class="i_fecha"></td>
+                <td class="pago_cell">Mayo</td>
+                <td class="pago_cell"><input type="text" class="i_monto"></td>
+                <td class="pago_cell"><input type="checkbox"></td>
+              </tr>
+              <tr>
+                <td class="pago_cell"><input type="text" class="i_fecha"></td>
+                <td class="pago_cell">Junio</td>
+                <td class="pago_cell"><input type="text" class="i_monto"></td>
+                <td class="pago_cell"><input type="checkbox"></td>
+              </tr>
+              <tr>
+                <td class="pago_cell"><input type="text" class="i_fecha"></td>
+                <td class="pago_cell">Julio</td>
+                <td class="pago_cell"><input type="text" class="i_monto"></td>
+                <td class="pago_cell"><input type="checkbox"></td>
+              </tr>
+              <tr>
+                <td class="pago_cell"><input type="text" class="i_fecha"></td>
+                <td class="pago_cell">Agosto</td>
+                <td class="pago_cell"><input type="text" class="i_monto"></td>
+                <td class="pago_cell"><input type="checkbox"></td>
+              </tr>
+              <tr>
+                <td class="pago_cell"><input type="text" class="i_fecha"></td>
+                <td class="pago_cell">Setiembre</td>
+                <td class="pago_cell"><input type="text" class="i_monto"></td>
+                <td class="pago_cell"><input type="checkbox"></td>
+              </tr>
+              <tr>
+                <td class="pago_cell"><input type="text" class="i_fecha"></td>
+                <td class="pago_cell">Octubre</td>
+                <td class="pago_cell"><input type="text" class="i_monto"></td>
+                <td class="pago_cell"><input type="checkbox"></td>
+              </tr>
+              <tr>
+                <td class="pago_cell"><input type="text" class="i_fecha"></td>
+                <td class="pago_cell">Noviembre</td>
+                <td class="pago_cell"><input type="text" class="i_monto"></td>
+                <td class="pago_cell"><input type="checkbox"></td>
+              </tr>
+              <tr>
+                <td class="pago_cell"><input type="text" class="i_fecha"></td>
+                <td class="pago_cell">Diciembre</td>
+                <td class="pago_cell"><input type="text" class="i_monto"></td>
+                <td class="pago_cell"><input type="checkbox"></td>
+              </tr>
+            </table>
 
-
-          </table>
         </div>
       </div>
       <div id="right-side">
         <div id="reportes">
           <div id="r_left">
             <h3>Reportes</h3>
-            <label><input type="radio"> Todos los atletas</label><br>
-            <label><input type="radio"> Atletas al día</label><br>
-            <label><input type="radio"> Atletas morosos</label><br>
+            <label class="block"><input type="radio"> Todos los atletas</label>
+            <label class="block"><input type="radio"> Atletas al día</label>
+            <label class="block"><input type="radio"> Atletas morosos</label>
           </div>
           <div id="r_center">
-            <p> Entrenador <input type="text"><br>
-              Desde:<br>
-              Mes <input type="text" class="small-bar"> Año <input type="text" class="small-bar"><br>
+              <label class="block">Entrenador <input type="text"></label>
+              <span class="block">Desde:</span>
+              <span class="block">Mes <input type="text" class="small-bar"> Año <input type="text" class="small-bar"></span>
               <button>Generar Reporte</button>
-            </p>
           </div>
           <div id="r_right">
-            <p>
-            <label><input type="checkbox"> Incluir inactivos</label>
-            <label><input type="checkbox"> Incluir retirados</label><br>
-            Hasta: <br>
-            Mes <input type="text" class="small-bar"> Año <input type="text" class="small-bar">
-            </p>
+            <span class="block">
+              <label><input type="checkbox"> Incluir inactivos</label>
+              <label><input type="checkbox"> Incluir retirados</label>
+            </span>
+            <span class="block">Hasta:</span>
+            <span class="block">Mes <input type="text" class="small-bar"> Año <input type="text" class="small-bar"></span>
           </div>
         </div>
         <div id="spreadsheet">
-          <div id="table"><table>
-            <tr class="t_header">
-              <tb class="t_col">Apellidos</tb>
-              <tb class="t_col">Nombre</tb>
-              <tb class="t_col">Cédula</tb>
-              <tb class="t_col">Correo Electrónico</tb>
-              <tb class="t_col">Patrocinador Nombre</tb>
-              <tb class="t_col">Organización</tb>
-              <tb class="t_col">Patrocinador Correo</tb>
-              <tb class="t_col">Deporte</tb>
-              <tb class="t_col">Paquete</tb>
-              <tb class="t_col">Entrenador Apellidos</tb>
-              <tb class="t_col">Entrenador Nombre</tb>
-            </tr> <br>
-            <tr class="t_row"><br>
-              <tb class="t_col">Apellidos</tb>
-              <tb class="t_col">Nombre</tb>
-              <tb class="t_col">Cédula</tb>
-              <tb class="t_col">Correo Electrónico</tb>
-              <tb class="t_col">Patrocinador Nombre</tb>
-              <tb class="t_col">Organización</tb>
-              <tb class="t_col">Patrocinador Correo</tb>
-              <tb class="t_col">Deporte</tb>
-              <tb class="t_col">Paquete</tb>
-              <tb class="t_col">Entrenador Apellidos</tb>
-              <tb class="t_col">Entrenador Nombre</tb>
-            </tr><br>
-            <tr class="t_row">
-              <tb class="t_col">Apellidos</tb>
-              <tb class="t_col">Nombre</tb>
-              <tb class="t_col">Cédula</tb>
-              <tb class="t_col">Correo Electrónico</tb>
-              <tb class="t_col">Patrocinador Nombre</tb>
-              <tb class="t_col">Organización</tb>
-              <tb class="t_col">Patrocinador Correo</tb>
-              <tb class="t_col">Deporte</tb>
-              <tb class="t_col">Paquete</tb>
-              <tb class="t_col">Entrenador Apellidos</tb>
-              <tb class="t_col">Entrenador Nombre</tb>
-            </tr><br>
-            <tr class="t_row">
-              <tb class="t_col">Apellidos</tb>
-              <tb class="t_col">Nombre</tb>
-              <tb class="t_col">Cédula</tb>
-              <tb class="t_col">Correo Electrónico</tb>
-              <tb class="t_col">Patrocinador Nombre</tb>
-              <tb class="t_col">Organización</tb>
-              <tb class="t_col">Patrocinador Correo</tb>
-              <tb class="t_col">Deporte</tb>
-              <tb class="t_col">Paquete</tb>
-              <tb class="t_col">Entrenador Apellidos</tb>
-              <tb class="t_col">Entrenador Nombre</tb>
-            </tr><br>
-            <tr class="t_row">
-              <tb class="t_col">Apellidos</tb>
-              <tb class="t_col">Nombre</tb>
-              <tb class="t_col">Cédula</tb>
-              <tb class="t_col">Correo Electrónico</tb>
-              <tb class="t_col">Patrocinador Nombre</tb>
-              <tb class="t_col">Organización</tb>
-              <tb class="t_col">Patrocinador Correo</tb>
-              <tb class="t_col">Deporte</tb>
-              <tb class="t_col">Paquete</tb>
-              <tb class="t_col">Entrenador Apellidos</tb>
-              <tb class="t_col">Entrenador Nombre</tb>
-            </tr><br>
-            <tr class="t_row">
-              <tb class="t_col">Apellidos</tb>
-              <tb class="t_col">Nombre</tb>
-              <tb class="t_col">Cédula</tb>
-              <tb class="t_col">Correo Electrónico</tb>
-              <tb class="t_col">Patrocinador Nombre</tb>
-              <tb class="t_col">Organización</tb>
-              <tb class="t_col">Patrocinador Correo</tb>
-              <tb class="t_col">Deporte</tb>
-              <tb class="t_col">Paquete</tb>
-              <tb class="t_col">Entrenador Apellidos</tb>
-              <tb class="t_col">Entrenador Nombre</tb>
-            </tr><br>
-            <tr class="t_row">
-              <tb class="t_col">Apellidos</tb>
-              <tb class="t_col">Nombre</tb>
-              <tb class="t_col">Cédula</tb>
-              <tb class="t_col">Correo Electrónico</tb>
-              <tb class="t_col">Patrocinador Nombre</tb>
-              <tb class="t_col">Organización</tb>
-              <tb class="t_col">Patrocinador Correo</tb>
-              <tb class="t_col">Deporte</tb>
-              <tb class="t_col">Paquete</tb>
-              <tb class="t_col">Entrenador Apellidos</tb>
-              <tb class="t_col">Entrenador Nombre</tb>
-            </tr><br>
-            <tr class="t_row">
-              <tb class="t_col">Apellidos</tb>
-              <tb class="t_col">Nombre</tb>
-              <tb class="t_col">Cédula</tb>
-              <tb class="t_col">Correo Electrónico</tb>
-              <tb class="t_col">Patrocinador Nombre</tb>
-              <tb class="t_col">Organización</tb>
-              <tb class="t_col">Patrocinador Correo</tb>
-              <tb class="t_col">Deporte</tb>
-              <tb class="t_col">Paquete</tb>
-              <tb class="t_col">Entrenador Apellidos</tb>
-              <tb class="t_col">Entrenador Nombre</tb>
-            </tr><br>
-            <tr class="t_row">
-              <tb class="t_col">Apellidos</tb>
-              <tb class="t_col">Nombre</tb>
-              <tb class="t_col">Cédula</tb>
-              <tb class="t_col">Correo Electrónico</tb>
-              <tb class="t_col">Patrocinador Nombre</tb>
-              <tb class="t_col">Organización</tb>
-              <tb class="t_col">Patrocinador Correo</tb>
-              <tb class="t_col">Deporte</tb>
-              <tb class="t_col">Paquete</tb>
-              <tb class="t_col">Entrenador Apellidos</tb>
-              <tb class="t_col">Entrenador Nombre</tb>
-            </tr><br>
-            <tr class="t_row">
-              <tb class="t_col">Apellidos</tb>
-              <tb class="t_col">Nombre</tb>
-              <tb class="t_col">Cédula</tb>
-              <tb class="t_col">Correo Electrónico</tb>
-              <tb class="t_col">Patrocinador Nombre</tb>
-              <tb class="t_col">Organización</tb>
-              <tb class="t_col">Patrocinador Correo</tb>
-              <tb class="t_col">Deporte</tb>
-              <tb class="t_col">Paquete</tb>
-              <tb class="t_col">Entrenador Apellidos</tb>
-              <tb class="t_col">Entrenador Nombre</tb>
-            </tr><br>
-            <tr class="t_row">
-              <tb class="t_col">Apellidos</tb>
-              <tb class="t_col">Nombre</tb>
-              <tb class="t_col">Cédula</tb>
-              <tb class="t_col">Correo Electrónico</tb>
-              <tb class="t_col">Patrocinador Nombre</tb>
-              <tb class="t_col">Organización</tb>
-              <tb class="t_col">Patrocinador Correo</tb>
-              <tb class="t_col">Deporte</tb>
-              <tb class="t_col">Paquete</tb>
-              <tb class="t_col">Entrenador Apellidos</tb>
-              <tb class="t_col">Entrenador Nombre</tb>
-            </tr><br>
-            <tr class="12">
-              <tb class="t_col">Apellidos</tb>
-              <tb class="t_col">Nombre</tb>
-              <tb class="t_col">Cédula</tb>
-              <tb class="t_col">Correo Electrónico</tb>
-              <tb class="t_col">Patrocinador Nombre</tb>
-              <tb class="t_col">Organización</tb>
-              <tb class="t_col">Patrocinador Correo</tb>
-              <tb class="t_col">Deporte</tb>
-              <tb class="t_col">Paquete</tb>
-              <tb class="t_col">Entrenador Apellidos</tb>
-              <tb class="t_col">Entrenador Nombre</tb>
-            </tr><br>
-            <tr class="13">
-              <tb class="t_col">Apellidos</tb>
-              <tb class="t_col">Nombre</tb>
-              <tb class="t_col">Cédula</tb>
-              <tb class="t_col">Correo Electrónico</tb>
-              <tb class="t_col">Patrocinador Nombre</tb>
-              <tb class="t_col">Organización</tb>
-              <tb class="t_col">Patrocinador Correo</tb>
-              <tb class="t_col">Deporte</tb>
-              <tb class="t_col">Paquete</tb>
-              <tb class="t_col">Entrenador Apellidos</tb>
-              <tb class="t_col">Entrenador Nombre</tb>
-            </tr><br>
-            <tr class="14">
-              <tb class="t_col">Apellidos</tb>
-              <tb class="t_col">Nombre</tb>
-              <tb class="t_col">Cédula</tb>
-              <tb class="t_col">Correo Electrónico</tb>
-              <tb class="t_col">Patrocinador Nombre</tb>
-              <tb class="t_col">Organización</tb>
-              <tb class="t_col">Patrocinador Correo</tb>
-              <tb class="t_col">Deporte</tb>
-              <tb class="t_col">Paquete</tb>
-              <tb class="t_col">Entrenador Apellidos</tb>
-              <tb class="t_col">Entrenador Nombre</tb>
-            </tr><br>
-            <tr class="15">
-              <tb class="t_col">Apellidos</tb>
-              <tb class="t_col">Nombre</tb>
-              <tb class="t_col">Cédula</tb>
-              <tb class="t_col">Correo Electrónico</tb>
-              <tb class="t_col">Patrocinador Nombre</tb>
-              <tb class="t_col">Organización</tb>
-              <tb class="t_col">Patrocinador Correo</tb>
-              <tb class="t_col">Deporte</tb>
-              <tb class="t_col">Paquete</tb>
-              <tb class="t_col">Entrenador Apellidos</tb>
-              <tb class="t_col">Entrenador Nombre</tb>
-            </tr><br>
-          </table></div>
+          <table class="s_table">
+  <tr>
+    <th class="st_header">Apellidos</th>
+    <th class="st_header">Nombre</th>
+    <th class="st_header">Cédula</th>
+    <th class="st_header">Email</th>
+    <th class="st_header">Patrocinador_nombre</th>
+    <th class="st_header">Organizac</th>
+    <th class="st_header">Patrocinador_email</th>
+    <th class="st_header">Deporte</th>
+    <th class="st_header">Paquete</th>
+    <th class="st_header">Entrenador_apellidos</th>
+    <th class="st_header">Entrenador_nombre</th>
+  </tr>
+  <tr class="odd_row">
+    <td class="st_cell">Alexander</td>
+    <td class="st_cell">Jason</td>
+    <td class="st_cell">567891234</td>
+    <td class="st_cell">jason@sample</td>
+    <td class="st_cell">Cobie Smolders</td>
+    <td class="st_cell">false</td>
+    <td class="st_cell">cobie@sample.com</td>
+    <td class="st_cell">Carrera de Fondo</td>
+    <td class="st_cell">Bronce</td>
+    <td class="st_cell">Cox</td>
+    <td class="st_cell">Courtney</td>
+  </tr>
+  <tr class="even_row">
+    <td class="st_cell">David</td>
+    <td class="st_cell">Larry</td>
+    <td class="st_cell">345678912</td>
+    <td class="st_cell">larry@sample</td>
+    <td class="st_cell">How I Met Your Mother</td>
+    <td class="st_cell">true</td>
+    <td class="st_cell">HIMYM@sample.com</td>
+    <td class="st_cell">Carrera de Fondo</td>
+    <td class="st_cell">Plata</td>
+    <td class="st_cell">Aniston</td>
+    <td class="st_cell">Jennifer</td>
+  </tr>
+</table>
         </div>
       </div>
   </body>

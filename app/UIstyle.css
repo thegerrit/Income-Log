@@ -1,13 +1,11 @@
 body {
-  height: 768px;
-  width: 1366px;
+  min-height: 768px;
+  min-width: 1366px;
   margin: 10px;
-  margin-right: 200px;
 }
 div {
-  border-style: solid;
-  border-color: blue;
-  border-width: 2px;
+  border: 2px solid blue;
+  display: block;
 }
 p {
   float: left;
@@ -17,12 +15,14 @@ h3 {
   padding: none;
   margin: none;
 }
-
+.block{
+  display: block;
+}
 .i_fecha{
-  width: 25%;
+  width: 95%;
 }
 .i_monto{
-  width:25%
+  width:95%
 }
 .small-bar{
   width:20%;
@@ -36,58 +36,62 @@ h3 {
   border-left-width:1px;
   width: 100px;
 }
+.pago_cell {
+  width: 23%;
+  align-self: center;
+}
+.s_table{
+  border-collapse:collapse;
+  border-spacing:0;
+}
+.s_table th{
+  padding: 5px;
+  border: 1px solid black;
+}
+.st_cell{
+  border: 1px solid gray;
+}
 
 #left-side{
-  height: 750px;
-  width: 380px;
+  width: 24%;
   float: left;
   margin-right: 5px;
 }
-#search-bar{
-  height: 90px
-}
-#atleta{
-  height: 200px;
-}
-#patrocinador{
-  height: 120px;
-}
-#fecha{
-  height: 325px;
-  border-color: red;
-}
+  #search-bar{
+  }
+  #ATLETA{
+    height: 27%;
+  }
+  #PATROCINADOR{
+    height: 20%;
+  }
+  #PAGO{
+    border: 2px solid red;
+    align-items: center;
+  }
 #right-side{
-  width: 950px;
-  height: 750px;
+  height: 95%;
+  width: 74%;
   float: left;
 }
-#reportes{
-  height: 150px;
-}
-#spreadsheet{
-  height: 600px;
-  width: 950px;
-  float: left;
-  position: static;
-  overflow: auto;
-}
-#table{
-  width: 1250px;
-  overflow-x: auto;
-  height: 600px;
-}
-#r_left{
-  width: 20%;
-  height: 100%;
-  float: left;
-}
-#r_center{
-  height: 100%;
-  width:40%;
-  float: left;
-}
-#r_right{
-  height: 100%;
-  width: 38%;
-  float: left;
+  #reportes{
+
+  }
+    #r_left{
+      width: 20%;
+      float: left;
+    }
+    #r_center{
+      width: 35%;
+      float: left;
+    }
+    #r_right{
+      width: 33%;
+      float: left;
+    }
+  #spreadsheet{
+    max-height: 75%;
+    width: 950px;
+    float: left;
+    overflow: auto;
 }
