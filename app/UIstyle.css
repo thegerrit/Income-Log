@@ -1,19 +1,54 @@
-body {
-  min-height: 768px;
+body{
   min-width: 1366px;
-  margin: 10px;
+  min-height: 768px;
+  margin: 5px;
 }
-div {
+div{
   border: 2px solid blue;
-  display: block;
+  border-collapse: collapse;
 }
-p {
-  float: left;
-  padding: none;
+.wrapper{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  height: 100%;
+  width:100%;
 }
-h3 {
-  padding: none;
-  margin: none;
+
+.search_bar{
+  grid-column: 1;
+  grid-row: 1/3;
+}
+.ATLETA{
+  grid-column: 1;
+  grid-row: 3/8;
+}
+.PATROCINADOR{
+  grid-column: 1;
+  grid-row: 8/11;
+}
+.fecha_pago{
+  grid-column: 1;
+  grid-row: 11/21;
+}
+.Reportes{
+  grid-column: 2;
+  grid-row:1/6;
+}
+.ENTRENADOR{
+  grid-column:3/5;
+  grid-row:1/6;
+}
+.inactivos{
+  grid-column: 5/6;
+  grid-row:1/6;
+}
+.spreadsheet{
+  grid-column: 2/6;
+  grid-row: 6/21;
+  max-height: 100%;
+  width: 100%;
+  overflow: auto;
 }
 .block{
   display: block;
@@ -26,15 +61,6 @@ h3 {
 }
 .small-bar{
   width:20%;
-}
-.t_header{
-  border-bottom:solid;
-  border-bottom:1px;
-}
-.t_col{
-  border-left:solid;
-  border-left-width:1px;
-  width: 100px;
 }
 .pago_cell {
   width: 23%;
@@ -50,48 +76,4 @@ h3 {
 }
 .st_cell{
   border: 1px solid gray;
-}
-
-#left-side{
-  width: 24%;
-  float: left;
-  margin-right: 5px;
-}
-  #search-bar{
-  }
-  #ATLETA{
-    height: 27%;
-  }
-  #PATROCINADOR{
-    height: 20%;
-  }
-  #PAGO{
-    border: 2px solid red;
-    align-items: center;
-  }
-#right-side{
-  height: 95%;
-  width: 74%;
-  float: left;
-}
-  #reportes{
-
-  }
-    #r_left{
-      width: 20%;
-      float: left;
-    }
-    #r_center{
-      width: 35%;
-      float: left;
-    }
-    #r_right{
-      width: 33%;
-      float: left;
-    }
-  #spreadsheet{
-    max-height: 75%;
-    width: 950px;
-    float: left;
-    overflow: auto;
 }
