@@ -1,5 +1,5 @@
 body {
-  min-width: 1366px;
+  min-width: 1200px;
 }
 
 aside,
@@ -16,7 +16,6 @@ div {
 aside {
   flex: 1;
   max-width: 520px;
-  box-sizing: border-box;
 }
 
 aside .details {
