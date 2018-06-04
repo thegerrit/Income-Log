@@ -21,6 +21,7 @@ aside {
 
 aside .details {
   padding: 20px;
+  height: calc(100% - 40px);
 }
 
 main {
@@ -30,4 +31,5 @@ main {
 
 main .reports {
   padding: 20px;
+  height: calc(100% - 40px);
 }
