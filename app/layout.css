@@ -1,0 +1,33 @@
+body {
+  min-width: 1366px;
+}
+
+aside,
+main,
+div {
+  outline: 1px solid blue;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+}
+
+aside {
+  flex: 1;
+  max-width: 520px;
+  box-sizing: border-box;
+}
+
+aside .details {
+  padding: 20px;
+}
+
+main {
+  flex: 2;
+  overflow: hidden;
+}
+
+main .reports {
+  padding: 20px;
+}
