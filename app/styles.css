@@ -2,20 +2,16 @@ body {
   min-width: 1366px;
   min-height: 768px;
 }
-div {
-  border: 2px solid blue;
-  border-collapse: collapse;
-}
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  /*grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
     'period        num-alerts   num-alerts'
     'stats         num-alerts   num-alerts'
     'staff-alerts  alert-types  alert-types'
     'trend-wh      trend-bay    trend-enroute';
   grid-gap: 30px;
-  justify-content: center;
+  justify-content: center;*/
 
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(20, 1fr);

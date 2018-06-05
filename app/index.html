@@ -6,39 +6,87 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" type="text/css" href="normalize.css">
-  <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+  <link rel="stylesheet" href="./material.min.css">
+  <script src="./material.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" type="text/css" href="styles.css">
   <link rel="stylesheet" type="text/css" href="layout.css">
   <link rel="stylesheet" type="text/css" href="details.css">
   <link rel="stylesheet" type="text/css" href="reports.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 
 <body>
   <div class="container">
     <aside>
       <div class="details">
-        <h2>Pagos</h2>
+        <header class="mdl-layout__header"> <h2>Pagos</h2>
+        </header>
         <div class="search">
-          <button>Añadir atleta</button>
-          <input type="text" placeholder="buscar atleta"></input>
-          <button>[ICON]</button>
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary add-athlete">Añadir Atleta</button>
+          <form action="#">
+            <div class="mdl-textfield mdl-js-textfield smallbar">
+              <input class="mdl-textfield__input" type="text" id="buscar_atleta">
+              <label class="mdl-textfield__label" for="buscar_atleta">Buscar Atleta</label>
+            </div>
+          </form>
+
         </div>
         <div class="athlete">
-          <label>Cédula <input type="text"></label>
-          <label>Nombre <input type="text"></label>
-          <label>Apellidos <input type="text"></label>
-          <label>Correoxx <input type="text"></label>
-          <label>Disciplina <input type="text"></label>
-          <label>Paquete <input type="text"></label>
-          <label>Entrenador <input type="text"></label>
+          <form action="#">
+            <div class="mdl-textfield mdl-js-textfield smallbar">
+              <input class="mdl-textfield__input" type="text" id="a_cedula">
+              <label class="mdl-textfield__label" for="a_cedula">Cédula</label>
+            </div>
+            <div class="mdl-textfield mdl-js-textfield smallbar">
+              <input class="mdl-textfield__input" type="text" id="a_nombre">
+              <label class="mdl-textfield__label" for="a_nombre">Nombre</label>
+            </div>
+            <div class="mdl-textfield mdl-js-textfield smallbar">
+              <input class="mdl-textfield__input" type="text" id="a_apellidos">
+              <label class="mdl-textfield__label" for="a_apellidos">Apellidos</label>
+            </div>
+            <div class="mdl-textfield mdl-js-textfield smallbar">
+              <input class="mdl-textfield__input" type="text" id="a_correo">
+              <label class="mdl-textfield__label" for="a_correo">Correo Electrónico</label>
+            </div>
+            <div class="mdl-textfield mdl-js-textfield smallbar">
+              <input class="mdl-textfield__input" type="text" id="a_disciplina">
+              <label class="mdl-textfield__label" for="a_disciplina">Disciplina</label>
+            </div>
+            <div class="mdl-textfield mdl-js-textfield smallbar">
+              <input class="mdl-textfield__input" type="text" id="a_paquete">
+              <label class="mdl-textfield__label" for="a_paquete">Paquete</label>
+            </div>
+            <div class="mdl-textfield mdl-js-textfield smallbar">
+              <input class="mdl-textfield__input" type="text" id="a_entrenador">
+              <label class="mdl-textfield__label" for="a_entrenador">Entrenador</label>
+            </div>
+          </form>
         </div>
+
         <div class="sponsor">
           <span>Patrocinador</span>
-          <label>Organización<input type="radio" name="org"></label>
-          <label>Individuo<input type="radio" name="org"></label>
-          <span>Nombre <input type="text"></span>
-          <span>Correoxx <input type="text"></span>
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+            <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1" checked>
+            <span class="mdl-radio__label">Organización</span>
+          </label>
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+            <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2">
+            <span class="mdl-radio__label">Individuo</span>
+          </label>
+          <form action="#">
+            <div class="mdl-textfield mdl-js-textfield">
+              <input class="mdl-textfield__input" type="text" id="p_nombre">
+              <label class="mdl-textfield__label" for="p_nombre">Nombre</label>
+            </div>
+            <div class="mdl-textfield mdl-js-textfield">
+              <input class="mdl-textfield__input" type="text" id="p_correo">
+              <label class="mdl-textfield__label" for="correo">Correo Electrónico</label>
+            </div>
+          </form>
         </div>
-        <div class="payments-form">
+        <!--<div class="payments-form">
           <span><button>Anterior</button>
             2018 <button>Siguente</button></span>
 
@@ -122,32 +170,69 @@
               <td class="pago_cell"><input type="checkbox"></td>
             </tr>
           </table>
-        </div>
+        </div>-->
       </div>
     </aside>
 
     <main>
       <div class="reports">
-        <h2>Reportes</h2>
+        <header class="mdl-layout__header"> <h2>Reportes</h2>
+        </header>
         <div class="reports-form">
           <div class="report-type">
-            <label><input type="radio"> Todos los atletas</label>
-            <label><input type="radio"> Atletas al día</label>
-            <label><input type="radio"> Atletas morosos</label>
+
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="todos">
+              <input type="radio" id="todos" class="mdl-radio__button" name="report-type" value="1" checked>
+              <span class="mdl-radio__label">Todos los atletas</span>
+            </label>
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="al-dia">
+              <input type="radio" id="al-dia" class="mdl-radio__button" name="report-type" value="1" checked>
+              <span class="mdl-radio__label"> Atletas al día</span>
+            </label>
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="morosos">
+              <input type="radio" id="morosos" class="mdl-radio__button" name="report-type" value="1" checked>
+              <span class="mdl-radio__label"> Atletas morosos</span>
+            </label>
+
           </div>
           <div class="filters">
-            <label>Entrenador <input type="text"></label>
-            <span>Desde:</span>
-            <span>Mes <input type="text" class="small-bar"> Año <input type="text" class="small-bar"></span>
-            <button>Generar Reporte</button>
+            <form action="#">
+              <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="text" id="f_entrenador">
+                <label class="mdl-textfield__label" for="sample1">Entrenador</label>
+              </div>
+              <span>Desde:</span>
+              <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="text" id="f_desde_mes">
+                <label class="mdl-textfield__label" for="f_desde_mes">Mes</label>
+              </div>
+              <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="text" id="f_desde_ano">
+                <label class="mdl-textfield__label" for="f_desde_ano">Año</label>
+              </div>
+          </form>
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Generar Reporte</button>
           </div>
           <div class="inactivos">
-            <span>
-                <label><input type="checkbox"> Incluir inactivos</label>
-                <label><input type="checkbox"> Incluir retirados</label>
-              </span>
-            <span>Hasta:</span>
-            <span>Mes <input type="text" class="small-bar"> Año <input type="text" class="small-bar"></span>
+            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="incluir_inactivos">
+              <input type="checkbox" id="incluir_inactivos" class="mdl-checkbox__input">
+              <span class="mdl-checkbox__label">Incluir Inactivos</span>
+            </label>
+            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="incluir_retirados">
+              <input type="checkbox" id="incluir_retirados" class="mdl-checkbox__input">
+              <span class="mdl-checkbox__label">Incluir Retirados</span>
+            </label>
+            <span>Hasta: </span>
+            <form action="#">
+              <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="text" id="hasta_mes">
+                <label class="mdl-textfield__label" for="hasta_mes">Mes</label>
+              </div>
+              <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="text" id="hasta_ano">
+                <label class="mdl-textfield__label" for="hasta_ano">Año</label>
+              </div>
+            </form>
           </div>
         </div>
 
@@ -196,7 +281,7 @@
         </div>
       </div>
     </<main>
-    
+
   </div>
 </body>
 
