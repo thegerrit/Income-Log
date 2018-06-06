@@ -271,15 +271,15 @@
 
           <div class="report-type indented">
 
-            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect block" for="todos">
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect block" style="position:relative;" for="todos">
               <input type="radio" id="todos" class="mdl-radio__button" name="report-type" value="1" checked>
               <span class="mdl-radio__label">Todos los atletas</span>
             </label>
-            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect block" for="al-dia">
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect block" style="position:relative;" for="al-dia">
               <input type="radio" id="al-dia" class="mdl-radio__button" name="report-type" value="1">
               <span class="mdl-radio__label"> Atletas al día</span>
             </label>
-            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect block" for="morosos">
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect block" style="position:relative;" for="morosos">
               <input type="radio" id="morosos" class="mdl-radio__button" name="report-type" value="1">
               <span class="mdl-radio__label"> Atletas morosos</span>
             </label>
@@ -301,7 +301,7 @@
                 <label class="mdl-textfield__label" for="f_desde_ano">Año</label>
               </div>
           </form>
-          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Generar Reporte</button>
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent report-button">Generar Reporte</button>
           </div>
           <div class="inactivos">
             <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="incluir_inactivos">
@@ -311,7 +311,7 @@
             <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="incluir_retirados">
               <input type="checkbox" id="incluir_retirados" class="mdl-checkbox__input">
               <span class="mdl-checkbox__label">Incluir Retirados</span>
-            </label><br><br>
+            </label><span style="display:block;height:10px;"> </span>
             <span>Hasta: </span>
             <form action="#">
               <div class="mdl-textfield mdl-js-textfield smallbar">
