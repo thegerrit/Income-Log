@@ -3,7 +3,9 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-
+aside{
+  box-shadow: 2px 2px 4px gray;
+}
 
 .container {
   height: 100vh;
