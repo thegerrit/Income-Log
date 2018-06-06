@@ -1,12 +1,79 @@
 .details {
-
+ overflow-y: auto;
 }
 .add-athlete{
   border-radius: 16px;
+  margin: 2% 0% 2% 35%;
+}
+.search-button{
+  height:48px;
+  width:48px;
 }
 .search{
-  align: center;
 }
+
 .smallbar{
-  margin: 0px;
+  margin: 0px 10px 0px 0px;
+  width: 40%;
+}
+.grid-details{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+.header-details{
+  grid-column:1;
+  grid-row: 1;
+  display: inline;
+}
+.subheader-details{
+  height: 24px;
+  font-size: 16px;
+  background-color: #2196f3;
+  padding-top:4px;
+}
+.subheader-title{
+  color:white;
+  margin-left: 20px;
+  padding-top: 4px;
+}
+.indented{
+  margin-left:15px;
+}
+.search {
+  grid-column: 1;
+  grid-row: 2;
+}
+.athlete {
+  grid-column: 1;
+  grid-row: 3;
+}
+.sponsor {
+  grid-column: 1;
+  grid-row: 4;
+}
+.toggle_year{
+  display: block;
+  margin-left: 35%;
+  font-size: 16px;
+}
+.i_fecha {
+  width: 90%;
+  border: none;
+  border-bottom: 2px solid lightgray;
+}
+
+.i_monto {
+  width: 90%;
+  border: 2px solid lightgray;
+}
+.i_diferencia{
+  width:90%;
+  border: 2px solid gray;
+  border-radius: 4px;
+}
+.pago_cell {
+  width: 23%;
+  font-size: 16px;
+  font-family: Roboto, sans-serif;
 }

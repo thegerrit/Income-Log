@@ -16,11 +16,12 @@ div {
 
 aside {
   flex: 1;
-  max-width: 520px;
+  max-width: 500px;
+  min-width: 460px;
 }
 
 aside .details {
-  padding: 20px;
+  padding: 0px;
   height: calc(100% - 40px);
 }
 

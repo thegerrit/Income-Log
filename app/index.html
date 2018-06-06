@@ -19,27 +19,38 @@
 <body>
   <div class="container">
     <aside>
-      <div class="details">
-        <header class="mdl-layout__header"> <h2>Pagos</h2>
-          <i class="material-icons">arrow_back_ios</i>
+      <div class="details grid-details">
+        <header class="mdl-layout__header header-details">
+            <h2 style="display:inline;">Pagos</h2>
+                        <button class="mdl-button--icon mdl-button search-button mdl-js-button mdl-js-ripple-effect" title="Ocultar" style="margin-left: 55%;">
+                          <i class="material-icons">arrow_back_ios</i>
+                        </button>
         </header>
         <div class="search">
-          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary add-athlete">Añadir Atleta</button>
           <form action="#">
-            <div class="mdl-textfield mdl-js-textfield smallbar">
+            <div class="mdl-textfield mdl-js-textfield indented">
               <input class="mdl-textfield__input" type="text" id="buscar_atleta">
               <label class="mdl-textfield__label" for="buscar_atleta">Buscar Atleta</label>
             </div>
+            <button class="mdl-button--icon mdl-button search-button mdl-js-button mdl-js-ripple-effect" title="Buscar">
+              <i class="material-icons">search</i>
+            </button>
+            <button class="mdl-button--icon mdl-button search-button mdl-js-button mdl-js-ripple-effect" title="Añadir Atleta">
+              <i class="material-icons">person_add</i>
+            </button>
           </form>
 
         </div>
         <div class="athlete">
+          <header class="subheader-details">
+            <span class="subheader-title">ATLETA</span>
+          </header>
           <form action="#">
-            <div class="mdl-textfield mdl-js-textfield smallbar">
+            <div class="mdl-textfield mdl-js-textfield smallbar block indented">
               <input class="mdl-textfield__input" type="text" id="a_cedula">
               <label class="mdl-textfield__label" for="a_cedula">Cédula</label>
             </div>
-            <div class="mdl-textfield mdl-js-textfield smallbar">
+            <div class="mdl-textfield mdl-js-textfield smallbar indented">
               <input class="mdl-textfield__input" type="text" id="a_nombre">
               <label class="mdl-textfield__label" for="a_nombre">Nombre</label>
             </div>
@@ -47,7 +58,7 @@
               <input class="mdl-textfield__input" type="text" id="a_apellidos">
               <label class="mdl-textfield__label" for="a_apellidos">Apellidos</label>
             </div>
-            <div class="mdl-textfield mdl-js-textfield smallbar">
+            <div class="mdl-textfield mdl-js-textfield smallbar indented">
               <input class="mdl-textfield__input" type="text" id="a_correo">
               <label class="mdl-textfield__label" for="a_correo">Correo Electrónico</label>
             </div>
@@ -55,7 +66,7 @@
               <input class="mdl-textfield__input" type="text" id="a_disciplina">
               <label class="mdl-textfield__label" for="a_disciplina">Disciplina</label>
             </div>
-            <div class="mdl-textfield mdl-js-textfield smallbar">
+            <div class="mdl-textfield mdl-js-textfield smallbar indented">
               <input class="mdl-textfield__input" type="text" id="a_paquete">
               <label class="mdl-textfield__label" for="a_paquete">Paquete</label>
             </div>
@@ -67,131 +78,208 @@
         </div>
 
         <div class="sponsor">
-          <span>Patrocinador</span>
-          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
-            <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1" checked>
+          <header class="subheader-details">
+            <span class="subheader-title">PATROCINADOR</span>
+          </header>
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect indented" for="option-1">
+            <input type="radio" id="option-1" class="mdl-radio__button" name="patrocinador" value="1">
             <span class="mdl-radio__label">Organización</span>
           </label>
           <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
-            <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2">
+            <input type="radio" id="option-2" class="mdl-radio__button" name="patrocinador" value="2">
             <span class="mdl-radio__label">Individuo</span>
           </label>
           <form action="#">
-            <div class="mdl-textfield mdl-js-textfield">
+            <div class="mdl-textfield mdl-js-textfield smallbar indented">
               <input class="mdl-textfield__input" type="text" id="p_nombre">
               <label class="mdl-textfield__label" for="p_nombre">Nombre</label>
             </div>
-            <div class="mdl-textfield mdl-js-textfield">
+            <div class="mdl-textfield mdl-js-textfield smallbar">
               <input class="mdl-textfield__input" type="text" id="p_correo">
               <label class="mdl-textfield__label" for="correo">Correo Electrónico</label>
             </div>
           </form>
         </div>
-        <!--<div class="payments-form">
-          <span><button>Anterior</button>
-            2018 <button>Siguente</button></span>
+        <!-- comment me out--><div class="payments-form">
+        <header class="subheader-details">
+          <span class="subheader-title">PAGO</span>
+        </header>
+          <div class="toggle_year">
+            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect">
+              <i class="material-icons">arrow_back</i>
+            </button>
+            2018
+            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect">
+              <i class="material-icons">arrow_forward</i>
+            </button>
+          </div>
 
-          <table class="tg">
+          <table class="tg indented">
             <tr>
               <th class="pago_cell"><span style="font-weight:bold">Fecha de Pago</span></th>
-              <th class="pago_cell"></th>
-              <th class="pago_cell"><span style="font-weight:bold">Monto</span></th>
-              <th class="pago_cell"><span style="font-weight:bold">Inactivo <input type="checkbox"></span></th>
+              <th class="pago_cell"> Monto</th>
+              <th class="pago_cell"> Diferencia</th>
+              <th class="pago_cell">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_inactivo">
+                  <span class="mdl-checkbox__label">Inactivo</span>
+                  <input type="checkbox" id="c_inactivo" class="mdl-checkbox__input">
+                </label>
+              </th>
+            </tr>
+            <tr>
+              <td class="pago_cell"><input type="text" class="i_fecha "></td>
+              <td class="pago_cell"><input type="text" class="i_monto"></td>
+              <td class="pago_cell"><input type="text" class="i_diferencia"></td>
+              <td class="pago_cell">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_enero">
+                  <span class="mdl-checkbox__label">Enero</span>
+                  <input type="checkbox" id="c_enero" class="mdl-checkbox__input">
+                </label>
+              </td>
             </tr>
             <tr>
               <td class="pago_cell"><input type="text" class="i_fecha"></td>
-              <td class="pago_cell">Enero</td>
               <td class="pago_cell"><input type="text" class="i_monto"></td>
-              <td class="pago_cell"><input type="checkbox"></td>
+              <td class="pago_cell"><input type="text" class="i_diferencia"></td>
+              <td class="pago_cell">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_febrero">
+                  <span class="mdl-checkbox__label">Febrero</span>
+                  <input type="checkbox" id="c_febrero" class="mdl-checkbox__input">
+                </label>
+              </td>
             </tr>
             <tr>
               <td class="pago_cell"><input type="text" class="i_fecha"></td>
-              <td class="pago_cell">Febrero</td>
               <td class="pago_cell"><input type="text" class="i_monto"></td>
-              <td class="pago_cell"><input type="checkbox"></td>
+              <td class="pago_cell"><input type="text" class="i_diferencia"></td>
+              <td class="pago_cell">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_marzo">
+                  <span class="mdl-checkbox__label">Marzo</span>
+                  <input type="checkbox" id="c_marzo" class="mdl-checkbox__input">
+                </label>
+              </td>
             </tr>
             <tr>
               <td class="pago_cell"><input type="text" class="i_fecha"></td>
-              <td class="pago_cell">Marzo</td>
               <td class="pago_cell"><input type="text" class="i_monto"></td>
-              <td class="pago_cell"><input type="checkbox"></td>
+              <td class="pago_cell"><input type="text" class="i_diferencia"></td>
+              <td class="pago_cell">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_abril">
+                  <span class="mdl-checkbox__label">Abril</span>
+                  <input type="checkbox" id="c_abril" class="mdl-checkbox__input">
+                </label>
+              </td>
             </tr>
             <tr>
               <td class="pago_cell"><input type="text" class="i_fecha"></td>
-              <td class="pago_cell">Abril</td>
               <td class="pago_cell"><input type="text" class="i_monto"></td>
-              <td class="pago_cell"><input type="checkbox"></td>
+              <td class="pago_cell"><input type="text" class="i_diferencia"></td>
+              <td class="pago_cell">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_mayo">
+                  <span class="mdl-checkbox__label">Mayo</span>
+                  <input type="checkbox" id="c_mayo" class="mdl-checkbox__input">
+                </label>
+              </td>
             </tr>
             <tr>
               <td class="pago_cell"><input type="text" class="i_fecha"></td>
-              <td class="pago_cell">Mayo</td>
               <td class="pago_cell"><input type="text" class="i_monto"></td>
-              <td class="pago_cell"><input type="checkbox"></td>
+              <td class="pago_cell"><input type="text" class="i_diferencia"></td>
+              <td class="pago_cell">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_junio">
+                  <span class="mdl-checkbox__label">Junio</span>
+                  <input type="checkbox" id="c_junio" class="mdl-checkbox__input">
+                </label>
+              </td>
             </tr>
             <tr>
               <td class="pago_cell"><input type="text" class="i_fecha"></td>
-              <td class="pago_cell">Junio</td>
               <td class="pago_cell"><input type="text" class="i_monto"></td>
-              <td class="pago_cell"><input type="checkbox"></td>
+              <td class="pago_cell"><input type="text" class="i_diferencia"></td>
+              <td class="pago_cell">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_julio">
+                  <span class="mdl-checkbox__label">Julio</span>
+                  <input type="checkbox" id="c_julio" class="mdl-checkbox__input">
+                </label>
+              </td>
             </tr>
             <tr>
               <td class="pago_cell"><input type="text" class="i_fecha"></td>
-              <td class="pago_cell">Julio</td>
               <td class="pago_cell"><input type="text" class="i_monto"></td>
-              <td class="pago_cell"><input type="checkbox"></td>
+              <td class="pago_cell"><input type="text" class="i_diferencia"></td>
+              <td class="pago_cell">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_agosto">
+                  <span class="mdl-checkbox__label">Agosto</span>
+                  <input type="checkbox" id="c_agosto" class="mdl-checkbox__input">
+                </label>
+              </td>
             </tr>
             <tr>
               <td class="pago_cell"><input type="text" class="i_fecha"></td>
-              <td class="pago_cell">Agosto</td>
               <td class="pago_cell"><input type="text" class="i_monto"></td>
-              <td class="pago_cell"><input type="checkbox"></td>
+              <td class="pago_cell"><input type="text" class="i_diferencia"></td>
+              <td class="pago_cell">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_setiembre">
+                  <span class="mdl-checkbox__label">Setiembre</span>
+                  <input type="checkbox" id="c_setiembre" class="mdl-checkbox__input">
+                </label>
+              </td>
             </tr>
             <tr>
               <td class="pago_cell"><input type="text" class="i_fecha"></td>
-              <td class="pago_cell">Setiembre</td>
               <td class="pago_cell"><input type="text" class="i_monto"></td>
-              <td class="pago_cell"><input type="checkbox"></td>
+              <td class="pago_cell"><input type="text" class="i_diferencia"></td>
+              <td class="pago_cell">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_octubre">
+                  <span class="mdl-checkbox__label">Octubre</span>
+                  <input type="checkbox" id="c_octubre" class="mdl-checkbox__input">
+                </label>
+              </td>
             </tr>
             <tr>
               <td class="pago_cell"><input type="text" class="i_fecha"></td>
-              <td class="pago_cell">Octubre</td>
               <td class="pago_cell"><input type="text" class="i_monto"></td>
-              <td class="pago_cell"><input type="checkbox"></td>
+              <td class="pago_cell"><input type="text" class="i_diferencia"></td>
+              <td class="pago_cell">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_noviembre">
+                  <span class="mdl-checkbox__label">Noviembre</span>
+                  <input type="checkbox" id="c_noviembre" class="mdl-checkbox__input">
+                </label>
+              </td>
             </tr>
             <tr>
               <td class="pago_cell"><input type="text" class="i_fecha"></td>
-              <td class="pago_cell">Noviembre</td>
               <td class="pago_cell"><input type="text" class="i_monto"></td>
-              <td class="pago_cell"><input type="checkbox"></td>
-            </tr>
-            <tr>
-              <td class="pago_cell"><input type="text" class="i_fecha"></td>
-              <td class="pago_cell">Diciembre</td>
-              <td class="pago_cell"><input type="text" class="i_monto"></td>
-              <td class="pago_cell"><input type="checkbox"></td>
+              <td class="pago_cell"><input type="text" class="i_diferencia"></td>
+              <td class="pago_cell">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_diciembre">
+                  <span class="mdl-checkbox__label">Diciembre</span>
+                  <input type="checkbox" id="c_diciembre" class="mdl-checkbox__input">
+                </label>
+              </td>
             </tr>
           </table>
-        </div>-->
+        </div><!-- comment out above-->
       </div>
     </aside>
 
     <main>
       <div class="reports">
-        <header class="mdl-layout__header"> <h2>Reportes</h2>
-        </header>
-        <div class="reports-form">
+
+        <div class="reports-form grid-reports">
+          <header class="mdl-layout__header header-reports"> <h2>Reportes</h2></header>
           <div class="report-type">
 
-            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="todos">
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect block" for="todos">
               <input type="radio" id="todos" class="mdl-radio__button" name="report-type" value="1" checked>
               <span class="mdl-radio__label">Todos los atletas</span>
             </label>
-            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="al-dia">
-              <input type="radio" id="al-dia" class="mdl-radio__button" name="report-type" value="1" checked>
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect block" for="al-dia">
+              <input type="radio" id="al-dia" class="mdl-radio__button" name="report-type" value="1">
               <span class="mdl-radio__label"> Atletas al día</span>
             </label>
-            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="morosos">
-              <input type="radio" id="morosos" class="mdl-radio__button" name="report-type" value="1" checked>
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect block" for="morosos">
+              <input type="radio" id="morosos" class="mdl-radio__button" name="report-type" value="1">
               <span class="mdl-radio__label"> Atletas morosos</span>
             </label>
 
@@ -202,12 +290,12 @@
                 <input class="mdl-textfield__input" type="text" id="f_entrenador">
                 <label class="mdl-textfield__label" for="sample1">Entrenador</label>
               </div>
-              <span>Desde:</span>
-              <div class="mdl-textfield mdl-js-textfield">
+              <span class="block">Desde:</span>
+              <div class="mdl-textfield mdl-js-textfield smallbar">
                 <input class="mdl-textfield__input" type="text" id="f_desde_mes">
                 <label class="mdl-textfield__label" for="f_desde_mes">Mes</label>
               </div>
-              <div class="mdl-textfield mdl-js-textfield">
+              <div class="mdl-textfield mdl-js-textfield smallbar">
                 <input class="mdl-textfield__input" type="text" id="f_desde_ano">
                 <label class="mdl-textfield__label" for="f_desde_ano">Año</label>
               </div>
@@ -225,61 +313,63 @@
             </label>
             <span>Hasta: </span>
             <form action="#">
-              <div class="mdl-textfield mdl-js-textfield">
+              <div class="mdl-textfield mdl-js-textfield smallbar">
                 <input class="mdl-textfield__input" type="text" id="hasta_mes">
                 <label class="mdl-textfield__label" for="hasta_mes">Mes</label>
               </div>
-              <div class="mdl-textfield mdl-js-textfield">
+              <div class="mdl-textfield mdl-js-textfield smallbar">
                 <input class="mdl-textfield__input" type="text" id="hasta_ano">
                 <label class="mdl-textfield__label" for="hasta_ano">Año</label>
               </div>
             </form>
           </div>
+          <div class="spreadsheet">
+            <div style="overflow: auto;">
+            <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+              <tr>
+                <th class="st_header">Apellidos</th>
+                <th class="st_header">Nombre</th>
+                <th class="st_header">Cédula</th>
+                <th class="st_header">Email</th>
+                <th class="st_header">Patrocinador_nombre</th>
+                <th class="st_header">Organizac</th>
+                <th class="st_header">Patrocinador_email</th>
+                <th class="st_header">Deporte</th>
+                <th class="st_header">Paquete</th>
+                <th class="st_header">Entrenador_apellidos</th>
+                <th class="st_header">Entrenador_nombre</th>
+              </tr>
+              <tr class="odd_row">
+                <td class="st_cell">Alexander</td>
+                <td class="st_cell">Jason</td>
+                <td class="st_cell">567891234</td>
+                <td class="st_cell">jason@sample</td>
+                <td class="st_cell">Cobie Smolders</td>
+                <td class="st_cell">false</td>
+                <td class="st_cell">cobie@sample.com</td>
+                <td class="st_cell">Carrera de Fondo</td>
+                <td class="st_cell">Bronce</td>
+                <td class="st_cell">Cox</td>
+                <td class="st_cell">Courtney</td>
+              </tr>
+              <tr class="even_row">
+                <td class="st_cell">David</td>
+                <td class="st_cell">Larry</td>
+                <td class="st_cell">345678912</td>
+                <td class="st_cell">larry@sample</td>
+                <td class="st_cell">How I Met Your Mother</td>
+                <td class="st_cell">true</td>
+                <td class="st_cell">HIMYM@sample.com</td>
+                <td class="st_cell">Carrera de Fondo</td>
+                <td class="st_cell">Plata</td>
+                <td class="st_cell">Aniston</td>
+                <td class="st_cell">Jennifer</td>
+              </tr>
+            </table>
+          </div>
+          </div>
         </div>
 
-        <div class="reports-table">
-          <table>
-            <tr>
-              <th class="st_header">Apellidos</th>
-              <th class="st_header">Nombre</th>
-              <th class="st_header">Cédula</th>
-              <th class="st_header">Email</th>
-              <th class="st_header">Patrocinador_nombre</th>
-              <th class="st_header">Organizac</th>
-              <th class="st_header">Patrocinador_email</th>
-              <th class="st_header">Deporte</th>
-              <th class="st_header">Paquete</th>
-              <th class="st_header">Entrenador_apellidos</th>
-              <th class="st_header">Entrenador_nombre</th>
-            </tr>
-            <tr class="odd_row">
-              <td class="st_cell">Alexander</td>
-              <td class="st_cell">Jason</td>
-              <td class="st_cell">567891234</td>
-              <td class="st_cell">jason@sample</td>
-              <td class="st_cell">Cobie Smolders</td>
-              <td class="st_cell">false</td>
-              <td class="st_cell">cobie@sample.com</td>
-              <td class="st_cell">Carrera de Fondo</td>
-              <td class="st_cell">Bronce</td>
-              <td class="st_cell">Cox</td>
-              <td class="st_cell">Courtney</td>
-            </tr>
-            <tr class="even_row">
-              <td class="st_cell">David</td>
-              <td class="st_cell">Larry</td>
-              <td class="st_cell">345678912</td>
-              <td class="st_cell">larry@sample</td>
-              <td class="st_cell">How I Met Your Mother</td>
-              <td class="st_cell">true</td>
-              <td class="st_cell">HIMYM@sample.com</td>
-              <td class="st_cell">Carrera de Fondo</td>
-              <td class="st_cell">Plata</td>
-              <td class="st_cell">Aniston</td>
-              <td class="st_cell">Jennifer</td>
-            </tr>
-          </table>
-        </div>
       </div>
     </<main>
 
