@@ -9,8 +9,6 @@
   height:48px;
   width:48px;
 }
-.search{
-}
 
 .smallbar{
   margin: 0px 10px 0px 0px;
@@ -34,7 +32,7 @@
 .subheader-details{
   height: 24px;
   font-size: 16px;
-  background-color: #2196f3;
+  background-color: #207d7d;
   padding-top:4px;
   box-shadow: 2px 2px 4px gray;
 }
@@ -82,4 +80,24 @@
   width: 20%;
   font-size: 16px;
   font-family: Roboto, sans-serif;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #135c6d;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #0cd2c9;
 }
