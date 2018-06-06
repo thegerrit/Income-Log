@@ -3,11 +3,7 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-aside,
-main,
-div {
-  outline: 1px solid blue;
-}
+
 
 .container {
   height: 100vh;
