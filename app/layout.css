@@ -31,6 +31,6 @@ main {
 }
 
 main .reports {
-  padding: 20px;
+  padding: 0px;
   height: calc(100% - 40px);
 }
