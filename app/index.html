@@ -14,15 +14,16 @@
   <link rel="stylesheet" type="text/css" href="details.css">
   <link rel="stylesheet" type="text/css" href="reports.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <script src="./effects.js" type="text/javascript"></script>
 </head>
 
 <body>
   <div class="container">
-    <aside>
+    <aside id="left-drawer">
       <div class="details grid-details">
         <header class="mdl-layout__header header-details">
             <h2 style="display:inline;">Pagos</h2>
-                        <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect hide-button" title="Ocultar">
+                        <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect hide-button" title="Ocultar" onclick="hideDrawer()">
                           <i class="material-icons">arrow_back_ios</i>
                         </button>
         </header>
@@ -38,13 +39,15 @@
             <button class="mdl-button--icon mdl-button search-button mdl-js-button mdl-js-ripple-effect" title="Añadir Atleta">
               <i class="material-icons">person_add</i>
             </button>
+
           </form>
 
         </div>
-        <div class="athlete">
+        <div class="athlete" id="header2">
           <header class="subheader-details">
             <span class="subheader-title">ATLETA</span>
           </header>
+          <button onclick="makeRed()">red</button>
           <form action="#">
             <div class="mdl-textfield mdl-js-textfield smallbar block indented">
               <input class="mdl-textfield__input" type="text" id="a_cedula">

@@ -3,10 +3,6 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-aside{
-  box-shadow: 2px 2px 4px gray;
-}
-
 .container {
   height: 100vh;
   display: flex;
@@ -16,6 +12,8 @@ aside {
   flex: 1;
   max-width: 500px;
   min-width: 460px;
+  box-shadow: 2px 2px 4px gray;
+  transition: 0.5s;
 }
 
 aside .details {
