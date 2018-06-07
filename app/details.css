@@ -61,20 +61,17 @@
   margin-left: 35%;
   font-size: 16px;
 }
-.i_fecha {
+.i_diferencia {
   width: 70%;
   border: none;
   border-bottom: 2px solid lightgray;
+  margin-left:25%;
 }
-
-.i_monto {
-  width: 70%;
-  border: 2px solid lightgray;
-}
-.i_diferencia{
+.i_text{
   width: 70%;
   border: 2px solid gray;
   border-radius: 4px;
+  margin-left:15%;
 }
 .pago_cell {
   width: 20%;
