@@ -43,11 +43,10 @@
           </form>
 
         </div>
-        <div class="athlete" id="header2">
+        <div class="athlete">
           <header class="subheader-details">
             <span class="subheader-title">ATLETA</span>
           </header>
-          <button onclick="makeRed()">red</button>
           <form action="#">
             <div class="mdl-textfield mdl-js-textfield smallbar block indented">
               <input class="mdl-textfield__input" type="text" id="a_cedula">
@@ -126,7 +125,7 @@
               <th class="pago_cell">
                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_inactivo">
                   <span class="mdl-checkbox__label">Inactivo</span>
-                  <input type="checkbox" id="c_inactivo" class="mdl-checkbox__input">
+                  <input type="checkbox" id="c_inactivo" class="mdl-checkbox__input" onclick="checkAll(this)">
                 </label>
               </th>
             </tr>
@@ -137,7 +136,7 @@
               <td class="pago_cell">
                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_enero">
                   <span class="mdl-checkbox__label">Enero</span>
-                  <input type="checkbox" id="c_enero" class="mdl-checkbox__input">
+                  <input type="checkbox" id="c_enero" class="mdl-checkbox__input" name="c_mes">
                 </label>
               </td>
             </tr>
@@ -148,7 +147,7 @@
               <td class="pago_cell">
                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_febrero">
                   <span class="mdl-checkbox__label">Febrero</span>
-                  <input type="checkbox" id="c_febrero" class="mdl-checkbox__input">
+                  <input type="checkbox" id="c_febrero" class="mdl-checkbox__input" name="c_mes">
                 </label>
               </td>
             </tr>
@@ -159,7 +158,7 @@
               <td class="pago_cell">
                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_marzo">
                   <span class="mdl-checkbox__label">Marzo</span>
-                  <input type="checkbox" id="c_marzo" class="mdl-checkbox__input">
+                  <input type="checkbox" id="c_marzo" class="mdl-checkbox__input" name="c_mes">
                 </label>
               </td>
             </tr>
@@ -170,7 +169,7 @@
               <td class="pago_cell">
                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_abril">
                   <span class="mdl-checkbox__label">Abril</span>
-                  <input type="checkbox" id="c_abril" class="mdl-checkbox__input">
+                  <input type="checkbox" id="c_abril" class="mdl-checkbox__input" name="c_mes">
                 </label>
               </td>
             </tr>
@@ -181,7 +180,7 @@
               <td class="pago_cell">
                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_mayo">
                   <span class="mdl-checkbox__label">Mayo</span>
-                  <input type="checkbox" id="c_mayo" class="mdl-checkbox__input">
+                  <input type="checkbox" id="c_mayo" class="mdl-checkbox__input" name="c_mes">
                 </label>
               </td>
             </tr>
@@ -192,7 +191,7 @@
               <td class="pago_cell">
                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_junio">
                   <span class="mdl-checkbox__label">Junio</span>
-                  <input type="checkbox" id="c_junio" class="mdl-checkbox__input">
+                  <input type="checkbox" id="c_junio" class="mdl-checkbox__input" name="c_mes">
                 </label>
               </td>
             </tr>
@@ -203,7 +202,7 @@
               <td class="pago_cell">
                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_julio">
                   <span class="mdl-checkbox__label">Julio</span>
-                  <input type="checkbox" id="c_julio" class="mdl-checkbox__input">
+                  <input type="checkbox" id="c_julio" class="mdl-checkbox__input" name="c_mes">
                 </label>
               </td>
             </tr>
@@ -214,7 +213,7 @@
               <td class="pago_cell">
                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_agosto">
                   <span class="mdl-checkbox__label">Agosto</span>
-                  <input type="checkbox" id="c_agosto" class="mdl-checkbox__input">
+                  <input type="checkbox" id="c_agosto" class="mdl-checkbox__input" name="c_mes">
                 </label>
               </td>
             </tr>
@@ -225,7 +224,7 @@
               <td class="pago_cell">
                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_setiembre">
                   <span class="mdl-checkbox__label">Setiembre</span>
-                  <input type="checkbox" id="c_setiembre" class="mdl-checkbox__input">
+                  <input type="checkbox" id="c_setiembre" class="mdl-checkbox__input" name="c_mes">
                 </label>
               </td>
             </tr>
@@ -236,7 +235,7 @@
               <td class="pago_cell">
                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_octubre">
                   <span class="mdl-checkbox__label">Octubre</span>
-                  <input type="checkbox" id="c_octubre" class="mdl-checkbox__input">
+                  <input type="checkbox" id="c_octubre" class="mdl-checkbox__input" name="c_mes">
                 </label>
               </td>
             </tr>
@@ -247,7 +246,7 @@
               <td class="pago_cell">
                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_noviembre">
                   <span class="mdl-checkbox__label">Noviembre</span>
-                  <input type="checkbox" id="c_noviembre" class="mdl-checkbox__input">
+                  <input type="checkbox" id="c_noviembre" class="mdl-checkbox__input" name="c_mes">
                 </label>
               </td>
             </tr>
@@ -258,7 +257,7 @@
               <td class="pago_cell">
                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_diciembre">
                   <span class="mdl-checkbox__label">Diciembre</span>
-                  <input type="checkbox" id="c_diciembre" class="mdl-checkbox__input">
+                  <input type="checkbox" id="c_diciembre" class="mdl-checkbox__input" name="c_mes">
                 </label>
               </td>
             </tr>
