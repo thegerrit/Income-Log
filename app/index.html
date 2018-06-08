@@ -36,6 +36,12 @@
             <button class="mdl-button--icon mdl-button b48x48 mdl-js-button mdl-js-ripple-effect" title="Buscar">
               <i class="material-icons">search</i>
             </button>
+            <div style="margin: 5px 0px 10px 15px;">
+              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="incluir_patrocinadores">
+                <input type="checkbox" id="incluir_patrocinadores" class="mdl-checkbox__input">
+                <span class="mdl-checkbox__label">Incluir Patrocinadores</span>
+              </label>
+            </div>
           </form>
 
         </div>
@@ -319,18 +325,46 @@
           </div>
           <div class="filters">
             <form action="#">
-              <div class="mdl-textfield mdl-js-textfield indented">
-                <input class="mdl-textfield__input" type="text" id="f_entrenador">
-                <label class="mdl-textfield__label" for="sample1">Entrenador</label>
+              <div class="details_select">
+                <select>
+                  <option value="0">Entrenador</option>
+                  <option value="1">Entrenador1</option>
+                  <option value="2">Entrenador2</option>
+                  <option value="3">Entrenador3</option>
+                </select>
               </div>
-              <span class="block indented">Desde:</span>
-              <div class="mdl-textfield mdl-js-textfield smallbar indented">
-                <input class="mdl-textfield__input" type="text" id="f_desde_mes">
-                <label class="mdl-textfield__label" for="f_desde_mes">Mes</label>
+              <span class="block">Desde:</span>
+              <div class="details_select">
+                <select>
+                  <option value="0">Mes</option>
+                  <option value="1">Enero</option>
+                  <option value="2">Febrero</option>
+                  <option value="3">Marzo</option>
+                  <option value="4">Abril</option>
+                  <option value="5">Mayo</option>
+                  <option value="6">Junio</option>
+                  <option value="7">Julio</option>
+                  <option value="8">Agosto</option>
+                  <option value="9">Setiembre</option>
+                  <option value="10">Octubre</option>
+                  <option value="11">Noviembre</option>
+                  <option value="12">Diciembre</option>
+                </select>
               </div>
-              <div class="mdl-textfield mdl-js-textfield smallbar">
-                <input class="mdl-textfield__input" type="text" id="f_desde_ano">
-                <label class="mdl-textfield__label" for="f_desde_ano">Año</label>
+              <div class="details_select">
+                <select>
+                  <option value="0">Año</option>
+                  <option value="2016">2016</option>
+                  <option value="2017">2017</option>
+                  <option value="2018">2018</option>
+                  <option value="2019">2019</option>
+                  <option value="2020">2020</option>
+                  <option value="2021">2021</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                  <option value="2024">2024</option>
+                  <option value="2025">2025</option>
+                </select>
               </div>
           </form>
           <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent report-button">Generar Reporte</button>
@@ -346,13 +380,37 @@
             </label><span style="display:block;height:10px;"> </span>
             <span>Hasta: </span>
             <form action="#">
-              <div class="mdl-textfield mdl-js-textfield smallbar">
-                <input class="mdl-textfield__input" type="text" id="hasta_mes">
-                <label class="mdl-textfield__label" for="hasta_mes">Mes</label>
+              <div class="details_select">
+                <select>
+                  <option value="0">Mes</option>
+                  <option value="1">Enero</option>
+                  <option value="2">Febrero</option>
+                  <option value="3">Marzo</option>
+                  <option value="4">Abril</option>
+                  <option value="5">Mayo</option>
+                  <option value="6">Junio</option>
+                  <option value="7">Julio</option>
+                  <option value="8">Agosto</option>
+                  <option value="9">Setiembre</option>
+                  <option value="10">Octubre</option>
+                  <option value="11">Noviembre</option>
+                  <option value="12">Diciembre</option>
+                </select>
               </div>
-              <div class="mdl-textfield mdl-js-textfield smallbar">
-                <input class="mdl-textfield__input" type="text" id="hasta_ano">
-                <label class="mdl-textfield__label" for="hasta_ano">Año</label>
+              <div class="details_select">
+                <select>
+                  <option value="0">Año</option>
+                  <option value="2016">2016</option>
+                  <option value="2017">2017</option>
+                  <option value="2018">2018</option>
+                  <option value="2019">2019</option>
+                  <option value="2020">2020</option>
+                  <option value="2021">2021</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                  <option value="2024">2024</option>
+                  <option value="2025">2025</option>
+                </select>
               </div>
             </form>
           </div>
