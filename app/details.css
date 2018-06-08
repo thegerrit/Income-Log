@@ -5,8 +5,7 @@ a:focus {
  overflow-y: auto;
 }
 .add-athlete{
-  border-radius: 16px;
-  margin: 2% 0% 2% 35%;
+  margin: 2% 0% 2% 20%;
 }
 .search-button{
   height:48px;
@@ -26,6 +25,10 @@ a:focus {
   grid-column:1;
   grid-row: 1;
   display: inline;
+}
+.header-details h2{
+  margin-top: 0px;
+  padding-left: 35%;
 }
 .hide-button{
   height: 48px;

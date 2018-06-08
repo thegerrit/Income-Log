@@ -15,6 +15,9 @@ aside {
   box-shadow: 2px 2px 4px gray;
   transition: 0.5s;
 }
+.hidden{
+  display:none;
+}
 
 aside .details {
   padding: 0px;

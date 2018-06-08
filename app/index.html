@@ -29,7 +29,7 @@
         </header>
         <div class="search">
           <form action="#">
-            <div class="mdl-textfield mdl-js-textfield indented">
+            <div class="mdl-textfield mdl-js-textfield indented" style="width:60%">
               <input class="mdl-textfield__input" type="text" id="buscar_atleta">
               <label class="mdl-textfield__label" for="buscar_atleta">Buscar Atleta</label>
             </div>
@@ -84,8 +84,8 @@
                 <option value="3">Entrenador3</option>
               </select>
             </div>
-            <button class="mdl-button--icon mdl-button search-button mdl-js-button mdl-js-ripple-effect"
-            title="Añadir Atleta" style="margin-left: 92px;">
+            <button class="mdl-button--icon mdl-button search-button mdl-js-button mdl-js-ripple-effect add-athlete"
+            title="Añadir Atleta">
               <i class="material-icons">person_add</i>
             </button>
           </form>
@@ -279,7 +279,12 @@
     </aside>
 
     <main>
-      <header class="mdl-layout__header header-reports" style="display:block; margins: 0px 0px 0px 0px;"> <h2>Reportes</h2></header>
+      <header class="mdl-layout__header header-reports" style="display:block; margins: 0px 0px 0px 0px;">
+          <h2>
+            <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect hidden" title="Abrir pestaña" onclick="showDrawer()" style="display:inline-block;" id="show-button">
+              <i class="material-icons">arrow_forward_ios</i>
+            </button>
+          <span style="margin-left:20%;">Reportes </span> </h2></header>
       <div class="reports">
 
         <div class="reports-form grid-reports">

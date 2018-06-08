@@ -1,5 +1,14 @@
 function hideDrawer () {
-  document.getElementById('left-drawer').style.width = '0px'
+  var drawer = document.getElementById('left-drawer');
+  var showButton = document.getElementById('show-button');
+  drawer.classList.add('hidden');
+  showButton.classList.remove('hidden');
+};
+function showDrawer(){
+  var drawer = document.getElementById('left-drawer');
+  var showButton = document.getElementById('show-button');
+  drawer.classList.remove('hidden');
+  showButton.classList.add('hidden');
 };
 
  function checkAll (source) {
