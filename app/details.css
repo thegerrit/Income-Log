@@ -7,7 +7,7 @@ a:focus {
 .add-athlete{
   margin: 2% 0% 2% 20%;
 }
-.search-button{
+.b48x48{
   height:48px;
   width:48px;
 }
@@ -31,8 +31,6 @@ a:focus {
   padding-left: 35%;
 }
 .hide-button{
-  height: 48px;
-  width: 48px;
   margin-left: 23%
 }
 .subheader-details{
@@ -92,6 +90,9 @@ a:focus {
   grid-column: 1;
   grid-row: 4;
 }
+.add-sponsor{
+  margin: 0px 5px 10px 66%;
+}
 .toggle_year{
   display: block;
   margin-left: 35%;
@@ -113,6 +114,16 @@ a:focus {
   width: 20%;
   font-size: 16px;
   font-family: Roboto, sans-serif;
+}
+.save-button{
+  background-color: #207d7d;
+  color: white;
+}
+.save-button:hover{
+  background-color:#2bbbca;
+}
+.pago-button{
+  margin: 20px 10px 10px 10px;
 }
 /* width */
 ::-webkit-scrollbar {
