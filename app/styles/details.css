@@ -11,11 +11,21 @@
 }
 
 #details section .content {
-  padding: 15px 15px 5px;
+  padding: 20px 20px 5px;
+}
+
+#details section h3 {
+  font-size: 1rem;
+  background-color: var(--color-section-title);
+  box-shadow: 0px 2px 4px grey;
+  margin: 0;
+  color: white;
+  padding-left: 20px;
+  text-transform: uppercase;
 }
 
 #details .search .mdl-js-textfield {
-  width: 80%;
+  width: 85%;
 }
 
 
