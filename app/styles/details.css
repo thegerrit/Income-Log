@@ -26,25 +26,29 @@
   margin-right: 20px;
 }
 
+#details section .content .row {
+  clear: both;
+}
+
+#details section .content .mdl-textfield {
+  width: 100%;
+}
+
+#details section .content .row .mdl-textfield {
+  float: left;
+  width: 46%;
+}
+
+#details section .content .row .mdl-textfield + .mdl-textfield {
+  float: right;
+}
+
 #details .search .mdl-textfield {
   width: 85%;
 }
 
 #details .athlete .content {
   padding-top: 0;
-}
-
-#details .athlete .content .row {
-  clear: both;
-}
-
-#details .athlete .content .row .mdl-textfield {
-  float: left;
-  width: 46%;
-}
-
-#details .athlete .content .row .mdl-textfield + .mdl-textfield {
-  float: right;
 }
 
 
