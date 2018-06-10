@@ -1,3 +1,8 @@
+#overview .mdl-tabs__panel {
+  padding: 20px 30px;
+}
+
+
 .header-reports{
   height: 16px;
   padding: 0px 0px 0px 0px;
