@@ -60,10 +60,6 @@ a:focus {
   width:48px;
 }
 
-.smallbar{
-  margin: 0px 10px 0px 0px;
-  width: 40%;
-}
 .header-details{
   grid-column:1;
   grid-row: 1;
@@ -120,13 +116,6 @@ a:focus {
   box-shadow: 2px 2px 4px gray;
 }
 
-.sponsor {
-  grid-column: 1;
-  grid-row: 4;
-}
-.add-sponsor{
-  margin: 0px 5px 10px 66%;
-}
 .toggle_year{
   display: block;
   margin-left: 35%;
