@@ -3,7 +3,7 @@ function hideDrawer () {
   var showButton = document.querySelector('#app-header .show-drawer');
   var hideButton = document.querySelector('#app-header .hide-drawer');
 
-  drawer.classList.add('hidden');
+  drawer.className = 'collapsed';
   hideButton.classList.add('hidden');
   showButton.classList.remove('hidden');
 };
@@ -13,7 +13,7 @@ function showDrawer(){
   var showButton = document.querySelector('#app-header .show-drawer');
   var hideButton = document.querySelector('#app-header .hide-drawer');
 
-  drawer.classList.remove('hidden');
+  drawer.className = 'expanded';
   showButton.classList.add('hidden');
   hideButton.classList.remove('hidden');
 };

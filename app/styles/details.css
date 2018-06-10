@@ -1,3 +1,7 @@
+#details {
+ overflow: hidden;
+}
+
 #details header {
   justify-content: flex-end;
 }
@@ -18,9 +22,7 @@
 a:focus {
   outline:none;
 }
-#details {
- overflow-y: auto;
-}
+
 .add-athlete{
   margin: 2% 0% 2% 20%;
 }

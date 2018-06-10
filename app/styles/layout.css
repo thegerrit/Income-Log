@@ -2,6 +2,7 @@ body {
   min-width: 1200px;
 }
 
+/* --- HEADER --- */
 #app-header {
   height: var(--header-height);
 }
@@ -11,12 +12,35 @@ body {
   display: flex;
 }
 
+
+/* --- DETAILS --- */
 #details {
-  width: var(--aside-width);
   max-width: 500px;
   box-shadow: 2px 2px 4px gray;
 }
 
+#details.expanded {
+  width: var(--aside-width);
+  transition: width 0.3s;
+}
+
+#details.expanded > * {
+  opacity: 1;
+  transition: opacity 0.3s ease 0.2s;
+}
+
+#details.collapsed {
+  width: 0;
+  transition: width 0.3s ease-in 0.2s;  /* wait for elements to fade in */
+}
+
+#details.collapsed > * {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+
+/* --- REPORTS --- */
 #reports {
   flex: 1;
   overflow: hidden;
