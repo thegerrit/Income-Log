@@ -1,3 +1,17 @@
+.details header {
+  justify-content: flex-end;
+}
+
+.details header button {
+  order: 1;
+}
+
+.details header h2 {
+  
+}
+
+
+
 a:focus {
   outline:none;
 }
@@ -29,9 +43,6 @@ a:focus {
 .header-details h2{
   margin-top: 0px;
   padding-left: 35%;
-}
-.hide-button{
-  margin-left: 23%
 }
 .subheader-details{
   height: 24px;

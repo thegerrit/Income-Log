@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
   <link rel="stylesheet" type="text/css" href="./lib/normalize.css">
   <link rel="stylesheet" type="text/css" href="./lib/material.min.css">
+  <link rel="stylesheet" type="text/css" href="./styles/base.css">
   <link rel="stylesheet" type="text/css" href="./styles/layout.css">
   <link rel="stylesheet" type="text/css" href="./styles/details.css">
   <link rel="stylesheet" type="text/css" href="./styles/reports.css">
@@ -18,11 +19,11 @@
   <div class="container">
     <aside id="left-drawer">
       <div class="details grid-details">
-        <header class="mdl-layout__header header-details">
-          <h2 style="display:inline;">Pagos</h2>
+        <header>
           <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect hide-button b48x48" title="Ocultar" onclick="hideDrawer()">
-                          <i class="material-icons">arrow_back_ios</i>
-                        </button>
+            <i class="material-icons">arrow_back_ios</i>
+          </button>
+          <h2>Pagos</h2>
         </header>
         <div class="search">
           <form action="#">
@@ -291,12 +292,12 @@
     </aside>
 
     <main>
-      <header class="mdl-layout__header header-reports" style="display:block; margins: 0px 0px 0px 0px;">
-        <h2>
-            <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect hidden b48x48" title="Abrir pestaña" onclick="showDrawer()" style="display:inline-block;" id="show-button">
-              <i class="material-icons">arrow_forward_ios</i>
-            </button>
-          <span style="margin-left:20%;">Reportes </span> </h2></header>
+      <header>
+        <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect hidden b48x48" title="Abrir pestaña" onclick="showDrawer()" id="show-button">
+          <i class="material-icons">arrow_forward_ios</i>
+        </button>
+        <h2>Reportes</h2>
+      </header>
       <div class="reports">
 
         <div class="reports-form grid-reports">

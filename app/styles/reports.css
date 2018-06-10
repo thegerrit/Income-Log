@@ -12,11 +12,6 @@
 .header-reports h2{
   margin-top: 0px;
 }
-#show-button{
-  width: 48px;
-  height: 48px;
-  margin: 10px 10px 0px 10px;
-}
 .report-type {
   grid-column: 1;
   grid-row: 1;
