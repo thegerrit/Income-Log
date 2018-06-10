@@ -6,10 +6,13 @@
   order: 1;
 }
 
-.details header h2 {
-  
+.details section .content {
+  padding: 15px 15px 5px;
 }
 
+.details .search .mdl-js-textfield {
+  width: 80%;
+}
 
 
 a:focus {
@@ -29,11 +32,6 @@ a:focus {
 .smallbar{
   margin: 0px 10px 0px 0px;
   width: 40%;
-}
-.grid-details{
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
 }
 .header-details{
   grid-column:1;
@@ -56,13 +54,7 @@ a:focus {
   margin-left: 20px;
   padding-top: 4px;
 }
-.indented{
-  margin-left:15px;
-}
-.search {
-  grid-column: 1;
-  grid-row: 2;
-}
+
 .athlete {
   grid-column: 1;
   grid-row: 3;
