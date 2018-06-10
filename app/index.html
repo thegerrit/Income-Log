@@ -54,24 +54,39 @@
       </section>
 
       <section class="athlete">
-        <h3>Atleta</h3>
-        <form action="#">
-          <div class="mdl-textfield mdl-js-textfield smallbar">
-            <input class="mdl-textfield__input" type="text" id="a_cedula">
-            <label class="mdl-textfield__label" for="a_cedula">Cédula</label>
+        <header>
+          <h3>Atleta</h3>
+          <div class="actions">
+            <button class="mdl-button--icon mdl-button b48x48 mdl-js-button mdl-js-ripple-effect add-athlete b48x48" title="Añadir Atleta">
+              <i class="material-icons">person_add</i>
+            </button>
           </div>
-          <div class="mdl-textfield mdl-js-textfield smallbar">
-            <input class="mdl-textfield__input" type="text" id="a_nombre">
-            <label class="mdl-textfield__label" for="a_nombre">Nombre</label>
+        </header>
+
+        <form action="#" class="content">
+
+          <div class="row">
+            <label class="mdl-textfield mdl-js-textfield">
+              <input class="mdl-textfield__input" type="text">
+              <label class="mdl-textfield__label">Cédula</label>
+            </label>
+            <label class="mdl-textfield mdl-js-textfield">
+              <input class="mdl-textfield__input" type="text">
+              <label class="mdl-textfield__label">Nombre</label>
+            </label>
           </div>
-          <div class="mdl-textfield mdl-js-textfield smallbar">
-            <input class="mdl-textfield__input" type="text" id="a_apellidos">
-            <label class="mdl-textfield__label" for="a_apellidos">Apellidos</label>
+
+          <div class="row">
+            <label class="mdl-textfield mdl-js-textfield">
+              <input class="mdl-textfield__input" type="text">
+              <label class="mdl-textfield__label">Apellidos</label>
+            </label>
+            <label class="mdl-textfield mdl-js-textfield">
+              <input class="mdl-textfield__input" type="text">
+              <label class="mdl-textfield__label">Correo Electrónico</label>
+            </label>
           </div>
-          <div class="mdl-textfield mdl-js-textfield smallbar">
-            <input class="mdl-textfield__input" type="text" id="a_correo">
-            <label class="mdl-textfield__label" for="a_correo">Correo Electrónico</label>
-          </div>
+
           <div class="details_select">
             <select>
                 <option value="0">Disciplina</option>
@@ -96,9 +111,6 @@
                 <option value="3">Entrenador3</option>
               </select>
           </div>
-          <button class="mdl-button--icon mdl-button b48x48 mdl-js-button mdl-js-ripple-effect add-athlete b48x48" title="Añadir Atleta">
-              <i class="material-icons">person_add</i>
-            </button>
         </form>
       </section>
 
@@ -116,11 +128,11 @@
             <span class="mdl-radio__label">Individuo</span>
           </label>
         <form action="#">
-          <div class="mdl-textfield mdl-js-textfield smallbar">
+          <div class="mdl-textfield mdl-js-textfield">
             <input class="mdl-textfield__input" type="text" id="p_nombre">
             <label class="mdl-textfield__label" for="p_nombre">Nombre</label>
           </div>
-          <div class="mdl-textfield mdl-js-textfield smallbar">
+          <div class="mdl-textfield mdl-js-textfield">
             <input class="mdl-textfield__input" type="text" id="p_correo">
             <label class="mdl-textfield__label" for="correo">Correo Electrónico</label>
           </div>
