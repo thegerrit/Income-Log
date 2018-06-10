@@ -43,7 +43,7 @@
   float: right;
 }
 
-#details .search .mdl-textfield {
+#details .search .content .mdl-textfield {
   width: 85%;
 }
 
@@ -171,8 +171,4 @@ a:focus {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #0cd2c9;
-}
-
-.payments-form {
-  display: none;
 }
