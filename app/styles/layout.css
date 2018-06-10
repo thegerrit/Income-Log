@@ -1,35 +1,23 @@
 body {
   min-width: 1200px;
-  font-family: 'Roboto', sans-serif;
 }
 
-.container {
-  height: 100vh;
+#app-header {
+  height: var(--header-height);
+}
+
+#app-main {
+  height: calc(100vh - var(--header-height));
   display: flex;
 }
 
-aside {
-  flex: 1;
+#details {
+  width: var(--aside-width);
   max-width: 500px;
-  min-width: 460px;
   box-shadow: 2px 2px 4px gray;
-  transition: 0.5s;
-}
-.hidden{
-  display:none;
 }
 
-aside .details {
-  padding: 0px;
-  height: calc(100% - 40px);
-}
-
-main {
-  flex: 2;
+#reports {
+  flex: 1;
   overflow: hidden;
-}
-
-main .reports {
-  padding: 0px;
-  height: calc(100% - 40px);
 }

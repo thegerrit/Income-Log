@@ -1,16 +1,16 @@
-.details header {
+#details header {
   justify-content: flex-end;
 }
 
-.details header button {
+#details header button {
   order: 1;
 }
 
-.details section .content {
+#details section .content {
   padding: 15px 15px 5px;
 }
 
-.details .search .mdl-js-textfield {
+#details .search .mdl-js-textfield {
   width: 80%;
 }
 
@@ -18,7 +18,7 @@
 a:focus {
   outline:none;
 }
-.details {
+#details {
  overflow-y: auto;
 }
 .add-athlete{
@@ -147,4 +147,8 @@ a:focus {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #0cd2c9;
+}
+
+.payments-form {
+  display: none;
 }
