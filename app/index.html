@@ -19,8 +19,8 @@
     <aside id="left-drawer">
       <div class="details grid-details">
         <header class="mdl-layout__header header-details">
-            <h2 style="display:inline;">Pagos</h2>
-                        <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect hide-button b48x48" title="Ocultar" onclick="hideDrawer()">
+          <h2 style="display:inline;">Pagos</h2>
+          <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect hide-button b48x48" title="Ocultar" onclick="hideDrawer()">
                           <i class="material-icons">arrow_back_ios</i>
                         </button>
         </header>
@@ -87,8 +87,7 @@
                 <option value="3">Entrenador3</option>
               </select>
             </div>
-            <button class="mdl-button--icon mdl-button b48x48 mdl-js-button mdl-js-ripple-effect add-athlete b48x48"
-            title="Añadir Atleta">
+            <button class="mdl-button--icon mdl-button b48x48 mdl-js-button mdl-js-ripple-effect add-athlete b48x48" title="Añadir Atleta">
               <i class="material-icons">person_add</i>
             </button>
           </form>
@@ -117,20 +116,19 @@
               <label class="mdl-textfield__label" for="correo">Correo Electrónico</label>
             </div>
           </form>
-          <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect add-sponsor b48x48"
-          title="Añadir Patrocinador">
+          <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect add-sponsor b48x48" title="Añadir Patrocinador">
             <i class="material-icons">group_add</i>
           </button>
         </div>
-        <!-- comment me out--><div class="payments-form">
-        <header class="subheader-details">
-          <span class="subheader-title">PAGO</span>
-        </header>
+        <!-- comment me out-->
+        <div class="payments-form">
+          <header class="subheader-details">
+            <span class="subheader-title">PAGO</span>
+          </header>
           <div class="toggle_year">
             <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect b48x48">
               <i class="material-icons">arrow_back</i>
-            </button>
-            2018
+            </button> 2018
             <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect b48x48">
               <i class="material-icons">arrow_forward</i>
             </button>
@@ -281,21 +279,20 @@
               </td>
             </tr>
           </table>
-          <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect b48x48 pago-button"
-          title="Archivar" style="margin-left: 67%;">
+          <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect b48x48 pago-button" title="Archivar" style="margin-left: 67%;">
             <i class="material-icons">archive</i>
           </button>
-          <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect b48x48 save-button pago-button"
-          title="Guardar">
+          <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect b48x48 save-button pago-button" title="Guardar">
             <i class="material-icons">save</i>
           </button>
-        </div><!-- comment out above-->
+        </div>
+        <!-- comment out above-->
       </div>
     </aside>
 
     <main>
       <header class="mdl-layout__header header-reports" style="display:block; margins: 0px 0px 0px 0px;">
-          <h2>
+        <h2>
             <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect hidden b48x48" title="Abrir pestaña" onclick="showDrawer()" style="display:inline-block;" id="show-button">
               <i class="material-icons">arrow_forward_ios</i>
             </button>
@@ -363,8 +360,8 @@
                   <option value="2025">2025</option>
                 </select>
               </div>
-          </form>
-          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent report-button">Generar Reporte</button>
+            </form>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent report-button">Generar Reporte</button>
           </div>
           <div class="inactivos">
             <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="incluir_inactivos">
@@ -413,53 +410,53 @@
           </div>
           <div class="spreadsheet indented">
             <div style="overflow: auto;">
-            <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
-              <tr>
-                <th class="st_header">Apellidos</th>
-                <th class="st_header">Nombre</th>
-                <th class="st_header">Cédula</th>
-                <th class="st_header">Email</th>
-                <th class="st_header">Patrocinador_nombre</th>
-                <th class="st_header">Organizac</th>
-                <th class="st_header">Patrocinador_email</th>
-                <th class="st_header">Deporte</th>
-                <th class="st_header">Paquete</th>
-                <th class="st_header">Entrenador_apellidos</th>
-                <th class="st_header">Entrenador_nombre</th>
-              </tr>
-              <tr class="odd_row">
-                <td class="st_cell">Alexander</td>
-                <td class="st_cell">Jason</td>
-                <td class="st_cell">567891234</td>
-                <td class="st_cell">jason@sample</td>
-                <td class="st_cell">Cobie Smolders</td>
-                <td class="st_cell">false</td>
-                <td class="st_cell">cobie@sample.com</td>
-                <td class="st_cell">Carrera de Fondo</td>
-                <td class="st_cell">Bronce</td>
-                <td class="st_cell">Cox</td>
-                <td class="st_cell">Courtney</td>
-              </tr>
-              <tr class="even_row">
-                <td class="st_cell">David</td>
-                <td class="st_cell">Larry</td>
-                <td class="st_cell">345678912</td>
-                <td class="st_cell">larry@sample</td>
-                <td class="st_cell">How I Met Your Mother</td>
-                <td class="st_cell">true</td>
-                <td class="st_cell">HIMYM@sample.com</td>
-                <td class="st_cell">Carrera de Fondo</td>
-                <td class="st_cell">Plata</td>
-                <td class="st_cell">Aniston</td>
-                <td class="st_cell">Jennifer</td>
-              </tr>
-            </table>
-          </div>
+              <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+                <tr>
+                  <th class="st_header">Apellidos</th>
+                  <th class="st_header">Nombre</th>
+                  <th class="st_header">Cédula</th>
+                  <th class="st_header">Email</th>
+                  <th class="st_header">Patrocinador_nombre</th>
+                  <th class="st_header">Organizac</th>
+                  <th class="st_header">Patrocinador_email</th>
+                  <th class="st_header">Deporte</th>
+                  <th class="st_header">Paquete</th>
+                  <th class="st_header">Entrenador_apellidos</th>
+                  <th class="st_header">Entrenador_nombre</th>
+                </tr>
+                <tr class="odd_row">
+                  <td class="st_cell">Alexander</td>
+                  <td class="st_cell">Jason</td>
+                  <td class="st_cell">567891234</td>
+                  <td class="st_cell">jason@sample</td>
+                  <td class="st_cell">Cobie Smolders</td>
+                  <td class="st_cell">false</td>
+                  <td class="st_cell">cobie@sample.com</td>
+                  <td class="st_cell">Carrera de Fondo</td>
+                  <td class="st_cell">Bronce</td>
+                  <td class="st_cell">Cox</td>
+                  <td class="st_cell">Courtney</td>
+                </tr>
+                <tr class="even_row">
+                  <td class="st_cell">David</td>
+                  <td class="st_cell">Larry</td>
+                  <td class="st_cell">345678912</td>
+                  <td class="st_cell">larry@sample</td>
+                  <td class="st_cell">How I Met Your Mother</td>
+                  <td class="st_cell">true</td>
+                  <td class="st_cell">HIMYM@sample.com</td>
+                  <td class="st_cell">Carrera de Fondo</td>
+                  <td class="st_cell">Plata</td>
+                  <td class="st_cell">Aniston</td>
+                  <td class="st_cell">Jennifer</td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
 
       </div>
-    </<main>
+      </<main>
 
   </div>
 
