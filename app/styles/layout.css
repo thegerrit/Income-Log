@@ -40,7 +40,7 @@ body {
 
 
 /* --- REPORTS --- */
-#reports {
+#overview {
   flex: 1;
   overflow: hidden;
 }

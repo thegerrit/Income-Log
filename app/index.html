@@ -14,16 +14,18 @@
   <link rel="stylesheet" type="text/css" href="./styles/layout.css">
   <link rel="stylesheet" type="text/css" href="./styles/app-header.css">
   <link rel="stylesheet" type="text/css" href="./styles/details.css">
-  <link rel="stylesheet" type="text/css" href="./styles/reports.css">
+  <link rel="stylesheet" type="text/css" href="./styles/overview.css">
 </head>
 
 <body>
   <header id="app-header">
     <nav>
-      <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect b48x48 hidden show-drawer" title="Mostrar detalles" onclick="showDrawer()">
+      <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect b48x48 hidden show-drawer" title="Mostrar detalles"
+        onclick="showDrawer()">
         <i class="material-icons">menu</i>
       </button>
-      <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect b48x48 hide-drawer" title="Ocultar detalles" onclick="hideDrawer()">
+      <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect b48x48 hide-drawer" title="Ocultar detalles"
+        onclick="hideDrawer()">
         <i class="material-icons">arrow_back_ios</i>
       </button>
     </nav>
@@ -292,11 +294,11 @@
       </div>
     </aside>
 
-    <main id="reports">
+    <main id="overview">
       <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
         <div class="mdl-tabs__tab-bar">
-            <a href="#search-panel" class="mdl-tabs__tab">Búsqueda</a>
-            <a href="#reports-panel" class="mdl-tabs__tab is-active">Reportes</a>
+          <a href="#search-panel" class="mdl-tabs__tab">Búsqueda</a>
+          <a href="#reports-panel" class="mdl-tabs__tab is-active">Reportes</a>
         </div>
 
         <div class="mdl-tabs__panel" id="search-panel">
@@ -393,9 +395,8 @@
                 <span class="mdl-checkbox__label">Incluir Retirados</span>
               </label><span style="display:block;height:10px;"> </span>
               <span>Hasta: </span>
-              <form action="#">
-                <div class="details_select">
-                  <select>
+              <div class="details_select">
+                <select>
                     <option value="0">Mes</option>
                     <option value="1">Enero</option>
                     <option value="2">Febrero</option>
@@ -410,9 +411,9 @@
                     <option value="11">Noviembre</option>
                     <option value="12">Diciembre</option>
                   </select>
-                </div>
-                <div class="details_select">
-                  <select>
+              </div>
+              <div class="details_select">
+                <select>
                     <option value="0">Año</option>
                     <option value="2016">2016</option>
                     <option value="2017">2017</option>
@@ -425,8 +426,7 @@
                     <option value="2024">2024</option>
                     <option value="2025">2025</option>
                   </select>
-                </div>
-              </form>
+              </div>
             </div>
             <div class="spreadsheet">
               <div style="overflow: auto;">
@@ -477,7 +477,7 @@
 
         </div>
       </div>
-    </<main>
+      </<main>
   </div>
 
   <script src="./lib/material.min.js" type="text/javascript"></script>
