@@ -1,14 +1,21 @@
 function hideDrawer () {
   var drawer = document.getElementById('details');
-  var showButton = document.getElementById('show-button');
+  var showButton = document.querySelector('#app-header .show-drawer');
+  var hideButton = document.querySelector('#app-header .hide-drawer');
+
   drawer.classList.add('hidden');
+  hideButton.classList.add('hidden');
   showButton.classList.remove('hidden');
 };
+
 function showDrawer(){
   var drawer = document.getElementById('details');
-  var showButton = document.getElementById('show-button');
+  var showButton = document.querySelector('#app-header .show-drawer');
+  var hideButton = document.querySelector('#app-header .hide-drawer');
+
   drawer.classList.remove('hidden');
   showButton.classList.add('hidden');
+  hideButton.classList.remove('hidden');
 };
 
  function checkAll (source) {

@@ -2,3 +2,7 @@ body {
   color: #5b5b5b;
   font-family: 'Roboto', sans-serif;
 }
+
+.hidden {
+  display: none !important;
+}
