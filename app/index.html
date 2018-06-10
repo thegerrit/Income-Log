@@ -313,167 +313,182 @@
     </aside>
 
     <main id="reports">
-      <div class="reports">
-
-        <div class="reports-form grid-reports">
-
-          <div class="report-type">
-
-            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect block" style="position:relative;" for="todos">
-              <input type="radio" id="todos" class="mdl-radio__button" name="report-type" value="1" checked>
-              <span class="mdl-radio__label">Todos los atletas</span>
-            </label>
-            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect block" style="position:relative;" for="al-dia">
-              <input type="radio" id="al-dia" class="mdl-radio__button" name="report-type" value="1">
-              <span class="mdl-radio__label"> Atletas al día</span>
-            </label>
-            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect block" style="position:relative;" for="morosos">
-              <input type="radio" id="morosos" class="mdl-radio__button" name="report-type" value="1">
-              <span class="mdl-radio__label"> Atletas morosos</span>
-            </label>
-
-          </div>
-          <div class="filters">
-            <form action="#">
-              <div class="details_select">
-                <select>
-                  <option value="0">Entrenador</option>
-                  <option value="1">Entrenador1</option>
-                  <option value="2">Entrenador2</option>
-                  <option value="3">Entrenador3</option>
-                </select>
-              </div>
-              <span class="block">Desde:</span>
-              <div class="details_select">
-                <select>
-                  <option value="0">Mes</option>
-                  <option value="1">Enero</option>
-                  <option value="2">Febrero</option>
-                  <option value="3">Marzo</option>
-                  <option value="4">Abril</option>
-                  <option value="5">Mayo</option>
-                  <option value="6">Junio</option>
-                  <option value="7">Julio</option>
-                  <option value="8">Agosto</option>
-                  <option value="9">Setiembre</option>
-                  <option value="10">Octubre</option>
-                  <option value="11">Noviembre</option>
-                  <option value="12">Diciembre</option>
-                </select>
-              </div>
-              <div class="details_select">
-                <select>
-                  <option value="0">Año</option>
-                  <option value="2016">2016</option>
-                  <option value="2017">2017</option>
-                  <option value="2018">2018</option>
-                  <option value="2019">2019</option>
-                  <option value="2020">2020</option>
-                  <option value="2021">2021</option>
-                  <option value="2022">2022</option>
-                  <option value="2023">2023</option>
-                  <option value="2024">2024</option>
-                  <option value="2025">2025</option>
-                </select>
-              </div>
-            </form>
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent report-button">Generar Reporte</button>
-          </div>
-          <div class="inactivos">
-            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="incluir_inactivos">
-              <input type="checkbox" id="incluir_inactivos" class="mdl-checkbox__input">
-              <span class="mdl-checkbox__label">Incluir Inactivos</span>
-            </label>
-            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="incluir_retirados">
-              <input type="checkbox" id="incluir_retirados" class="mdl-checkbox__input">
-              <span class="mdl-checkbox__label">Incluir Retirados</span>
-            </label><span style="display:block;height:10px;"> </span>
-            <span>Hasta: </span>
-            <form action="#">
-              <div class="details_select">
-                <select>
-                  <option value="0">Mes</option>
-                  <option value="1">Enero</option>
-                  <option value="2">Febrero</option>
-                  <option value="3">Marzo</option>
-                  <option value="4">Abril</option>
-                  <option value="5">Mayo</option>
-                  <option value="6">Junio</option>
-                  <option value="7">Julio</option>
-                  <option value="8">Agosto</option>
-                  <option value="9">Setiembre</option>
-                  <option value="10">Octubre</option>
-                  <option value="11">Noviembre</option>
-                  <option value="12">Diciembre</option>
-                </select>
-              </div>
-              <div class="details_select">
-                <select>
-                  <option value="0">Año</option>
-                  <option value="2016">2016</option>
-                  <option value="2017">2017</option>
-                  <option value="2018">2018</option>
-                  <option value="2019">2019</option>
-                  <option value="2020">2020</option>
-                  <option value="2021">2021</option>
-                  <option value="2022">2022</option>
-                  <option value="2023">2023</option>
-                  <option value="2024">2024</option>
-                  <option value="2025">2025</option>
-                </select>
-              </div>
-            </form>
-          </div>
-          <div class="spreadsheet">
-            <div style="overflow: auto;">
-              <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
-                <tr>
-                  <th class="st_header">Apellidos</th>
-                  <th class="st_header">Nombre</th>
-                  <th class="st_header">Cédula</th>
-                  <th class="st_header">Email</th>
-                  <th class="st_header">Patrocinador_nombre</th>
-                  <th class="st_header">Organizac</th>
-                  <th class="st_header">Patrocinador_email</th>
-                  <th class="st_header">Deporte</th>
-                  <th class="st_header">Paquete</th>
-                  <th class="st_header">Entrenador_apellidos</th>
-                  <th class="st_header">Entrenador_nombre</th>
-                </tr>
-                <tr class="odd_row">
-                  <td class="st_cell">Alexander</td>
-                  <td class="st_cell">Jason</td>
-                  <td class="st_cell">567891234</td>
-                  <td class="st_cell">jason@sample</td>
-                  <td class="st_cell">Cobie Smolders</td>
-                  <td class="st_cell">false</td>
-                  <td class="st_cell">cobie@sample.com</td>
-                  <td class="st_cell">Carrera de Fondo</td>
-                  <td class="st_cell">Bronce</td>
-                  <td class="st_cell">Cox</td>
-                  <td class="st_cell">Courtney</td>
-                </tr>
-                <tr class="even_row">
-                  <td class="st_cell">David</td>
-                  <td class="st_cell">Larry</td>
-                  <td class="st_cell">345678912</td>
-                  <td class="st_cell">larry@sample</td>
-                  <td class="st_cell">How I Met Your Mother</td>
-                  <td class="st_cell">true</td>
-                  <td class="st_cell">HIMYM@sample.com</td>
-                  <td class="st_cell">Carrera de Fondo</td>
-                  <td class="st_cell">Plata</td>
-                  <td class="st_cell">Aniston</td>
-                  <td class="st_cell">Jennifer</td>
-                </tr>
-              </table>
-            </div>
-          </div>
+      <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+        <div class="mdl-tabs__tab-bar">
+            <a href="#search-panel" class="mdl-tabs__tab">Búsqueda</a>
+            <a href="#reports-panel" class="mdl-tabs__tab is-active">Reportes</a>
         </div>
 
-      </div>
-      </<main>
+        <div class="mdl-tabs__panel" id="search-panel">
+          <ul>
+            <li>Eddard</li>
+            <li>Catelyn</li>
+            <li>Robb</li>
+            <li>Sansa</li>
+            <li>Brandon</li>
+            <li>Arya</li>
+            <li>Rickon</li>
+          </ul>
+        </div>
+        <div class="mdl-tabs__panel is-active" id="reports-panel">
 
+          <div class="reports-form grid-reports">
+
+            <div class="report-type">
+              <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect block" style="position:relative;" for="todos">
+                <input type="radio" id="todos" class="mdl-radio__button" name="report-type" value="1" checked>
+                <span class="mdl-radio__label">Todos los atletas</span>
+              </label>
+              <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect block" style="position:relative;" for="al-dia">
+                <input type="radio" id="al-dia" class="mdl-radio__button" name="report-type" value="1">
+                <span class="mdl-radio__label"> Atletas al día</span>
+              </label>
+              <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect block" style="position:relative;" for="morosos">
+                <input type="radio" id="morosos" class="mdl-radio__button" name="report-type" value="1">
+                <span class="mdl-radio__label"> Atletas morosos</span>
+              </label>
+            </div>
+            <div class="filters">
+              <form action="#">
+                <div class="details_select">
+                  <select>
+                    <option value="0">Entrenador</option>
+                    <option value="1">Entrenador1</option>
+                    <option value="2">Entrenador2</option>
+                    <option value="3">Entrenador3</option>
+                  </select>
+                </div>
+                <span class="block">Desde:</span>
+                <div class="details_select">
+                  <select>
+                    <option value="0">Mes</option>
+                    <option value="1">Enero</option>
+                    <option value="2">Febrero</option>
+                    <option value="3">Marzo</option>
+                    <option value="4">Abril</option>
+                    <option value="5">Mayo</option>
+                    <option value="6">Junio</option>
+                    <option value="7">Julio</option>
+                    <option value="8">Agosto</option>
+                    <option value="9">Setiembre</option>
+                    <option value="10">Octubre</option>
+                    <option value="11">Noviembre</option>
+                    <option value="12">Diciembre</option>
+                  </select>
+                </div>
+                <div class="details_select">
+                  <select>
+                    <option value="0">Año</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                  </select>
+                </div>
+              </form>
+              <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent report-button">Generar Reporte</button>
+            </div>
+            <div class="inactivos">
+              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="incluir_inactivos">
+                <input type="checkbox" id="incluir_inactivos" class="mdl-checkbox__input">
+                <span class="mdl-checkbox__label">Incluir Inactivos</span>
+              </label>
+              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="incluir_retirados">
+                <input type="checkbox" id="incluir_retirados" class="mdl-checkbox__input">
+                <span class="mdl-checkbox__label">Incluir Retirados</span>
+              </label><span style="display:block;height:10px;"> </span>
+              <span>Hasta: </span>
+              <form action="#">
+                <div class="details_select">
+                  <select>
+                    <option value="0">Mes</option>
+                    <option value="1">Enero</option>
+                    <option value="2">Febrero</option>
+                    <option value="3">Marzo</option>
+                    <option value="4">Abril</option>
+                    <option value="5">Mayo</option>
+                    <option value="6">Junio</option>
+                    <option value="7">Julio</option>
+                    <option value="8">Agosto</option>
+                    <option value="9">Setiembre</option>
+                    <option value="10">Octubre</option>
+                    <option value="11">Noviembre</option>
+                    <option value="12">Diciembre</option>
+                  </select>
+                </div>
+                <div class="details_select">
+                  <select>
+                    <option value="0">Año</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                  </select>
+                </div>
+              </form>
+            </div>
+            <div class="spreadsheet">
+              <div style="overflow: auto;">
+                <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+                  <tr>
+                    <th class="st_header">Apellidos</th>
+                    <th class="st_header">Nombre</th>
+                    <th class="st_header">Cédula</th>
+                    <th class="st_header">Email</th>
+                    <th class="st_header">Patrocinador_nombre</th>
+                    <th class="st_header">Organizac</th>
+                    <th class="st_header">Patrocinador_email</th>
+                    <th class="st_header">Deporte</th>
+                    <th class="st_header">Paquete</th>
+                    <th class="st_header">Entrenador_apellidos</th>
+                    <th class="st_header">Entrenador_nombre</th>
+                  </tr>
+                  <tr class="odd_row">
+                    <td class="st_cell">Alexander</td>
+                    <td class="st_cell">Jason</td>
+                    <td class="st_cell">567891234</td>
+                    <td class="st_cell">jason@sample</td>
+                    <td class="st_cell">Cobie Smolders</td>
+                    <td class="st_cell">false</td>
+                    <td class="st_cell">cobie@sample.com</td>
+                    <td class="st_cell">Carrera de Fondo</td>
+                    <td class="st_cell">Bronce</td>
+                    <td class="st_cell">Cox</td>
+                    <td class="st_cell">Courtney</td>
+                  </tr>
+                  <tr class="even_row">
+                    <td class="st_cell">David</td>
+                    <td class="st_cell">Larry</td>
+                    <td class="st_cell">345678912</td>
+                    <td class="st_cell">larry@sample</td>
+                    <td class="st_cell">How I Met Your Mother</td>
+                    <td class="st_cell">true</td>
+                    <td class="st_cell">HIMYM@sample.com</td>
+                    <td class="st_cell">Carrera de Fondo</td>
+                    <td class="st_cell">Plata</td>
+                    <td class="st_cell">Aniston</td>
+                    <td class="st_cell">Jennifer</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </<main>
   </div>
 
   <script src="./lib/material.min.js" type="text/javascript"></script>
