@@ -1,0 +1,46 @@
+body {
+  min-width: 1200px;
+}
+
+/* --- HEADER --- */
+#app-header {
+  height: var(--header-height);
+}
+
+#app-main {
+  height: calc(100vh - var(--header-height));
+  display: flex;
+}
+
+
+/* --- DETAILS --- */
+#details {
+  max-width: 500px;
+}
+
+#details.expanded {
+  width: var(--aside-width);
+  transition: width 0.3s;
+}
+
+#details.expanded > * {
+  opacity: 1;
+  transition: opacity 0.3s ease 0.2s;
+}
+
+#details.collapsed {
+  width: 0;
+  transition: width 0.3s ease-in 0.2s;  /* wait for elements to fade in */
+}
+
+#details.collapsed > * {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+
+/* --- REPORTS --- */
+#overview {
+  flex: 1;
+  overflow: hidden;
+}

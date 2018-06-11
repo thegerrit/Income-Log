@@ -1,7 +1,6 @@
 CREATE TABLE "DEPORTE" (
-  "id" SERIAL,
   "nombre" VARCHAR(50) NOT NULL,
-  PRIMARY KEY ("id")
+  PRIMARY KEY ("nombre")
 );
 
 CREATE TABLE "ENTRENADOR" (
@@ -14,9 +13,8 @@ CREATE TABLE "ENTRENADOR" (
 
 CREATE TABLE "PATROCINADOR" (
   "id" SERIAL,
-  "nombre_organizacion" VARCHAR(50),
-  "nombre" VARCHAR(50),
-  "apellidos" VARCHAR(50),
+  "organizacion" BOOLEAN,
+  "nombre" VARCHAR(50) NOT NULL,
   "email" VARCHAR(100) NOT NULL,
   PRIMARY KEY ("id")
 );
@@ -25,10 +23,10 @@ CREATE TABLE "PAQUETE" (
   "id" SERIAL,
   "nombre" VARCHAR(50) NOT NULL,
   "precio" INTEGER NOT NULL,
-  "id_deporte" INTEGER NOT NULL,
+  "deporte" VARCHAR(50) NOT NULL,
   "id_entrenador" INTEGER NOT NULL,
   PRIMARY KEY ("id"),
-  FOREIGN KEY ("id_deporte") REFERENCES "DEPORTE"("id") ON DELETE RESTRICT,
+  FOREIGN KEY ("deporte") REFERENCES "DEPORTE"("nombre") ON DELETE RESTRICT,
   FOREIGN KEY ("id_entrenador") REFERENCES "ENTRENADOR"("id") ON DELETE RESTRICT
 );
 
@@ -56,6 +54,7 @@ CREATE TABLE "PAGO" (
   "año_cancelado" INTEGER NOT NULL,
   "monto" INTEGER NOT NULL,
   "diferencia" INTEGER NOT NULL,
+  "activo" BOOLEAN DEFAULT TRUE,
   PRIMARY KEY ("id"),
   FOREIGN KEY ("cedula_atleta") REFERENCES "ATLETA"("cedula") ON DELETE RESTRICT,
   FOREIGN KEY ("id_paquete") REFERENCES "PAQUETE"("id") ON DELETE RESTRICT,
