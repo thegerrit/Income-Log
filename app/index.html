@@ -305,20 +305,22 @@
 
         <section class="mdl-tabs__panel" id="search-panel">
           <form action="#" class="content">
-            <div>
-              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                <input type="checkbox" class="mdl-checkbox__input">
-                <span class="mdl-checkbox__label">Incluir Patrocinadores</span>
-              </label>
-            </div>
-            <div>
-              <label class="mdl-textfield mdl-js-textfield">
-                <input class="mdl-textfield__input" type="text">
-                <span class="mdl-textfield__label" >Buscar Atleta</span>
+            <div class="flex-container">
+              <div class="flex-checkbox">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                  <input type="checkbox" class="mdl-checkbox__input">
+                  <span class="mdl-checkbox__label">Incluir Patrocinadores</span>
                 </label>
-              <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect" title="Buscar">
-                <i class="material-icons">search</i>
-              </button>
+              </div>
+              <div class="flex-search">
+                <label class="mdl-textfield mdl-js-textfield">
+                  <input class="mdl-textfield__input" type="text">
+                  <span class="mdl-textfield__label" >Buscar Atleta</span>
+                  </label>
+                <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect" title="Buscar">
+                  <i class="material-icons">search</i>
+                </button>
+              </div>
             </div>
           </form>
         </section>

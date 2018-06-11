@@ -68,6 +68,17 @@
 .header-reports h2{
   margin-top: 0px;
 }
+.flex-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.flex-checkbox{
+  order: 2;
+}
+.flex-search{
+  order:1;
+}
 
 .spreadsheet {
   width: 96%;
