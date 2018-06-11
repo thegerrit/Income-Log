@@ -59,10 +59,6 @@ a:focus {
 .add-athlete{
   margin: 2% 0% 2% 20%;
 }
-.b48x48{
-  height:48px;
-  width:48px;
-}
 
 .header-details{
   grid-column:1;

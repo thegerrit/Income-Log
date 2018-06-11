@@ -3,6 +3,11 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+button.mdl-button--icon {
+  height:48px;
+  width:48px;
+}
+
 .hidden {
   display: none !important;
 }
