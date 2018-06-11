@@ -69,13 +69,6 @@ a:focus {
   margin-top: 0px;
   padding-left: 35%;
 }
-.subheader-details{
-  height: 24px;
-  font-size: 16px;
-  background-color: #207d7d;
-  padding-top:4px;
-  box-shadow: 2px 2px 4px gray;
-}
 .subheader-title{
   color:white;
   margin-left: 20px;
@@ -141,13 +134,12 @@ a:focus {
 .save-button{
   background-color: #207d7d;
   color: white;
+  align-self: flex-end;
 }
 .save-button:hover{
   background-color:#2bbbca;
 }
-.pago-button{
-  margin: 20px 10px 10px 10px;
-}
+
 /* width */
 ::-webkit-scrollbar {
     width: 10px;

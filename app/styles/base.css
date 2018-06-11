@@ -8,6 +8,10 @@ button.mdl-button--icon {
   width:48px;
 }
 
+.mdl-button--primary{
+  background-color: var(--color-section-title);
+}
+
 .hidden {
   display: none !important;
 }
