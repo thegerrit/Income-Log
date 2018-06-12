@@ -12,6 +12,6 @@ for (i=0; i < acc.length; i++) {
   });
 }*/
 function accordion() {
-  var panel = document.getElementById("accordion-content");
-  panel.classList.add("hidden");
+  var panel = event.target.parentElement.parentElement.nextElementSibling;
+  panel.classList.toggle("hidden");
 };

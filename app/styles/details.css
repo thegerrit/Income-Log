@@ -141,9 +141,9 @@ a:focus {
 }
 
 .accordion-content{
-  max-height: 0px;
+  max-height: 0%;
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  transition: display 0.2s ease-out;
 }
 
 /* width */

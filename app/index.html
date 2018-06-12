@@ -38,10 +38,12 @@
 
       <section class="athlete">
         <header>
-          <button class="accordion-header"> Show </button>
           <h3>Atleta</h3>
+          <button class="accordion-header mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect"  onclick="accordion()">
+            <i class="material-icons">keyboard_arrow_down</i>
+          </button>
           <div class="actions">
-            <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect add-athlete" title="Añadir Atleta" onclick="accordion()">
+            <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect add-athlete" title="Añadir Atleta">
               <i class="material-icons">person_add</i>
             </button>
           </div>
@@ -101,6 +103,9 @@
       <section class="sponsor">
         <header>
           <h3>Sponsor</h3>
+          <button class="accordion-header mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect"  onclick="accordion()">
+            <i class="material-icons">keyboard_arrow_down</i>
+          </button>
           <div class="actions">
             <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect" title="Añadir Patrocinador">
               <i class="material-icons">group_add</i>
@@ -132,12 +137,19 @@
       <section class="payments-form">
         <header>
           <h3>PAGO</h3>
+          <button class="accordion-header mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect"  onclick="accordion()">
+            <i class="material-icons">keyboard_arrow_down</i>
+          </button>
           <div class="actions">
-            <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect" title="Archivar" style="margin-left: 67%;">
+            <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect" title="Archivar">
                 <i class="material-icons">archive</i>
               </button>
+              <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect save-button" title="Guardar">
+                  <i class="material-icons">save</i>
+                </button>
           </div>
         </header>
+        <div>
         <div class="toggle_year">
           <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect">
               <i class="material-icons">arrow_back</i>
@@ -292,9 +304,7 @@
             </td>
           </tr>
         </table>
-        <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect save-button" title="Guardar">
-            <i class="material-icons">save</i>
-          </button>
+      </div>
       </section>
     </aside>
 
