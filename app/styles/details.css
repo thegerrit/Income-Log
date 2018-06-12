@@ -140,6 +140,12 @@ a:focus {
   background-color:#2bbbca;
 }
 
+.accordion-content{
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
