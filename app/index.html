@@ -48,7 +48,7 @@
             </button>
           </div>
         </header>
-        <div id="accordion-content">
+        <div>
         <form action="#" class="content">
 
           <div class="row">
@@ -97,10 +97,18 @@
                 <option value="3">Entrenador3</option>
               </select>
           </div>
+          <span class="save-or-clear">
+            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" title="Borrar">
+              <i class="material-icons">clear</i>
+            </button>
+            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect save-button" title="Guardar">
+              <i class="material-icons">save</i>
+            </button>
+          </span>
         </form>
       </section>
 
-      <section class="sponsor">
+      <section>
         <header>
           <h3>Sponsor</h3>
           <button class="accordion-header mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect"  onclick="accordion()">
@@ -111,6 +119,7 @@
               <i class="material-icons">group_add</i>
             </button>
           </div>
+
         </header>
 
         <form action="#" class="content">
@@ -131,10 +140,18 @@
             <input class="mdl-textfield__input" type="text">
             <label class="mdl-textfield__label">Correo Electrónico</label>
           </div>
-        </form>
+        <span class="save-or-clear">
+          <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"  title="Borrar">
+            <i class="material-icons">clear</i>
+          </button>
+          <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect save-button" title="Guardar">
+            <i class="material-icons">save</i>
+          </button>
+        </span>
+      </form>
       </section>
 
-      <section class="payments-form">
+      <section>
         <header>
           <h3>PAGO</h3>
           <button class="accordion-header mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect"  onclick="accordion()">
@@ -144,12 +161,9 @@
             <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect" title="Archivar">
                 <i class="material-icons">archive</i>
               </button>
-              <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect save-button" title="Guardar">
-                  <i class="material-icons">save</i>
-                </button>
           </div>
         </header>
-        <div>
+        <div class="content">
         <div class="toggle_year">
           <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect">
               <i class="material-icons">arrow_back</i>
@@ -304,6 +318,15 @@
             </td>
           </tr>
         </table>
+
+        <span class="save-or-clear">
+          <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" title="Borrar Pago">
+            <i class="material-icons">clear</i>
+          </button>
+          <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect save-button" title="Guardar">
+            <i class="material-icons">save</i>
+          </button>
+        </span>
       </div>
       </section>
     </aside>
