@@ -56,6 +56,10 @@
   display: block;
   margin: 5px 20px 5px 0px;
 }
+#details .accordion-button{
+  float: right;
+  align-self:flex-end;
+}
 
 
 a:focus {
