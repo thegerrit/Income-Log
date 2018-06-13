@@ -68,6 +68,11 @@
   align-self:flex-end;
 }
 
+#details .i_date{
+  max-width: 150px;
+  border: 2px solid gray;
+  border-radius: 4px;
+}
 
 a:focus {
   outline:none;
