@@ -70,15 +70,19 @@
 }
 .flex-container{
   display: flex;
-  justify-content: space-around;
+  justify-content:center;
   align-items: center;
   flex-wrap: wrap;
 }
-.flex-checkbox{
-  order: 2;
-}
+
 .flex-search{
   order:1;
+  margin: 20px 10px 0px 0px;
+}
+#flex-filter{
+  order: 2;
+  max-width: 300px;
+  margin-left: 10px;
 }
 
 #spreadsheet {
