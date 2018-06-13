@@ -343,15 +343,14 @@
             <div class="flex-container">
               <div class="details_select" id="flex-filter">
                 <span>Buscar atleta por </span>
-                <select>
+                <select onchange="showEntrenador(value)">
                     <option value="0">Nombre</option>
-                    <option value="1">Cédula</option>
-                    <option value="2">Entrenador</option>
-                    <option value="3">Patrocinador</option>
-                    <option value="4">Deporte</option>
+                    <option value="1">Entrenador</option>
+                    <option value="2">Patrocinador</option>
                   </select>
               </div>
               <div class="flex-search">
+                <div id="buscar-atleta">
                 <label class="mdl-textfield mdl-js-textfield">
                   <input class="mdl-textfield__input" type="text">
                   <span class="mdl-textfield__label" >Buscar Atleta</span>
@@ -359,7 +358,9 @@
                 <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect" title="Buscar">
                   <i class="material-icons">search</i>
                 </button>
+              </div>
 
+                <div id="buscar-patrocinador" class="hidden">
                 <label class="mdl-textfield mdl-js-textfield">
                   <input class="mdl-textfield__input" type="text">
                   <span class="mdl-textfield__label" >Buscar Patrocinador</span>
@@ -367,8 +368,9 @@
                 <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect" title="Buscar">
                   <i class="material-icons">search</i>
                 </button>
+              </div>
 
-                <div class="details_select">
+                <div class="details_select hidden" id="entrenador-select">
                 <select>
                     <option value="0">Seleccionar Entrenador</option>
                     <option value="1">Entrenador1</option>
