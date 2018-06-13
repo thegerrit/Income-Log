@@ -56,6 +56,13 @@
   display: block;
   margin: 5px 20px 5px 0px;
 }
+#details .save-or-clear .clear-button{
+  background-color: #de3d3dad;
+  margin-left: 10px;
+}
+#details .save-or-clear .clear-button:hover{
+  background-color: #ff0b0bfa;
+}
 #details .accordion-button{
   float: right;
   align-self:flex-end;
