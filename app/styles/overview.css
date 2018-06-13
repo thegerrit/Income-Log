@@ -98,17 +98,34 @@
   overflow-x: auto;
   padding: 0px 0px 0px 0px;
 }
+#BT-table{
+  border: 5px solid #207d7d;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px #2196f3;
+  overflow-x: auto;
+  padding: 0px 0px 0px 0px;
+  max-width: 450px;
+  overflow:hidden;
+}
+#BT-table .mdl-data-table th,
 #spreadsheet .mdl-data-table th{
   background-color: var(--color-table-header);
   color: var(--text-color-table-header);
   border: 1px solid var(--color-table-header);
 }
+#BT-table,
 #spreadsheet  table{
   border-spacing: 0px;
 }
+#BT-table,
 #spreadsheet .mdl-data-table tr:nth-child(even){
   background-color: #f2f2f2;
 }
+#BT-table,
 #spreadsheet .mdl-data-table tr:hover{
   background-color: #dcdede;
+}
+#BT-table th,
+#BT-table td{
+  width: 150px;
 }
