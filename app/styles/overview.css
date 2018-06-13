@@ -78,11 +78,16 @@
 .flex-search{
   order:1;
   margin: 20px 10px 0px 0px;
+  flex: 1;
 }
 #flex-filter{
   order: 2;
-  max-width: 300px;
   margin-left: 10px;
+  flex: 1;
+}
+#flex-filter span{
+  color:#000000de;
+  margin: 0px 0px 10px 5px;
 }
 
 #spreadsheet {
