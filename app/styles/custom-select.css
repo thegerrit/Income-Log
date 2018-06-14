@@ -1,4 +1,4 @@
-.details_select{
+/*.details_select{
   position: relative;
   display: inline-block;
   font-family: Helvetica, Roboto, sans-serif;
@@ -8,8 +8,34 @@
   width: 46%;
   padding: 20px 0px;
   max-width: 300px;
+}*/
+
+.small-select,
+.big-select{
+  position: relative;
+  display: inline-block;
+  font-family: Helvetica, Roboto, sans-serif;
+  font-size: 16px;
+  color: #bdbdbd;
+  font-style: normal;
+  padding: 20px 0px;
 }
-.details_select select{
+
+.small-select{
+  width: 46%;
+  max-width: 300px;
+}
+.small-select select{
+  width: 100%;
+}
+.big-select{
+  width: 95%;
+}
+.big-select select{
+  width: 106%;
+}
+.small-select select,
+.big-select select{
   border: none;
       border-bottom: 1px solid rgba(0,0,0,.12);
       display: block;
@@ -17,12 +43,56 @@
       font-family: "Helvetica","Arial",sans-serif;
       margin: 0;
       padding: 4px 0;
-      width: 100%;
+      /*width: 100%;*/
       background: 0 0;
       text-align: left;
       color: inherit;
 }
+.small-select select:focus,
+.big-select select:focus{
+  outline: none;
+  box-shadow: 2px 2px 4px gray;
+}
 
-#details .details_select + .details_select {
+#details .small-select + .small-select {
   float: right;
+}
+
+/* custom select v2*/
+.custom-select{
+  width: 200px;
+  position: relative;
+  display: inline-block;
+  font-family: Helvetica, Roboto, sans-serif;
+  font-size: 16px;
+  color: #bdbdbd;
+  font-style: normal;
+}
+
+.custom-select li:hover{
+  background-color: var(--color-table-hover);
+}
+
+.custom-select button{
+  border: none;
+  border-bottom: 1px solid rgba(0,0,0,.12);
+  display: block;
+  font-size: 16px;
+  font-family: "Helvetica","Arial",sans-serif;
+  margin: 0;
+  padding: 4px 0;
+  width: 100%;
+  background: 0 0;
+  text-align: left;
+  color: inherit;
+  padding: 5px 0px 2px 5px;
+}
+.custom-select button:focus{
+  outline: none;
+  color: #5b5b5b;
+  border-bottom: 2px solid var(--color-section-title);
+}
+
+.custom-select .dropdown{
+  border: 1px solid rgba(0,0,0,.12);
 }

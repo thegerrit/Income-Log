@@ -33,9 +33,9 @@
   clear: both;
 }
 
-#details section .content .mdl-textfield {
+/*#details section .content .mdl-textfield {
   width: 100%;
-}
+}*/
 
 #details section .content .row .mdl-textfield {
   float: left;
@@ -74,11 +74,6 @@
   max-width: 150px;
   border: 2px solid gray;
   border-radius: 4px;
-}
-
-.details_select select:focus{
-  outline: none;
-  box-shadow: 2px 2px 4px gray;
 }
 
 .toggle_year{

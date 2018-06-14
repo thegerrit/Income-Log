@@ -76,7 +76,7 @@
             </label>
           </div>
           <div class="row">
-            <div class="details_select">
+            <div class="small-select">
               <select>
                   <option value="0">Disciplina</option>
                   <option value="1">Carrera de Fondo</option>
@@ -85,7 +85,7 @@
                 </select>
             </div>
 
-            <div class="details_select">
+            <div class="small-select">
               <select>
                   <option value="0">Paquete</option>
                   <option value="1">Bronce</option>
@@ -93,7 +93,7 @@
                 </select>
             </div>
           </div>
-          <div class="details_select">
+          <div class="big-select">
             <select>
                 <option value="0">Entrenador</option>
                 <option value="1">Entrenador1</option>
@@ -341,7 +341,7 @@
         <section class="mdl-tabs__panel" id="search-panel">
           <form action="#" class="content">
             <div class="flex-container">
-              <div class="details_select" id="flex-filter">
+              <div class="small-select" id="flex-filter">
                 <span>Buscar atleta por </span>
                 <select onchange="showEntrenador(value)">
                     <option value="0">Nombre</option>
@@ -370,7 +370,7 @@
                 </button>
               </div>
 
-                <div class="details_select hidden" id="entrenador-select">
+                <div class="small-select hidden" id="entrenador-select">
                 <select>
                     <option value="0">Seleccionar Entrenador</option>
                     <option value="1">Entrenador1</option>
@@ -424,7 +424,7 @@
 
             <div class="filters">
               <div class="row">
-                <div class="details_select">
+                <div class="small-select">
                   <select>
                     <option value="0">Entrenador</option>
                     <option value="1">Entrenador1</option>
@@ -447,7 +447,7 @@
               <div class="row">
                 <div class="start-date">
                   <span>Desde</span>
-                  <div class="details_select">
+                  <div class="small-select">
                     <select>
                       <option value="0">Mes</option>
                       <option value="1">Enero</option>
@@ -464,7 +464,7 @@
                       <option value="12">Diciembre</option>
                     </select>
                   </div>
-                  <div class="details_select">
+                  <div class="small-select">
                     <select>
                       <option value="0">Año</option>
                       <option value="2016">2016</option>
@@ -483,7 +483,7 @@
 
                 <div class="end-date">
                   <span>Hasta</span>
-                  <div class="details_select">
+                  <div class="small-select">
                     <select>
                       <option value="0">Mes</option>
                       <option value="1">Enero</option>
@@ -500,7 +500,7 @@
                       <option value="12">Diciembre</option>
                     </select>
                   </div>
-                  <div class="details_select">
+                  <div class="small-select">
                     <select>
                       <option value="0">Año</option>
                       <option value="2016">2016</option>
@@ -565,6 +565,18 @@
                 <td>Jennifer</td>
               </tr>
             </table>
+          </div>
+          <div class="custom-select">
+            <button onfocus="selectMenu()" >
+              <span id="selected">Dropdown </span>
+              <i class="material-icons" style="float:right; align-self: center;">keyboard_arrow_down</i>
+            </button>
+            <div id="options" class="dropdown hidden">
+              <a onclick="chooseOption()"><option value="Option 1">Option 1</option></a>
+              <li value="Option 2">Option 2</li>
+              <li value="Option 3">Option 3</li>
+              <li value="Option 4">Option 4</li>
+            </div>
           </div>
         </section>
       </div>

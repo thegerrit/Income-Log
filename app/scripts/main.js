@@ -60,3 +60,13 @@ function onlyNumbers(evt){
 
 return true;
 }
+
+function selectMenu(){
+  var m = document.getElementById('options');
+  m.classList.toggle("hidden");
+}
+
+function chooseOption(){
+  var s = document.getElementById('selected');
+  s.replace("Dropdown","Option 1");
+}
