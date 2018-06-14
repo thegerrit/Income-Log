@@ -23,7 +23,7 @@ function showDrawer(){
   for (var i = 0, n = checkboxes.length; i < n; i++) {
     checkboxes[i].checked = source.checked;
     var labelMes = document.getElementsByName('l_mes');
-    if (checkboxes[i].checked == true) {
+    if (checkboxes[i].checked === true) {
       labelMes[i].classList.add("is-checked");
     }
     else {
@@ -36,15 +36,15 @@ function showEntrenador(val){
   var entr = document.getElementById('entrenador-select');
   var patr = document.getElementById('buscar-patrocinador');
   var atle = document.getElementById('buscar-atleta');
-  if (val==0){
+  if (val===0){
     patr.classList.add('hidden');
     entr.classList.add('hidden');
     atle.classList.remove('hidden');
-  } else if (val==1) {
+  } else if (val===1) {
     entr.classList.remove('hidden');
     patr.classList.add('hidden');
     atle.classList.add('hidden');
-  } else if (val==2){
+  } else if (val===2){
     entr.classList.add('hidden');
     patr.classList.remove('hidden');
     atle.classList.add('hidden');
