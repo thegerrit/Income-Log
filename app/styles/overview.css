@@ -102,7 +102,7 @@
 #spreadsheet .mdl-data-table th{
   background-color: var(--color-table-header);
   color: var(--text-color-table-header);
-  border: 1px solid var(--color-table-header);
+  border-bottom: 2px solid var(--border-table-header);
 }
 #search-table,
 #spreadsheet  table{

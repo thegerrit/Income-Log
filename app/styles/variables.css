@@ -3,7 +3,8 @@
   --aside-width: 32vw;
 
   --color-section-title: #207d7d;
-  --color-table-header: #61b7b7;
+  --color-table-header: white;
+  --border-table-header: #135c6d;
   --text-color-table-header: #614545;
   --color-table-even-row: #f2f2f2;
   --color-table-hover: #dcdede;
