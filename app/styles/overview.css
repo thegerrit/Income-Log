@@ -108,7 +108,8 @@
 #spreadsheet  table{
   border-spacing: 0px;
 }
-#search-table,
+#search-table .mdl-data-table tr:nth-child(even),
+#details tr:nth-child(even),
 #spreadsheet .mdl-data-table tr:nth-child(even){
   background-color: var(--color-table-even-row);
 }
