@@ -11,7 +11,7 @@
   background-color: var(--color-section-title);
   box-shadow: 0px 2px 4px grey;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   color: white;
 
@@ -21,10 +21,12 @@
   font-size: 1.2rem;
   margin: 0 0 0 20px;
   text-transform: uppercase;
+  margin-right: auto;
 }
 
 #details section header .actions {
   margin-right: 20px;
+  margin-left: auto;
 }
 
 #details section .content .row {
@@ -58,14 +60,14 @@
 }
 #details .save-or-clear .clear-button{
   background-color: var(--color-cancel-button);
+  color: white;
   margin-left: 10px;
 }
 #details .save-or-clear .clear-button:hover{
   background-color: var(--color-cancel-button-hover);
 }
 #details .accordion-button{
-  float: right;
-  align-self:flex-end;
+  margin-left: 10px;
 }
 
 #details .i_date{
