@@ -91,6 +91,9 @@
   overflow-x: auto;
   padding: 0;
 }
+#spreadsheet table{
+  width: 100%;
+}
 #search-table{
   border: 5px solid #207d7d;
   border-radius: 4px;
