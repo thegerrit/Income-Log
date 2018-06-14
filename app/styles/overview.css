@@ -59,15 +59,6 @@
   margin: 10px 0 20px;
 }
 
-
-.header-reports{
-  height: 16px;
-  padding: 0px 0px 0px 0px;
-  margin: 0px 0px 0px 0px;
-}
-.header-reports h2{
-  margin-top: 0px;
-}
 .flex-container{
   display: flex;
   justify-content:center;

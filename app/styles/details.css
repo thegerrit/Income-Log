@@ -74,34 +74,6 @@
   border-radius: 4px;
 }
 
-a:focus {
-  outline:none;
-}
-
-.add-athlete{
-  margin: 2% 0% 2% 20%;
-}
-
-.header-details{
-  grid-column:1;
-  grid-row: 1;
-  display: inline;
-}
-.header-details h2{
-  margin-top: 0px;
-  padding-left: 35%;
-}
-.subheader-title{
-  color:white;
-  margin-left: 20px;
-  padding-top: 4px;
-}
-
-.athlete {
-  grid-column: 1;
-  grid-row: 3;
-}
-
 .details_select select:focus{
   outline: none;
   box-shadow: 2px 2px 4px gray;
@@ -136,12 +108,6 @@ a:focus {
 }
 .save-button:hover{
   background-color:#2bbbca;
-}
-
-.accordion-content{
-  max-height: 0%;
-  overflow: hidden;
-  transition: display 0.2s ease-out;
 }
 
 /* width */
