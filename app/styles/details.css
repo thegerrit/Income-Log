@@ -14,7 +14,7 @@
   justify-content: space-between;
   align-items: center;
   color: white;
-  width: 100%;
+
 }
 
 #details section header h3 {
@@ -52,7 +52,7 @@
   padding-top: 0;
 }
 #details .save-or-clear{
-  float: right;
+  text-align: right;
   display: block;
   margin: 5px 20px 5px 0px;
 }
