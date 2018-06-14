@@ -89,7 +89,7 @@
   overflow-x: auto;
   padding: 0;
 }
-#BT-table{
+#search-table{
   border: 5px solid #207d7d;
   border-radius: 4px;
   box-shadow: 2px 2px 4px #2196f3;
@@ -98,25 +98,25 @@
   max-width: 450px;
   overflow:hidden;
 }
-#BT-table .mdl-data-table th,
+#search-table .mdl-data-table th,
 #spreadsheet .mdl-data-table th{
   background-color: var(--color-table-header);
   color: var(--text-color-table-header);
   border: 1px solid var(--color-table-header);
 }
-#BT-table,
+#search-table,
 #spreadsheet  table{
   border-spacing: 0px;
 }
-#BT-table,
+#search-table,
 #spreadsheet .mdl-data-table tr:nth-child(even){
   background-color: var(--color-table-even-row);
 }
-#BT-table,
+#search-table,
 #spreadsheet .mdl-data-table tr:hover{
   background-color: var(--color-table-hover);
 }
-#BT-table th,
-#BT-table td{
+#search-table th,
+#search-table td{
   width: 150px;
 }
