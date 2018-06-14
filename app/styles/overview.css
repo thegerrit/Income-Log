@@ -87,14 +87,14 @@
   border-radius: 4px;
   box-shadow: 2px 2px 4px #2196f3;
   overflow-x: auto;
-  padding: 0px 0px 0px 0px;
+  padding: 0;
 }
 #BT-table{
   border: 5px solid #207d7d;
   border-radius: 4px;
   box-shadow: 2px 2px 4px #2196f3;
   overflow-x: auto;
-  padding: 0px 0px 0px 0px;
+  padding: 0;
   max-width: 450px;
   overflow:hidden;
 }
