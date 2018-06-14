@@ -13,7 +13,8 @@ button.mdl-button--icon {
 }
 
 .hidden {
-  display: none !important;
+  /*display: none !important;*/
+  max-height: 0px;
 }
 
 /* width */

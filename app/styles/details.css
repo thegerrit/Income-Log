@@ -5,6 +5,9 @@
 
 #details section .content {
   padding: 20px 20px 5px;
+  transition: max-height 0.5s ease-out;
+  /*max-height: 0;*/
+  overflow: hidden;
 }
 
 #details section header {
@@ -68,6 +71,11 @@
 }
 #details .accordion-button{
   margin-left: 10px;
+}
+#accordion{
+  max-height: 550px;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
 }
 
 #details .i_date{
