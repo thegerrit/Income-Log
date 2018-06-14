@@ -110,11 +110,11 @@
 }
 #BT-table,
 #spreadsheet .mdl-data-table tr:nth-child(even){
-  background-color: #f2f2f2;
+  background-color: var(--color-table-even-row);
 }
 #BT-table,
 #spreadsheet .mdl-data-table tr:hover{
-  background-color: #dcdede;
+  background-color: var(--color-table-hover);
 }
 #BT-table th,
 #BT-table td{
