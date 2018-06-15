@@ -4,9 +4,8 @@
 }
 
 #details section .content {
-  padding: 20px 20px 5px;
+  padding: 0px 20px 0px 20px;
   transition: max-height 0.5s ease-out;
-  /*max-height: 0;*/
   overflow: hidden;
 }
 
@@ -68,6 +67,9 @@
 }
 #details .save-or-clear .clear-button:hover{
   background-color: var(--color-cancel-button-hover);
+}
+#details .pat-checkboxes{
+  margin-top: 10px;
 }
 #details .accordion-button{
   margin-left: 10px;
