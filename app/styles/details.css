@@ -74,7 +74,7 @@
 #details .accordion-button{
   margin-left: 10px;
 }
-#accordion{
+#details .accordion{
   max-height: 550px;
   overflow: hidden;
   transition: max-height 0.5s ease-out;
