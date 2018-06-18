@@ -68,7 +68,7 @@
 #details .save-or-clear .clear-button:hover{
   background-color: var(--color-cancel-button-hover);
 }
-#details .pat-checkboxes{
+#details .pat-checkboxes{ /*not a shared style */
   margin-top: 10px;
 }
 #details .accordion-button{
