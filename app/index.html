@@ -77,7 +77,7 @@
           </div>
           <div class="row">
             <div class="small-select">
-              <select>
+              <select onclick="darkenText()">
                   <option value="0">Disciplina</option>
                   <option value="1">Carrera de Fondo</option>
                   <option value="2">Ciclismo</option>
@@ -86,14 +86,14 @@
             </div>
 
             <div class="small-select">
-              <select>
+              <select onclick="darkenText()">
                   <option value="0">Paquete</option>
                   <option value="1">Bronce</option>
                   <option value="2">Plata</option>
                 </select>
             </div>
           </div>
-          <div class="big-select">
+          <div class="big-select" onclick="darkenText()">
             <select>
                 <option value="0">Entrenador</option>
                 <option value="1">Entrenador1</option>
@@ -346,7 +346,7 @@
             <div class="flex-container">
               <div class="small-select" id="flex-filter">
                 <span>Buscar atleta por </span>
-                <select onchange="showEntrenador(value)">
+                <select onchange="showEntrenador(value)" onclick="darkenText()">
                     <option value="0">Nombre</option>
                     <option value="1">Entrenador</option>
                     <option value="2">Patrocinador</option>
@@ -374,7 +374,7 @@
               </div>
 
                 <div class="small-select hidden" id="entrenador-select">
-                <select>
+                <select onclick="darkenText()">
                     <option value="0">Seleccionar Entrenador</option>
                     <option value="1">Entrenador1</option>
                     <option value="2">Entrenador2</option>
@@ -428,7 +428,7 @@
             <div class="filters">
               <div class="row">
                 <div class="small-select">
-                  <select>
+                  <select onclick="darkenText()">
                     <option value="0">Entrenador</option>
                     <option value="1">Entrenador1</option>
                     <option value="2">Entrenador2</option>
@@ -451,7 +451,7 @@
                 <div class="start-date">
                   <span>Desde</span>
                   <div class="small-select">
-                    <select>
+                    <select onclick="darkenText()">
                       <option value="0">Mes</option>
                       <option value="1">Enero</option>
                       <option value="2">Febrero</option>
@@ -468,7 +468,7 @@
                     </select>
                   </div>
                   <div class="small-select">
-                    <select>
+                    <select onclick="darkenText()">
                       <option value="0">Año</option>
                       <option value="2016">2016</option>
                       <option value="2017">2017</option>
@@ -487,7 +487,7 @@
                 <div class="end-date">
                   <span>Hasta</span>
                   <div class="small-select">
-                    <select>
+                    <select onclick="darkenText()">
                       <option value="0">Mes</option>
                       <option value="1">Enero</option>
                       <option value="2">Febrero</option>
@@ -504,7 +504,7 @@
                     </select>
                   </div>
                   <div class="small-select">
-                    <select>
+                    <select onclick="darkenText()">
                       <option value="0">Año</option>
                       <option value="2016">2016</option>
                       <option value="2017">2017</option>
@@ -581,7 +581,7 @@
               <li value="Option 4">Option 4</li>
             </div>
           </div>
-          <div class="mdl-textfield mdl-js-textfield getmdl-select">
+          <div class="mdl-textfield mdl-js-textfield getmdl-select is-upgraded" data-upgraded=",MaterialTextfield">
     <input type="text" value="" class="mdl-textfield__input" id="sample1" readonly>
     <input type="hidden" value="" name="sample1">
     <label for="sample1" class="mdl-textfield__label">Country</label>
@@ -591,6 +591,30 @@
         <li class="mdl-menu__item" data-val="RUS">Russia</li>
     </ul>
 </div>
+
+      <!--<form action="#">
+        <div class="mdl-textfield mdl-js-textfield getmdl-select is-upgraded"
+        data-upgraded=",MaterialTextfield">
+          <input class="mdl-textfield__input" value id="country2" readonly>
+          <input value type="hidden" name="country2">
+          <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+          <label class="mdl-textfield__label" for="country2">
+            Country
+          </label>
+        <div class="mdl-menu__container is-upgraded">
+          <div class="mdl-menu__outline mdl-menu--bottom-left"></div>
+          <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="country2" data-upgraded=",MaterialMenu">
+            <li class="mdl-menu__item" data-val="DEU" tabindex="-1">
+              Germany</li>
+            <li class="mdl-menu__item" data-val="RUS" tabindex="-1">
+              Russia</li>
+            <li class="mdl-menu__item" data-val="BLR" tabindex="-1">
+              Belarus</li>
+          </ul>
+        </div>
+        </div>
+      </form>-->
+
         </section>
       </div>
     </main>

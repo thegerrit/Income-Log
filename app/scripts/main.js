@@ -70,3 +70,8 @@ function chooseOption(){
   var s = document.getElementById('selected');
   s.replace("Dropdown","Option 1");
 }
+
+function darkenText(){
+  var box = event.target;
+  box.style.color = "#805b5b";
+}
