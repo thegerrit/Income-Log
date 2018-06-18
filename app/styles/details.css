@@ -4,35 +4,40 @@
 }
 
 #details section .content {
-  padding: 20px 20px 5px;
+  padding: 0px 20px 0px 20px;
+  transition: max-height 0.5s ease-out;
+  overflow: hidden;
 }
 
 #details section header {
   background-color: var(--color-section-title);
   box-shadow: 0px 2px 4px grey;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   color: white;
+
 }
 
 #details section header h3 {
   font-size: 1.2rem;
   margin: 0 0 0 20px;
   text-transform: uppercase;
+  margin-right: auto;
 }
 
 #details section header .actions {
   margin-right: 20px;
+  margin-left: auto;
 }
 
 #details section .content .row {
   clear: both;
 }
 
-#details section .content .mdl-textfield {
+/*#details section .content .mdl-textfield {
   width: 100%;
-}
+}*/
 
 #details section .content .row .mdl-textfield {
   float: left;
@@ -50,76 +55,44 @@
 #details .athlete .content {
   padding-top: 0;
 }
-
-
-a:focus {
-  outline:none;
+#details .save-or-clear{
+  text-align: right;
+  display: block;
+  margin: 5px 20px 5px 0px;
+}
+#details .save-or-clear .clear-button{
+  background-color: var(--color-cancel-button);
+  color: white;
+  margin-left: 10px;
+}
+#details .save-or-clear .clear-button:hover{
+  background-color: var(--color-cancel-button-hover);
+}
+#details .pat-checkboxes{
+  margin-top: 10px;
+}
+#details .accordion-button{
+  margin-left: 10px;
+}
+#details .accordion{
+  max-height: 550px;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
 }
 
-.add-athlete{
-  margin: 2% 0% 2% 20%;
-}
-
-.header-details{
-  grid-column:1;
-  grid-row: 1;
-  display: inline;
-}
-.header-details h2{
-  margin-top: 0px;
-  padding-left: 35%;
-}
-.subheader-details{
-  height: 24px;
-  font-size: 16px;
-  background-color: #207d7d;
-  padding-top:4px;
-  box-shadow: 2px 2px 4px gray;
-}
-.subheader-title{
-  color:white;
-  margin-left: 20px;
-  padding-top: 4px;
-}
-
-.athlete {
-  grid-column: 1;
-  grid-row: 3;
-}
-.details_select{
-  position: relative;
-  display: inline-block;
-  font-family: Helvetica, Roboto, sans-serif;
-  font-size: 16px;
-  color: #bdbdbd;
-  font-style: normal;
-  width: 40%;
-  padding: 20px 0px;
-  margin-right:10px;
-}
-.details_select select{
-  border: none;
-      border-bottom: 1px solid rgba(0,0,0,.12);
-      display: block;
-      font-size: 16px;
-      font-family: "Helvetica","Arial",sans-serif;
-      margin: 0;
-      padding: 4px 0;
-      width: 100%;
-      background: 0 0;
-      text-align: left;
-      color: inherit;
-}
-
-.details_select select:focus{
-  outline: none;
-  box-shadow: 2px 2px 4px gray;
+#details .i_date{
+  max-width: 150px;
+  border: 2px solid gray;
+  border-radius: 4px;
 }
 
 .toggle_year{
   display: block;
   margin-left: 35%;
   font-size: 16px;
+}
+#details .tg{
+  border: 1px solid var(--tg-border);
 }
 .i_diferencia {
   width: 70%;
@@ -132,39 +105,22 @@ a:focus {
   border: 2px solid gray;
   border-radius: 4px;
   margin-left:15%;
+  height: 22px;
 }
-.pago_cell {
+#details .tg th,
+#details .tg td{
   width: 20%;
   font-size: 16px;
   font-family: Roboto, sans-serif;
 }
+#details .tg td{
+  padding: 5px 0px 5px 0px;
+}
 .save-button{
   background-color: #207d7d;
   color: white;
+  align-self: flex-end;
 }
 .save-button:hover{
   background-color:#2bbbca;
-}
-.pago-button{
-  margin: 20px 10px 10px 10px;
-}
-/* width */
-::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #135c6d;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #0cd2c9;
 }

@@ -21,6 +21,7 @@ body {
 #details.expanded {
   width: var(--aside-width);
   transition: width 0.3s;
+  overflow: auto;
 }
 
 #details.expanded > * {
