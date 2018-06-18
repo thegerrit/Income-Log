@@ -88,7 +88,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-//Shared styles
+/*Shared styles*/
 #details {
  overflow: hidden;
  box-shadow: 1px 0px 6px grey;
