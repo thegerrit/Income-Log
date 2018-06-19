@@ -36,15 +36,15 @@ function showEntrenador(val){
   var entr = document.getElementById('entrenador-select');
   var patr = document.getElementById('buscar-patrocinador');
   var atle = document.getElementById('buscar-atleta');
-  if (val === '0'){
+  if (val === 'NOM'){
     patr.classList.add('hidden');
     entr.classList.add('hidden');
     atle.classList.remove('hidden');
-  } else if (val === '1') {
+  } else if (val === 'ENT') {
     entr.classList.remove('hidden');
     patr.classList.add('hidden');
     atle.classList.add('hidden');
-  } else if (val === '2'){
+  } else if (val === 'PAT'){
     entr.classList.add('hidden');
     patr.classList.remove('hidden');
     atle.classList.add('hidden');
