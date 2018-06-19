@@ -3,6 +3,7 @@
     <AppHeader />
     <ContentArea />
     <AthleteForm />
+    <SponsorForm />
     <img src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
@@ -12,6 +13,7 @@
 import AppHeader from "./components/AppHeader.vue";
 import ContentArea from "./components/ContentArea.vue";
 import AthleteForm from "./components/AthleteForm.vue";
+import SponsorForm from "./components/SponsorForm.vue";
 import HelloWorld from "./components/HelloWorld.vue";
 
 export default {
@@ -20,6 +22,7 @@ export default {
     AppHeader,
     ContentArea,
     AthleteForm,
+    SponsorForm,
     HelloWorld
   }
 };
