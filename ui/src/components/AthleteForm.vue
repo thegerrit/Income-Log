@@ -89,87 +89,77 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 /*Shared styles*/
-#details {
- overflow: hidden;
- box-shadow: 1px 0px 6px grey;
-}
-
-#details section .content {
-  padding: 0px 20px 0px 20px;
-  transition: max-height 0.5s ease-out;
+section {
   overflow: hidden;
-}
-
-#details section header {
-  background-color: var(--color-section-title);
-  box-shadow: 0px 2px 4px grey;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  color: white;
-
-}
-
-#details section header h3 {
-  font-size: 1.2rem;
-  margin: 0 0 0 20px;
-  text-transform: uppercase;
-  margin-right: auto;
-}
-
-#details section header .actions {
-  margin-right: 20px;
-  margin-left: auto;
-}
-
-#details section .content .row {
-  clear: both;
-}
-
-#details section .content .row .mdl-textfield {
-  float: left;
-  width: 46%;
-}
-
-#details section .content .row .mdl-textfield + .mdl-textfield {
-  float: right;
-}
-
-#details .search .content .mdl-textfield {
-  width: 85%;
-}
-
-#details .athlete .content {
-  padding-top: 0;
-}
-#details .save-or-clear{
-  text-align: right;
-  display: block;
-  margin: 5px 20px 5px 0px;
-}
-#details .save-or-clear .clear-button{
-  background-color: var(--color-cancel-button);
-  color: white;
-  margin-left: 10px;
-  #details .save-or-clear .clear-button:hover{
-    background-color: var(--color-cancel-button-hover);
-  }
-  .save-button{
-    background-color: #207d7d;
+  box-shadow: 1px 0px 6px grey;
+  header{
+    background-color: var(--color-section-title);
+    box-shadow: 0px 2px 4px grey;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     color: white;
-    align-self: flex-end;
+    h3 {
+      font-size: 1.2rem;
+      margin: 0 0 0 20px;
+      text-transform: uppercase;
+      margin-right: auto;
+    }
+    .actions {
+    margin-right: 20px;
+    margin-left: auto;
+    }
+    .accordion-button {
+      margin-left: 10px;
+    }
   }
-  .save-button:hover{
-    background-color:#2bbbca;
+  .content {
+    padding-top: 0;
+    padding: 0px 20px 0px 20px;
+    transition: max-height 0.5s ease-out;
+    overflow: hidden;
+    .row {
+      clear: both;
+      .mdl-textfield {
+        float: left;
+        width: 46%;
+      }
+      .mdl-textfield + .mdl-textfield {
+        float: right;
+      }
+    }
+    .mdl-textfield {
+    width: 85%;
+    }
+    .save-or-clear {
+      text-align: right;
+      display: block;
+      margin: 5px 20px 5px 0px;
+      .clear-button {
+        background-color: var(--color-cancel-button);
+        color: white;
+        margin-left: 10px;
+        &:hover{
+          background-color: var(--color-cancel-button-hover);
+        }
+      }
+      .save-button {
+        background-color: #207d7d;
+        color: white;
+        align-self: flex-end;
+        &:hover {
+          background-color:#2bbbca;
+        }
+      }
+    }
   }
-  #details .accordion-button{
-    margin-left: 10px;
-  }
-  #details .accordion{
+  .accordion {
     max-height: 550px;
     overflow: hidden;
     transition: max-height 0.5s ease-out;
   }
+}
+  /*when mdl-select boxes are added, these styles will be removed*/
   .small-select,
   .big-select{
     position: relative;
