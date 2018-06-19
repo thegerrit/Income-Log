@@ -1,8 +1,8 @@
 <template>
-  <div id="app-main">
-    <aside id="details" class="expanded">
+  <div id="content-area">
+    <aside class="expanded">
     </aside>
-    <main id="overview">
+    <main>
       <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
         <div class="mdl-tabs__tab-bar">
           <a href="#search-panel" class="mdl-tabs__tab">Búsqueda</a>
@@ -10,6 +10,7 @@
         </div>
       </div>
     </main>
+  </div>
 </template>
 
 <script>
@@ -28,32 +29,28 @@ export default {
   height: calc(100vh - var(--header-height));
   display: flex;
 }
-#details {
+aside {
   max-width: 500px;
+  .expanded {
+    width: var(--aside-width);
+    transition: width 0.3s;
+    overflow: auto;
+    & > * {
+      opacity: 1;
+      transition: opacity 0.3s ease 0.2s;
+    }
+  }
+  .collapsed {
+    width: 0;
+    transition: width 0.3s ease-in 0.2s;  /* wait for elements to fade in */
+    & > * {
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+  }
 }
 
-#details.expanded {
-  width: var(--aside-width);
-  transition: width 0.3s;
-  overflow: auto;
-}
-
-#details.expanded > * {
-  opacity: 1;
-  transition: opacity 0.3s ease 0.2s;
-}
-
-#details.collapsed {
-  width: 0;
-  transition: width 0.3s ease-in 0.2s;  /* wait for elements to fade in */
-}
-
-#details.collapsed > * {
-  opacity: 0;
-  transition: opacity 0.2s;
-}
-
-#overview {
+main {
   flex: 1;
   overflow: hidden;
 }
