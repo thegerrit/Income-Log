@@ -77,30 +77,39 @@
             </label>
           </div>
           <div class="row">
-            <div class="small-select">
-              <select onclick="darkenText()">
-                  <option value="0">Disciplina</option>
-                  <option value="1">Carrera de Fondo</option>
-                  <option value="2">Ciclismo</option>
-                  <option value="3">Triatlón</option>
-                </select>
+            <div class="mdl-textfield mdl-js-textfield getmdl-select">
+                <input type="text" value="" class="mdl-textfield__input" id="Deporte-select" readonly>
+                <input type="hidden" value="" name="Deporte-select">
+                <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+                <label for="Deporte-select" class="mdl-textfield__label">Disciplina</label>
+                <ul for="Deporte-select" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                    <li class="mdl-menu__item" data-val="CAR">Carrera de Fondo</li>
+                    <li class="mdl-menu__item" data-val="CIC">Ciclismo</li>
+                    <li class="mdl-menu__item" data-val="TRI">Triatlón</li>
+                </ul>
             </div>
 
-            <div class="small-select">
-              <select onclick="darkenText()">
-                  <option value="0">Paquete</option>
-                  <option value="1">Bronce</option>
-                  <option value="2">Plata</option>
-                </select>
+            <div class="mdl-textfield mdl-js-textfield getmdl-select">
+                <input type="text" value="" class="mdl-textfield__input" id="Paquete-select" readonly>
+                <input type="hidden" value="" name="Paquete-select">
+                <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+                <label for="Paquete-select" class="mdl-textfield__label">Paquete</label>
+                <ul for="Paquete-select" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                    <li class="mdl-menu__item" data-val="BRO">Bronce</li>
+                    <li class="mdl-menu__item" data-val="PLA">Plata</li>
+                </ul>
             </div>
           </div>
-          <div class="big-select" onclick="darkenText()">
-            <select>
-                <option value="0">Entrenador</option>
-                <option value="1">Entrenador1</option>
-                <option value="2">Entrenador2</option>
-                <option value="3">Entrenador3</option>
-              </select>
+          <div class="mdl-textfield mdl-js-textfield getmdl-select">
+              <input type="text" value="" class="mdl-textfield__input" id="Entrenador-select" readonly>
+              <input type="hidden" value="" name="Entrenador-select">
+              <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+              <label for="Entrenador-select" class="mdl-textfield__label">Entrenador</label>
+              <ul for="Entrenador-select" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                  <li class="mdl-menu__item" data-val="1">Entrenador1</li>
+                  <li class="mdl-menu__item" data-val="2">Entrenador2</li>
+                  <li class="mdl-menu__item" data-val="3">Entrenador3</li>
+              </ul>
           </div>
           <div class="save-or-clear">
             <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect save-button" title="Guardar atleta">
@@ -345,13 +354,18 @@
         <section class="mdl-tabs__panel" id="search-panel">
           <form action="#" class="content">
             <div class="flex-container">
-              <div class="small-select" id="flex-filter">
-                <span>Buscar atleta por </span>
-                <select onchange="showEntrenador(value)" onclick="darkenText()">
-                    <option value="0">Nombre</option>
-                    <option value="1">Entrenador</option>
-                    <option value="2">Patrocinador</option>
-                  </select>
+              <div id="flex-filter">
+                <div class="mdl-textfield mdl-js-textfield getmdl-select">
+                    <input type="text" value="" class="mdl-textfield__input" id="Buscar-por" readonly onchange="">
+                    <input type="hidden" value="" name="Buscar-por">
+                    <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+                    <label for="Buscar-por" class="mdl-textfield__label">Buscar atleta por</label>
+                    <ul for="Buscar-por" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                        <li class="mdl-menu__item" data-val="NOM">Nombre</li>
+                        <li class="mdl-menu__item" data-val="ENT">Entrenador</li>
+                        <li class="mdl-menu__item" data-val="PAT">Patrocinador</li>
+                    </ul>
+                </div>
               </div>
               <div class="flex-search">
                 <div id="buscar-atleta">
@@ -374,14 +388,16 @@
                 </button>
               </div>
 
-                <div class="small-select hidden" id="entrenador-select">
-                <select onclick="darkenText()">
-                    <option value="0">Seleccionar Entrenador</option>
-                    <option value="1">Entrenador1</option>
-                    <option value="2">Entrenador2</option>
-                    <option value="3">Entrenador3</option>
-                    <option value="4">Entrenador4</option>
-                  </select>
+                <div class="mdl-textfield mdl-js-textfield getmdl-select hidden">
+                    <input type="text" value="" class="mdl-textfield__input" id="Entrenador-bt" readonly>
+                    <input type="hidden" value="" name="Entrenador-bt">
+                    <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+                    <label for="Entrenador-bt" class="mdl-textfield__label">Entrenador</label>
+                    <ul for="Entrenador-bt" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                        <li class="mdl-menu__item" data-val="1">Entrenador1</li>
+                        <li class="mdl-menu__item" data-val="2">Entrenador2</li>
+                        <li class="mdl-menu__item" data-val="3">Entrenador3</li>
+                    </ul>
                 </div>
               </div>
             </div>
@@ -428,13 +444,16 @@
 
             <div class="filters">
               <div class="row">
-                <div class="small-select">
-                  <select onclick="darkenText()">
-                    <option value="0">Entrenador</option>
-                    <option value="1">Entrenador1</option>
-                    <option value="2">Entrenador2</option>
-                    <option value="3">Entrenador3</option>
-                  </select>
+                <div class="mdl-textfield mdl-js-textfield getmdl-select">
+                    <input type="text" value="" class="mdl-textfield__input" id="Entrenador-filter" readonly>
+                    <input type="hidden" value="" name="Entrenador-filter">
+                    <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+                    <label for="Entrenador-filter" class="mdl-textfield__label">Entrenador</label>
+                    <ul for="Entrenador-filter" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                        <li class="mdl-menu__item" data-val="1">Entrenador1</li>
+                        <li class="mdl-menu__item" data-val="2">Entrenador2</li>
+                        <li class="mdl-menu__item" data-val="3">Entrenador3</li>
+                    </ul>
                 </div>
                 <div class="inactive">
                   <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
@@ -451,73 +470,86 @@
               <div class="row">
                 <div class="start-date">
                   <span>Desde</span>
-                  <div class="small-select">
-                    <select onclick="darkenText()">
-                      <option value="0">Mes</option>
-                      <option value="1">Enero</option>
-                      <option value="2">Febrero</option>
-                      <option value="3">Marzo</option>
-                      <option value="4">Abril</option>
-                      <option value="5">Mayo</option>
-                      <option value="6">Junio</option>
-                      <option value="7">Julio</option>
-                      <option value="8">Agosto</option>
-                      <option value="9">Setiembre</option>
-                      <option value="10">Octubre</option>
-                      <option value="11">Noviembre</option>
-                      <option value="12">Diciembre</option>
-                    </select>
+                  <div class="mdl-textfield mdl-js-textfield getmdl-select">
+                      <input type="text" value="" class="mdl-textfield__input" id="desde-mes" readonly>
+                      <input type="hidden" value="" name="desde-mes">
+                      <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+                      <label for="desde-mes" class="mdl-textfield__label">Mes</label>
+                      <ul for="desde-mes" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                          <li class="mdl-menu__item" data-val="1">Enero</li>
+                          <li class="mdl-menu__item" data-val="2">Febrero</li>
+                          <li class="mdl-menu__item" data-val="3">Marzo</li>
+                          <li class="mdl-menu__item" data-val="4">Abril</li>
+                          <li class="mdl-menu__item" data-val="5">Mayo</li>
+                          <li class="mdl-menu__item" data-val="6">Junio</li>
+                          <li class="mdl-menu__item" data-val="7">Julio</li>
+                          <li class="mdl-menu__item" data-val="8">Agosto</li>
+                          <li class="mdl-menu__item" data-val="9">Setiembre</li>
+                          <li class="mdl-menu__item" data-val="10">Octubre</li>
+                          <li class="mdl-menu__item" data-val="11">Noviembre</li>
+                          <li class="mdl-menu__item" data-val="12">Diciembre</li>
+                      </ul>
                   </div>
-                  <div class="small-select">
-                    <select onclick="darkenText()">
-                      <option value="0">Año</option>
-                      <option value="2016">2016</option>
-                      <option value="2017">2017</option>
-                      <option value="2018">2018</option>
-                      <option value="2019">2019</option>
-                      <option value="2020">2020</option>
-                      <option value="2021">2021</option>
-                      <option value="2022">2022</option>
-                      <option value="2023">2023</option>
-                      <option value="2024">2024</option>
-                      <option value="2025">2025</option>
-                    </select>
+
+                  <div class="mdl-textfield mdl-js-textfield getmdl-select">
+                      <input type="text" value="" class="mdl-textfield__input" id="desde-año" readonly>
+                      <input type="hidden" value="" name="desde-año">
+                      <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+                      <label for="desde-año" class="mdl-textfield__label">Año</label>
+                      <ul for="desde-año" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                          <li class="mdl-menu__item" data-val="2016">2016</li>
+                          <li class="mdl-menu__item" data-val="2017">2017</li>
+                          <li class="mdl-menu__item" data-val="2018">2018</li>
+                          <li class="mdl-menu__item" data-val="2019">2019</li>
+                          <li class="mdl-menu__item" data-val="2020">2020</li>
+                          <li class="mdl-menu__item" data-val="2021">2021</li>
+                          <li class="mdl-menu__item" data-val="2022">2022</li>
+                          <li class="mdl-menu__item" data-val="2023">2023</li>
+                          <li class="mdl-menu__item" data-val="2024">2024</li>
+                          <li class="mdl-menu__item" data-val="2025">2025</li>
+                      </ul>
                   </div>
                 </div>
 
                 <div class="end-date">
                   <span>Hasta</span>
-                  <div class="small-select">
-                    <select onclick="darkenText()">
-                      <option value="0">Mes</option>
-                      <option value="1">Enero</option>
-                      <option value="2">Febrero</option>
-                      <option value="3">Marzo</option>
-                      <option value="4">Abril</option>
-                      <option value="5">Mayo</option>
-                      <option value="6">Junio</option>
-                      <option value="7">Julio</option>
-                      <option value="8">Agosto</option>
-                      <option value="9">Setiembre</option>
-                      <option value="10">Octubre</option>
-                      <option value="11">Noviembre</option>
-                      <option value="12">Diciembre</option>
-                    </select>
+                  <div class="mdl-textfield mdl-js-textfield getmdl-select">
+                      <input type="text" value="" class="mdl-textfield__input" id="hasta-mes" readonly>
+                      <input type="hidden" value="" name="hasta-mes">
+                      <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+                      <label for="hasta-mes" class="mdl-textfield__label">Mes</label>
+                      <ul for="hasta-mes" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                          <li class="mdl-menu__item" data-val="1">Enero</li>
+                          <li class="mdl-menu__item" data-val="2">Febrero</li>
+                          <li class="mdl-menu__item" data-val="3">Marzo</li>
+                          <li class="mdl-menu__item" data-val="4">Abril</li>
+                          <li class="mdl-menu__item" data-val="5">Mayo</li>
+                          <li class="mdl-menu__item" data-val="6">Junio</li>
+                          <li class="mdl-menu__item" data-val="7">Julio</li>
+                          <li class="mdl-menu__item" data-val="8">Agosto</li>
+                          <li class="mdl-menu__item" data-val="9">Setiembre</li>
+                          <li class="mdl-menu__item" data-val="10">Octubre</li>
+                          <li class="mdl-menu__item" data-val="11">Noviembre</li>
+                          <li class="mdl-menu__item" data-val="12">Diciembre</li>
+                      </ul>
                   </div>
-                  <div class="small-select">
-                    <select onclick="darkenText()">
-                      <option value="0">Año</option>
-                      <option value="2016">2016</option>
-                      <option value="2017">2017</option>
-                      <option value="2018">2018</option>
-                      <option value="2019">2019</option>
-                      <option value="2020">2020</option>
-                      <option value="2021">2021</option>
-                      <option value="2022">2022</option>
-                      <option value="2023">2023</option>
-                      <option value="2024">2024</option>
-                      <option value="2025">2025</option>
-                    </select>
+                  <div class="mdl-textfield mdl-js-textfield getmdl-select">
+                      <input type="text" value="" class="mdl-textfield__input" id="hasta-año" readonly>
+                      <input type="hidden" value="" name="hasta-año">
+                      <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+                      <label for="hasta-año" class="mdl-textfield__label">Año</label>
+                      <ul for="hasta-año" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                          <li class="mdl-menu__item" data-val="2016">2016</li>
+                          <li class="mdl-menu__item" data-val="2017">2017</li>
+                          <li class="mdl-menu__item" data-val="2018">2018</li>
+                          <li class="mdl-menu__item" data-val="2019">2019</li>
+                          <li class="mdl-menu__item" data-val="2020">2020</li>
+                          <li class="mdl-menu__item" data-val="2021">2021</li>
+                          <li class="mdl-menu__item" data-val="2022">2022</li>
+                          <li class="mdl-menu__item" data-val="2023">2023</li>
+                          <li class="mdl-menu__item" data-val="2024">2024</li>
+                          <li class="mdl-menu__item" data-val="2025">2025</li>
+                      </ul>
                   </div>
                 </div>
               </div>
