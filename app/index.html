@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
   <link rel="stylesheet" type="text/css" href="./lib/normalize.css">
   <link rel="stylesheet" type="text/css" href="./lib/material.min.css">
+  <link rel="stylesheet" type="text/css" href="./lib/getmdl-select.css">
   <link rel="stylesheet" type="text/css" href="./styles/variables.css">
   <link rel="stylesheet" type="text/css" href="./styles/base.css">
   <link rel="stylesheet" type="text/css" href="./styles/layout.css">
@@ -569,28 +570,18 @@
               </tr>
             </table>
           </div>
-          <div class="custom-select">
-            <button onfocus="selectMenu()" >
-              <span id="selected">Dropdown </span>
-              <i class="material-icons" style="float:right; align-self: center;">keyboard_arrow_down</i>
-            </button>
-            <div id="options" class="dropdown hidden">
-              <a onclick="chooseOption()"><option value="Option 1">Option 1</option></a>
-              <li value="Option 2">Option 2</li>
-              <li value="Option 3">Option 3</li>
-              <li value="Option 4">Option 4</li>
-            </div>
+
+          <div class="mdl-textfield mdl-js-textfield getmdl-select">
+              <input type="text" value="" class="mdl-textfield__input" id="sample2" readonly>
+              <input type="hidden" value="" name="sample2">
+              <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+              <label for="sample2" class="mdl-textfield__label">Country</label>
+              <ul for="sample2" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                  <li class="mdl-menu__item" data-val="DEU">Germany</li>
+                  <li class="mdl-menu__item" data-val="BLR">Belarus</li>
+                  <li class="mdl-menu__item" data-val="RUS">Russia</li>
+              </ul>
           </div>
-          <div class="mdl-textfield mdl-js-textfield getmdl-select is-upgraded" data-upgraded=",MaterialTextfield">
-    <input type="text" value="" class="mdl-textfield__input" id="sample1" readonly>
-    <input type="hidden" value="" name="sample1">
-    <label for="sample1" class="mdl-textfield__label">Country</label>
-    <ul for="sample1" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
-        <li class="mdl-menu__item" data-val="DEU">Germany</li>
-        <li class="mdl-menu__item" data-val="BLR">Belarus</li>
-        <li class="mdl-menu__item" data-val="RUS">Russia</li>
-    </ul>
-</div>
 
       <!--<form action="#">
         <div class="mdl-textfield mdl-js-textfield getmdl-select is-upgraded"
@@ -621,6 +612,7 @@
   </div>
 
   <script src="./lib/material.min.js" type="text/javascript"></script>
+  <script src="./lib/getmdl-select.js" type="text/javascript"></script>
   <script src="./scripts/main.js" type="text/javascript"></script>
   <script src="./scripts/accordion.js" type="text/javascript"></script>
 </body>
