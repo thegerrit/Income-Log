@@ -1,6 +1,8 @@
 <template>
   <div id="app">
     <AppHeader />
+    <ContentArea />
+    <AthleteForm />
     <img src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
@@ -8,12 +10,16 @@
 
 <script>
 import AppHeader from "./components/AppHeader.vue";
+import ContentArea from "./components/ContentArea.vue";
+import AthleteForm from "./components/AthleteForm.vue";
 import HelloWorld from "./components/HelloWorld.vue";
 
 export default {
   name: "app",
   components: {
     AppHeader,
+    ContentArea,
+    AthleteForm,
     HelloWorld
   }
 };
