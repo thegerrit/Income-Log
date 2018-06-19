@@ -289,7 +289,6 @@ section {
       margin-left:15%;
       height: 22px;
     }
-  }
   /* Not Shared Styles (end) */
   }
   .accordion {
