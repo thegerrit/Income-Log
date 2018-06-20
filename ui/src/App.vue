@@ -1,10 +1,7 @@
 <template>
   <div id="app">
     <AppHeader />
-    <ContentArea />
-    <AthleteForm />
-    <SponsorForm />
-    <PaymentForm />
+    <ContentArea></ContentArea>
     <img src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
@@ -13,9 +10,7 @@
 <script>
 import AppHeader from "./components/AppHeader.vue";
 import ContentArea from "./components/ContentArea.vue";
-import AthleteForm from "./components/AthleteForm.vue";
-import SponsorForm from "./components/SponsorForm.vue";
-import PaymentForm from "./components/PaymentForm.vue";
+
 import HelloWorld from "./components/HelloWorld.vue";
 
 export default {
@@ -23,9 +18,6 @@ export default {
   components: {
     AppHeader,
     ContentArea,
-    AthleteForm,
-    SponsorForm,
-    PaymentForm,
     HelloWorld
   }
 };

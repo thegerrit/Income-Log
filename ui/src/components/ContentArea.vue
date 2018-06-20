@@ -1,6 +1,9 @@
 <template>
   <div id="content-area">
     <aside class="expanded">
+      <AthleteForm></AthleteForm>
+      <SponsorForm></SponsorForm>
+      <PaymentForm></PaymentForm>
     </aside>
     <main>
       <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
@@ -14,10 +17,19 @@
 </template>
 
 <script>
+import AthleteForm from "./AthleteForm.vue";
+import SponsorForm from "./SponsorForm.vue";
+import PaymentForm from "./PaymentForm.vue";
+
 export default {
   name: "ContentArea",
   props: {
     msg: String
+  },
+  components: {
+    AthleteForm,
+    SponsorForm,
+    PaymentForm
   }
 };
 
@@ -31,6 +43,7 @@ export default {
 }
 aside {
   max-width: 500px;
+  height: 95%;
   .expanded {
     width: var(--aside-width);
     transition: width 0.3s;
