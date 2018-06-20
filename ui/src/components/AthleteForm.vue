@@ -39,30 +39,39 @@
         </label>
       </div>
       <div class="row">
-        <div class="small-select">
-          <select onclick="darkenText()">
-              <option value="0">Disciplina</option>
-              <option value="1">Carrera de Fondo</option>
-              <option value="2">Ciclismo</option>
-              <option value="3">Triatlón</option>
-            </select>
+        <div class="mdl-textfield mdl-js-textfield getmdl-select">
+            <input type="text" value="" class="mdl-textfield__input" id="Deporte-select" readonly>
+            <input type="hidden" value="" name="Deporte-select">
+            <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+            <label for="Deporte-select" class="mdl-textfield__label">Disciplina</label>
+            <ul for="Deporte-select" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                <li class="mdl-menu__item" data-val="CAR">Carrera de Fondo</li>
+                <li class="mdl-menu__item" data-val="CIC">Ciclismo</li>
+                <li class="mdl-menu__item" data-val="TRI">Triatlón</li>
+            </ul>
         </div>
 
-        <div class="small-select">
-          <select onclick="darkenText()">
-              <option value="0">Paquete</option>
-              <option value="1">Bronce</option>
-              <option value="2">Plata</option>
-            </select>
+        <div class="mdl-textfield mdl-js-textfield getmdl-select">
+            <input type="text" value="" class="mdl-textfield__input" id="Paquete-select" readonly>
+            <input type="hidden" value="" name="Paquete-select">
+            <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+            <label for="Paquete-select" class="mdl-textfield__label">Paquete</label>
+            <ul for="Paquete-select" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                <li class="mdl-menu__item" data-val="BRO">Bronce</li>
+                <li class="mdl-menu__item" data-val="PLA">Plata</li>
+            </ul>
         </div>
       </div>
-      <div class="big-select" onclick="darkenText()">
-        <select>
-            <option value="0">Entrenador</option>
-            <option value="1">Entrenador1</option>
-            <option value="2">Entrenador2</option>
-            <option value="3">Entrenador3</option>
-          </select>
+      <div class="mdl-textfield mdl-js-textfield getmdl-select">
+          <input type="text" value="" class="mdl-textfield__input" id="Entrenador-select" readonly>
+          <input type="hidden" value="" name="Entrenador-select">
+          <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+          <label for="Entrenador-select" class="mdl-textfield__label">Entrenador</label>
+          <ul for="Entrenador-select" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+              <li class="mdl-menu__item" data-val="1">Entrenador1</li>
+              <li class="mdl-menu__item" data-val="2">Entrenador2</li>
+              <li class="mdl-menu__item" data-val="3">Entrenador3</li>
+          </ul>
       </div>
       <div class="save-or-clear">
         <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect save-button" title="Guardar atleta">
@@ -152,12 +161,69 @@ section {
       }
     }
   }
+    /* Temporarily placed getmdl-select.css in style to override material.min.css (start)*/
+    /*.getmdl-select {
+      outline: none;
+      .mdl-textfield__input {
+        cursor: pointer;
+      }
+      .selected {
+        background-color: #ddd;
+      }
+    }
+  }
   .accordion {
     max-height: 550px;
     overflow: hidden;
     transition: max-height 0.5s ease-out;
   }
+}*/
+/* Temporarily placed getmdl-select.css in style to override material.min.css (start)*/
+/*.getmdl-select {
+  outline: none;
 }
+.getmdl-select .mdl-textfield__input {
+  cursor: pointer;
+}
+
+.getmdl-select .selected {
+  background-color: #ddd;
+}
+
+.getmdl-select .mdl-icon-toggle__label {
+  float: right;
+  margin-top: -30px;
+  color: rgba(0, 0, 0, 0.4);
+  transform: rotate(0);
+  transition: transform 0.3s;
+}
+
+.getmdl-select.is-focused .mdl-icon-toggle__label {
+  color: #3f51b5;
+  transform: rotate(180deg);
+}
+
+.getmdl-select .mdl-menu__container {
+  width: 100% !important;
+  margin-top: 2px;
+  .mdl-menu {
+    width: 100%;
+    .mdl-menu__item {
+      font-size: 16px;
+    }
+  }
+}
+
+.getmdl-select__fix-height .mdl-menu__container .mdl-menu {
+  overflow-y: auto;
+  max-height: 288px !important;
+}
+
+.getmdl-select__fix-height .mdl-menu.mdl-menu--top-left {
+  bottom: auto;
+  top: 0;
+}*/
+/* Temporarily placed getmdl-select.css in style to override material.min.css (end)*/
   /*TODO: when mdl-select boxes are added, these styles will be removed*/
   .small-select,
   .big-select{
@@ -206,4 +272,6 @@ section {
   #details .small-select + .small-select {
     float: right;
   }
+}
+
 </style>
