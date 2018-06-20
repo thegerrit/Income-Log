@@ -1,4 +1,3 @@
-/*This component is just for the layout.*/
 <template>
   <section class="mdl-tabs__panel is-active" id="reports-panel">
     <form class="controls">

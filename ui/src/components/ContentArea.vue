@@ -13,6 +13,7 @@
         </div>
       </div>
       <SearchPanel></SearchPanel>
+      <ResultsPanel></ResultsPanel>
     </main>
   </div>
 </template>
@@ -22,6 +23,7 @@ import AthleteForm from "./AthleteForm.vue";
 import SponsorForm from "./SponsorForm.vue";
 import PaymentForm from "./PaymentForm.vue";
 import SearchPanel from "./SearchPanel.vue";
+import ResultsPanel from "./ResultsPanel.vue";
 
 export default {
   name: "ContentArea",
@@ -32,7 +34,8 @@ export default {
     AthleteForm,
     SponsorForm,
     PaymentForm,
-    SearchPanel
+    SearchPanel,
+    ResultsPanel
   }
 };
 
