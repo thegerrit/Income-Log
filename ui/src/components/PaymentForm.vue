@@ -189,7 +189,6 @@ export default {
 /*Shared styles*/
 section {
   overflow: hidden;
-  box-shadow: 1px 0px 6px grey;
   header{
     background-color: var(--color-section-title);
     box-shadow: 0px 2px 4px grey;
