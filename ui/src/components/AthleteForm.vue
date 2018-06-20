@@ -1,5 +1,5 @@
 <template>
-  <section class="athlete">
+  <section class="athlete" id="vAthleteForm">
     <header>
       <button class="accordion-button mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect"  onclick="accordion()">
         <i class="material-icons">keyboard_arrow_down</i>
@@ -19,7 +19,7 @@
 
       <div class="row">
         <label class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="text" onkeypress="return onlyNumbers(event)">
+          <input class="mdl-textfield__input" type="text" onkeypress="return onlyNumbers(event)" v-model="Cedula">
           <label class="mdl-textfield__label">Cédula</label>
         </label>
         <label class="mdl-textfield mdl-js-textfield">
@@ -93,6 +93,13 @@ export default {
     msg: String
   }
 };
+/*var vAthleteForm = new Vue({
+  el: '#vAthleteForm',
+  data: {
+    Cedula: ''
+  }
+})*/
+/* BUG: adding this makes pago go blank*/
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
