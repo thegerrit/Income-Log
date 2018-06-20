@@ -52,6 +52,9 @@
   width: 85%;
 }
 
+#details .athlete .content {
+  padding-top: 0;
+}
 #details .save-or-clear{
   text-align: right;
   display: block;
@@ -65,7 +68,7 @@
 #details .save-or-clear .clear-button:hover{
   background-color: var(--color-cancel-button-hover);
 }
-#details .pat-checkboxes{ /*not a shared style */
+#details .pat-checkboxes{
   margin-top: 10px;
 }
 #details .accordion-button{

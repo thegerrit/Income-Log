@@ -12,6 +12,12 @@ button.mdl-button--icon {
   background-color: var(--color-section-title);
 }
 
+/*Select Menu*/
+.mdl-textfield ul {
+  max-height: 380px;
+  overflow-y:auto;
+}
+
 .hidden {
   /*display: none !important;*/
   max-height: 0px;
