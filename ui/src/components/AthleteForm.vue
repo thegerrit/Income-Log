@@ -161,69 +161,14 @@ section {
       }
     }
   }
-    /* Temporarily placed getmdl-select.css in style to override material.min.css (start)*/
-    /*.getmdl-select {
-      outline: none;
-      .mdl-textfield__input {
-        cursor: pointer;
-      }
-      .selected {
-        background-color: #ddd;
-      }
-    }
-  }
+
   .accordion {
     max-height: 550px;
     overflow: hidden;
     transition: max-height 0.5s ease-out;
   }
-}*/
-/* Temporarily placed getmdl-select.css in style to override material.min.css (start)*/
-/*.getmdl-select {
-  outline: none;
-}
-.getmdl-select .mdl-textfield__input {
-  cursor: pointer;
 }
 
-.getmdl-select .selected {
-  background-color: #ddd;
-}
-
-.getmdl-select .mdl-icon-toggle__label {
-  float: right;
-  margin-top: -30px;
-  color: rgba(0, 0, 0, 0.4);
-  transform: rotate(0);
-  transition: transform 0.3s;
-}
-
-.getmdl-select.is-focused .mdl-icon-toggle__label {
-  color: #3f51b5;
-  transform: rotate(180deg);
-}
-
-.getmdl-select .mdl-menu__container {
-  width: 100% !important;
-  margin-top: 2px;
-  .mdl-menu {
-    width: 100%;
-    .mdl-menu__item {
-      font-size: 16px;
-    }
-  }
-}
-
-.getmdl-select__fix-height .mdl-menu__container .mdl-menu {
-  overflow-y: auto;
-  max-height: 288px !important;
-}
-
-.getmdl-select__fix-height .mdl-menu.mdl-menu--top-left {
-  bottom: auto;
-  top: 0;
-}*/
-/* Temporarily placed getmdl-select.css in style to override material.min.css (end)*/
   /*TODO: when mdl-select boxes are added, these styles will be removed*/
   .small-select,
   .big-select{
