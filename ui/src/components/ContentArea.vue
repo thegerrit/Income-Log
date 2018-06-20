@@ -45,6 +45,7 @@ aside {
   max-width: 500px;
   height: calc(100vh - var(--header-height));
   overflow: auto;
+  box-shadow: 1px 0px 6px grey;
   .expanded {
     width: var(--aside-width);
     transition: width 0.3s;
