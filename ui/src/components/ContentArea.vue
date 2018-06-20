@@ -43,7 +43,8 @@ export default {
 }
 aside {
   max-width: 500px;
-  height: 95%;
+  height: calc(100vh - var(--header-height));
+  overflow: auto;
   .expanded {
     width: var(--aside-width);
     transition: width 0.3s;

@@ -40,6 +40,9 @@ export default {
 
   --tg-border: #76efef;
 }
+#app {
+  height: calc(100vh - var(--header-height));
+}
 
 body {
   color: #5b5b5b;

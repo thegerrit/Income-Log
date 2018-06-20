@@ -292,7 +292,7 @@ section {
   /* Not Shared Styles (end) */
   }
   .accordion {
-    max-height: 550px;
+    max-height: 600px;
     overflow: hidden;
     transition: max-height 0.5s ease-out;
   }
