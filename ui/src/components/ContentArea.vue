@@ -12,6 +12,7 @@
           <a href="#reports-panel" class="mdl-tabs__tab is-active">Reportes</a>
         </div>
       </div>
+      <SearchPanel></SearchPanel>
     </main>
   </div>
 </template>
@@ -20,6 +21,7 @@
 import AthleteForm from "./AthleteForm.vue";
 import SponsorForm from "./SponsorForm.vue";
 import PaymentForm from "./PaymentForm.vue";
+import SearchPanel from "./SearchPanel.vue";
 
 export default {
   name: "ContentArea",
@@ -29,7 +31,8 @@ export default {
   components: {
     AthleteForm,
     SponsorForm,
-    PaymentForm
+    PaymentForm,
+    SearchPanel
   }
 };
 
@@ -69,4 +72,5 @@ main {
   flex: 1;
   overflow: hidden;
 }
+
 </style>
