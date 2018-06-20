@@ -37,7 +37,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-#app-main {
+#content-area {
   height: calc(100vh - var(--header-height));
   display: flex;
 }
