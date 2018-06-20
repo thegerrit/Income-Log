@@ -158,7 +158,7 @@ section {
     transition: max-height 0.5s ease-out;
   }
 }
-  /*when mdl-select boxes are added, these styles will be removed*/
+  /*TODO: when mdl-select boxes are added, these styles will be removed*/
   .small-select,
   .big-select{
     position: relative;
