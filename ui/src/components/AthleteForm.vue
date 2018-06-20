@@ -217,6 +217,6 @@ section {
   #details .small-select + .small-select {
     float: right;
   }
-}
+
 
 </style>
