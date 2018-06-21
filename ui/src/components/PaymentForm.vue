@@ -24,7 +24,7 @@
         <th>
           <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_inactivo">
               <span class="mdl-checkbox__label">Inactivo</span>
-              <input type="checkbox" id="c_inactivo" class="mdl-checkbox__input"> <!-- TODO: add  v-on="checkAll" once you figure event handlers-->
+              <input type="checkbox" id="c_inactivo" class="mdl-checkbox__input"> <!-- TODO: add  v-on:change="checkAll" once you figure event handlers-->
             </label>
         </th>
       </tr>
@@ -198,13 +198,13 @@ export default {
       dicMonto: ''
     }
   }/*,
-  methods () {
+  methods: {
     checkAll: {
-      if (meses == [1,2,3,4,5,6,7,8,9,10,11,12]){
-        meses = [];
+      if (this.meses == [1,2,3,4,5,6,7,8,9,10,11,12]){
+        this.meses = [];
       }
       else {
-        meses = [1,2,3,4,5,6,7,8,9,10,11,12];
+        this.meses = [1,2,3,4,5,6,7,8,9,10,11,12];
       }
     }
   }*/
