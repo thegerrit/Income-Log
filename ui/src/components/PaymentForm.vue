@@ -30,133 +30,134 @@
       </tr>
       <tr>
         <td><input type="date" class="i_date"></td>
-        <td><input type="text" class="i_text"></td>
-        <td><span class="i_diferencia">7.000</span></td>
+        <td><input type="text" class="i_text" v-model="eneMonto"></td>
+        <td><span class="i_diferencia">7.000<!--TODO: replace this something like: {{eneMonto}} - Precio_Paquete --></span></td>
         <td>
           <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_enero" name="l_mes">
               <span class="mdl-checkbox__label">Enero</span>
-              <input type="checkbox" id="c_enero" class="mdl-checkbox__input" name="c_mes">
+              <!--set month values to numbers to match their values in the database-->
+              <input type="checkbox" id="c_enero" class="mdl-checkbox__input" name="c_mes" value="1" v-model="meses">
             </label>
         </td>
       </tr>
       <tr>
         <td><input type="date" class="i_date"></td>
-        <td><input type="text" class="i_text"></td>
+        <td><input type="text" class="i_text" v-model="febMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
           <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_febrero" name="l_mes">
               <span class="mdl-checkbox__label">Febrero</span>
-              <input type="checkbox" id="c_febrero" class="mdl-checkbox__input" name="c_mes">
+              <input type="checkbox" id="c_febrero" class="mdl-checkbox__input" name="c_mes" value="2" v-model="meses">
             </label>
         </td>
       </tr>
       <tr>
         <td><input type="date" class="i_date"></td>
-        <td><input type="text" class="i_text"></td>
+        <td><input type="text" class="i_text" v-model="marMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
           <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_marzo" name="l_mes">
               <span class="mdl-checkbox__label">Marzo</span>
-              <input type="checkbox" id="c_marzo" class="mdl-checkbox__input" name="c_mes">
+              <input type="checkbox" id="c_marzo" class="mdl-checkbox__input" name="c_mes" value="3" v-model="meses">
             </label>
         </td>
       </tr>
       <tr>
         <td><input type="date" class="i_date"></td>
-        <td><input type="text" class="i_text"></td>
+        <td><input type="text" class="i_text" v-model="abrMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
           <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_abril" name="l_mes">
               <span class="mdl-checkbox__label">Abril</span>
-              <input type="checkbox" id="c_abril" class="mdl-checkbox__input" name="c_mes">
+              <input type="checkbox" id="c_abril" class="mdl-checkbox__input" name="c_mes" value="4" v-model="meses">
             </label>
         </td>
       </tr>
       <tr>
         <td><input type="date" class="i_date"></td>
-        <td><input type="text" class="i_text"></td>
+        <td><input type="text" class="i_text" v-model="mayMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
           <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_mayo" name="l_mes">
               <span class="mdl-checkbox__label">Mayo</span>
-              <input type="checkbox" id="c_mayo" class="mdl-checkbox__input" name="c_mes">
+              <input type="checkbox" id="c_mayo" class="mdl-checkbox__input" name="c_mes" value="5" v-model="meses">
             </label>
         </td>
       </tr>
       <tr>
         <td><input type="date" class="i_date"></td>
-        <td><input type="text" class="i_text"></td>
+        <td><input type="text" class="i_text" v-model="junMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
           <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_junio" name="l_mes">
               <span class="mdl-checkbox__label">Junio</span>
-              <input type="checkbox" id="c_junio" class="mdl-checkbox__input" name="c_mes">
+              <input type="checkbox" id="c_junio" class="mdl-checkbox__input" name="c_mes" value="6" v-model="meses">
             </label>
         </td>
       </tr>
       <tr>
         <td><input type="date" class="i_date"></td>
-        <td><input type="text" class="i_text"></td>
+        <td><input type="text" class="i_text" v-model="julMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
           <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_julio" name="l_mes">
               <span class="mdl-checkbox__label">Julio</span>
-              <input type="checkbox" id="c_julio" class="mdl-checkbox__input" name="c_mes">
+              <input type="checkbox" id="c_julio" class="mdl-checkbox__input" name="c_mes" value="7" v-model="meses">
             </label>
         </td>
       </tr>
       <tr>
         <td><input type="date" class="i_date"></td>
-        <td><input type="text" class="i_text"></td>
+        <td><input type="text" class="i_text" v-model="agoMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
           <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_agosto" name="l_mes">
               <span class="mdl-checkbox__label">Agosto</span>
-              <input type="checkbox" id="c_agosto" class="mdl-checkbox__input" name="c_mes">
+              <input type="checkbox" id="c_agosto" class="mdl-checkbox__input" name="c_mes" value="8" v-model="meses">
             </label>
         </td>
       </tr>
       <tr>
         <td><input type="date" class="i_date"></td>
-        <td><input type="text" class="i_text"></td>
+        <td><input type="text" class="i_text" v-model="setMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
           <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_setiembre" name="l_mes">
               <span class="mdl-checkbox__label">Setiembre</span>
-              <input type="checkbox" id="c_setiembre" class="mdl-checkbox__input" name="c_mes">
+              <input type="checkbox" id="c_setiembre" class="mdl-checkbox__input" name="c_mes" value="9" v-model="meses">
             </label>
         </td>
       </tr>
       <tr>
         <td><input type="date" class="i_date"></td>
-        <td><input type="text" class="i_text"></td>
+        <td><input type="text" class="i_text" v-model="octMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
           <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_octubre" name="l_mes">
               <span class="mdl-checkbox__label">Octubre</span>
-              <input type="checkbox" id="c_octubre" class="mdl-checkbox__input" name="c_mes">
+              <input type="checkbox" id="c_octubre" class="mdl-checkbox__input" name="c_mes" value="10" v-model="meses">
             </label>
         </td>
       </tr>
       <tr>
         <td><input type="date" class="i_date"></td>
-        <td><input type="text" class="i_text"></td>
+        <td><input type="text" class="i_text" v-model="novMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
           <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_noviembre" name="l_mes">
               <span class="mdl-checkbox__label">Noviembre</span>
-              <input type="checkbox" id="c_noviembre" class="mdl-checkbox__input" name="c_mes">
+              <input type="checkbox" id="c_noviembre" class="mdl-checkbox__input" name="c_mes" value="11" v-model="meses">
             </label>
         </td>
       </tr>
       <tr>
         <td><input type="date" class="i_date"></td>
-        <td><input type="text" class="i_text"></td>
+        <td><input type="text" class="i_text" v-model="dicMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
           <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_diciembre" name="l_mes">
               <span class="mdl-checkbox__label">Diciembre</span>
-              <input type="checkbox" id="c_diciembre" class="mdl-checkbox__input" name="c_mes">
+              <input type="checkbox" id="c_diciembre" class="mdl-checkbox__input" name="c_mes" value="12" v-model="meses">
             </label>
         </td>
       </tr>
@@ -179,6 +180,23 @@ export default {
   name: "PaymentForm",
   props: {
     msg: String
+  },
+  data () {
+    return {
+      meses: [],
+      eneMonto: '',
+      febMonto: '',
+      marMonto: '',
+      abrMonto: '',
+      mayMonto: '',
+      junMonto: '',
+      julMonto: '',
+      agoMonto: '',
+      setMonto: '',
+      octMonto: '',
+      novMonto: '',
+      dicMonto: ''
+    }
   }
 };
 
