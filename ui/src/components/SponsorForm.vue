@@ -16,21 +16,21 @@
     <form action="#" class="content">
       <div class="pat-checkboxes">
       <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
-        <input type="radio" class="mdl-radio__button" name="patrocinador" value="1">
+        <input type="radio" class="mdl-radio__button" name="patrocinador" value="1" v-model="tipoPat">
         <span class="mdl-radio__label">Organización</span>
       </label>
       <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
-        <input type="radio" class="mdl-radio__button" name="patrocinador" value="2">
+        <input type="radio" class="mdl-radio__button" name="patrocinador" value="2" v-model="tipoPat">
         <span class="mdl-radio__label">Individuo</span>
       </label>
     </div>
 
       <div class="mdl-textfield mdl-js-textfield">
-        <input class="mdl-textfield__input" type="text">
+        <input class="mdl-textfield__input" type="text" v-model="Nombre">
         <label class="mdl-textfield__label">Nombre</label>
       </div>
       <div class="mdl-textfield mdl-js-textfield">
-        <input class="mdl-textfield__input" type="text">
+        <input class="mdl-textfield__input" type="text" v-model="Correo">
         <label class="mdl-textfield__label">Correo Electrónico</label>
       </div>
     <div class="save-or-clear">
@@ -53,6 +53,13 @@ export default {
   name: "SponsorForm",
   props: {
     msg: String
+  },
+  data () {
+    return {
+      Nombre: '',
+      Correo: '',
+      tipoPat: ''
+    }
   }
 };
 
