@@ -132,55 +132,15 @@
         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary">Generar Reporte</button>
       </div>
     </form>
-
-    <div class="table-container">
-      <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
-        <tr>
-          <th>Apellidos</th>
-          <th>Nombre</th>
-          <th>Cédula</th>
-          <th>Email</th>
-          <th>Patrocinador_nombre</th>
-          <th>Organizac</th>
-          <th>Patrocinador_email</th>
-          <th>Deporte</th>
-          <th>Paquete</th>
-          <th>Entrenador_apellidos</th>
-          <th>Entrenador_nombre</th>
-        </tr>
-        <tr class="odd_row">
-          <td>Alexander</td>
-          <td>Jason</td>
-          <td>567891234</td>
-          <td>jason@sample</td>
-          <td>Cobie Smolders</td>
-          <td>false</td>
-          <td>cobie@sample.com</td>
-          <td>Carrera de Fondo</td>
-          <td>Bronce</td>
-          <td>Cox</td>
-          <td>Courtney</td>
-        </tr>
-        <tr class="even_row">
-          <td>David</td>
-          <td>Larry</td>
-          <td>345678912</td>
-          <td>larry@sample</td>
-          <td>How I Met Your Mother</td>
-          <td>true</td>
-          <td>HIMYM@sample.com</td>
-          <td>Carrera de Fondo</td>
-          <td>Plata</td>
-          <td>Aniston</td>
-          <td>Jennifer</td>
-        </tr>
-      </table>
-    </div>
+    <DataTable />
   </section>
 </template>
 <script>
 export default {
   name: "ResultsPanel",
+  components: {
+    DataTable,
+  },
   props: {
     msg: String
   },
@@ -190,8 +150,9 @@ export default {
       inactivos: false,
       retirados: false
     }
-  }
+  },
 };
+import DataTable from "./DataTable.vue";
 
 </script>
 
