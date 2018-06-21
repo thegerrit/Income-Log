@@ -8,12 +8,12 @@
     <main>
       <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
         <div class="mdl-tabs__tab-bar">
-          <a href="#search-panel" class="mdl-tabs__tab">Búsqueda</a>
-          <a href="#reports-panel" class="mdl-tabs__tab is-active">Reportes</a>
+          <a href="#search-panel" class="mdl-tabs__tab">Búsqueda</a> <!--v-on:click="panel2=true"-->
+          <a href="#reports-panel" class="mdl-tabs__tab is-active">Reportes</a>  <!--v-on:click="panel2=false"-->
         </div>
       </div>
-      <SearchPanel></SearchPanel>
-      <ResultsPanel></ResultsPanel>
+      <SearchPanel v-if="Panel2"></SearchPanel>
+      <ResultsPanel v-else></ResultsPanel>
     </main>
   </div>
 </template>
@@ -36,6 +36,11 @@ export default {
     PaymentForm,
     SearchPanel,
     ResultsPanel
+  },
+  data () {
+    return {
+      panel2: false
+    }
   }
 };
 
