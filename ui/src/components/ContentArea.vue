@@ -1,6 +1,6 @@
 <template>
   <div id="content-area">
-    <aside class="expanded">
+    <aside class="expanded" id="details">
       <AthleteForm></AthleteForm>
       <SponsorForm></SponsorForm>
       <PaymentForm></PaymentForm>
@@ -57,23 +57,7 @@ aside {
   height: calc(100vh - var(--header-height));
   overflow: auto;
   box-shadow: 1px 0px 6px grey;
-  .expanded {
-    width: var(--aside-width);
-    transition: width 0.3s;
-    overflow: auto;
-    & > * {
-      opacity: 1;
-      transition: opacity 0.3s ease 0.2s;
-    }
-  }
-  .collapsed {
-    width: 0;
-    transition: width 0.3s ease-in 0.2s;  /* wait for elements to fade in */
-    & > * {
-      opacity: 0;
-      transition: opacity 0.2s;
-    }
-  }
+  /* expanded and collapsed are defined styled in App.vue */
 }
 
 main {
