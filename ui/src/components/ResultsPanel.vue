@@ -167,6 +167,7 @@ import DataTable from "./DataTable.vue";
       '.               report-actions';
     justify-content: center;
     .report-type {
+      min-width: 170px;
       grid-area: report-type;
       label {
         display: block;
