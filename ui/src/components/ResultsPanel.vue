@@ -3,15 +3,15 @@
     <form class="controls">
       <div class="report-type">
         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect block">
-          <input type="radio" class="mdl-radio__button" name="report-type" value="1" checked>
+          <input type="radio" class="mdl-radio__button" name="report-type" value="1" v-model="atletaFiltros">
           <span class="mdl-radio__label">Todos los atletas</span>
         </label>
         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect block">
-          <input type="radio" class="mdl-radio__button" name="report-type" value="1">
+          <input type="radio" class="mdl-radio__button" name="report-type" value="2" v-model="atletaFiltros">
           <span class="mdl-radio__label">Atletas al día</span>
         </label>
         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect block">
-          <input type="radio" class="mdl-radio__button" name="report-type" value="1">
+          <input type="radio" class="mdl-radio__button" name="report-type" value="3" v-model="atletaFiltros">
           <span class="mdl-radio__label">Atletas morosos</span>
         </label>
       </div>
@@ -31,11 +31,11 @@
           </div>
           <div class="inactive">
             <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-              <input type="checkbox" class="mdl-checkbox__input">
+              <input type="checkbox" class="mdl-checkbox__input" v-model="inactivos">
               <span class="mdl-checkbox__label">Incluir Inactivos</span>
             </label>
             <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-              <input type="checkbox" class="mdl-checkbox__input">
+              <input type="checkbox" class="mdl-checkbox__input" v-model="retirados">
               <span class="mdl-checkbox__label">Incluir Retirados</span>
             </label>
           </div>
@@ -183,6 +183,13 @@ export default {
   name: "ResultsPanel",
   props: {
     msg: String
+  },
+  data () {
+    return {
+      atletaFiltros: '1',
+      inactivos: false,
+      retirados: false
+    }
   }
 };
 
