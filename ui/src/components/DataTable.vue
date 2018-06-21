@@ -70,7 +70,6 @@ export default {
 
 
 <style scoped lang="scss">
-  /* TODO: add max-height to container once ui is complete*/
   .table-container{
     width: 96%;
     overflow: auto;
@@ -102,5 +101,6 @@ export default {
     box-shadow: 2px 2px 4px #2196f3;
     overflow-x: auto;
     padding: 0;
+    max-height: 56vh;
   }
 </style>
