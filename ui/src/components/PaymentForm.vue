@@ -1,7 +1,7 @@
 <template>
   <section>
     <header>
-      <button class="accordion-button mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect"  onclick="accordion()">
+      <button class="accordion-button mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect" v-on:click="accordion">
         <i class="material-icons">keyboard_arrow_down</i>
       </button>
       <h3>PAGO</h3>
@@ -197,9 +197,18 @@ export default {
       novMonto: '',
       dicMonto: ''
     }
-  }/*,
+  },
   methods: {
-    checkAll: {
+    accordion: function () {
+      var panel= event.target.parentElement.parentElement.nextElementSibling;
+      if (panel.style.maxHeight !== "0px"){
+        panel.style.maxHeight = 0;
+      }
+      else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    },
+    checkAll: function () {
       if (this.meses == [1,2,3,4,5,6,7,8,9,10,11,12]){
         this.meses = [];
       }
@@ -207,7 +216,7 @@ export default {
         this.meses = [1,2,3,4,5,6,7,8,9,10,11,12];
       }
     }
-  }*/
+  }
 };
 
 </script>

@@ -1,7 +1,7 @@
 <template>
   <section>
     <header>
-      <button class="accordion-button mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect"  onclick="accordion()">
+      <button class="accordion-button mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect" v-on:click="accordion">
         <i class="material-icons">keyboard_arrow_down</i>
       </button>
       <h3>Sponsor</h3>
@@ -59,6 +59,17 @@ export default {
       Nombre: '',
       Correo: '',
       tipoPat: ''
+    }
+  },
+  methods: {
+    accordion: function () {
+      var panel= event.target.parentElement.parentElement.nextElementSibling;
+      if (panel.style.maxHeight !== "0px"){
+        panel.style.maxHeight = 0;
+      }
+      else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
     }
   }
 };
