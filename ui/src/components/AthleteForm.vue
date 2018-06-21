@@ -23,18 +23,18 @@
           <label class="mdl-textfield__label">Cédula</label>
         </label>
         <label class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="text">
+          <input class="mdl-textfield__input" type="text" v-model="Nombre">
           <label class="mdl-textfield__label">Nombre</label>
         </label>
       </div>
 
       <div class="row">
         <label class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="text">
+          <input class="mdl-textfield__input" type="text" v-model="Apellidos">
           <label class="mdl-textfield__label">Apellidos</label>
         </label>
         <label class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="text">
+          <input class="mdl-textfield__input" type="text" v-model="Correo">
           <label class="mdl-textfield__label">Correo Electrónico</label>
         </label>
       </div>
@@ -87,18 +87,21 @@
 </template>
 
 <script>
+import Vue from "vue";
 export default {
   name: "AthleteForm",
   props: {
     msg: String
+  },
+  data () {
+    return {
+      Cedula: '',
+      Nombre: '',
+      Apellidos: '',
+      Correo: ''
+    }
   }
-};
-/*var vAthleteForm = new Vue({
-  el: '#vAthleteForm',
-  data: {
-    Cedula: ''
-  }
-})*/
+}
 /* BUG: adding this makes pago go blank*/
 </script>
 
