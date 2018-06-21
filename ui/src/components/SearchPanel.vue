@@ -18,7 +18,7 @@
         <div class="flex-search">
           <div id="buscar-atleta">
           <label class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text">
+            <input class="mdl-textfield__input" type="text" v-model="buscarAtleta">
             <span class="mdl-textfield__label">Buscar Atleta</span>
             </label>
           <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect" title="Buscar">
@@ -28,7 +28,7 @@
 
           <div id="buscar-patrocinador" class="hidden">
           <label class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text">
+            <input class="mdl-textfield__input" type="text" v-model="buscarPatrocinador">
             <span class="mdl-textfield__label" >Buscar Patrocinador</span>
             </label>
           <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect" title="Buscar">
@@ -80,6 +80,13 @@ export default {
   name: "SearchPanel",
   props: {
     msg: String
+  },
+  data () {
+    return {
+      buscarAtleta: '',
+      buscarPatrocinador: '',
+
+    }
   }
 };
 
