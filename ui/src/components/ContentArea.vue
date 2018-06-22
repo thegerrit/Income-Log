@@ -8,11 +8,11 @@
     <main>
       <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
         <div class="mdl-tabs__tab-bar">
-          <a href="#search-panel" class="mdl-tabs__tab">Búsqueda</a> <!--v-on:click="panel2=true"-->
-          <a href="#reports-panel" class="mdl-tabs__tab is-active">Reportes</a>  <!--v-on:click="panel2=false"-->
+          <a href="#search-panel" class="mdl-tabs__tab" v-on:click="panel2=true">Búsqueda</a> <!--v-on:click="panel2=true"-->
+          <a href="#reports-panel" class="mdl-tabs__tab is-active" v-on:click="panel2=false">Reportes</a>  <!--v-on:click="panel2=false"-->
         </div>
       </div>
-      <SearchPanel v-if="Panel2"></SearchPanel>
+      <SearchPanel v-if="panel2"></SearchPanel>
       <ResultsPanel v-else></ResultsPanel>
     </main>
   </div>
