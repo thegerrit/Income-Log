@@ -40,23 +40,23 @@
       </div>
 
         <div>
-          <select>
-            <option>Deporte</option>
+          <select value="" v-model="vdeporte">
+            <option disabled>Deporte</option>
             <option>Carrera de Fondo</option>
             <option>Ciclismo</option>
             <option>Triatlón</option>
           </select>
         </div>
         <div>
-          <select>
-            <option>Paquete</option>
+          <select value="" v-model="vpaquete">
+            <option disabled>Paquete</option>
             <option>Bronce</option>
             <option>Plata</option>
           </select>
         </div>
         <div>
-          <select>
-            <option>Entrenador</option>
+          <select value="" v-model="ventrenador">
+            <option disabled>Entrenador</option>
             <option>Entrenador1</option>
             <option>Entrenador2</option>
             <option>Entrenador3</option>
@@ -122,7 +122,10 @@ export default {
       Cedula: '',
       Nombre: '',
       Apellidos: '',
-      Correo: ''
+      Correo: '',
+      vdeporte: '',
+      vpaquete: '',
+      ventrenador: ''
     }
   },
   methods: {
