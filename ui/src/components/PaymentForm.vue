@@ -22,9 +22,9 @@
         <th> Monto</th>
         <th> Diferencia</th>
         <th>
-          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_inactivo">
-              <span class="mdl-checkbox__label">Inactivo</span>
-              <input type="checkbox" id="c_inactivo" class="mdl-checkbox__input"> <!-- TODO: add  v-on:change="checkAll" once you figure event handlers-->
+          <label for="c_inactivo">
+              <span>Inactivo</span>
+              <input type="checkbox" id="c_inactivo"> <!-- TODO: add  v-on:change="checkAll" once you figure event handlers-->
             </label>
         </th>
       </tr>
@@ -33,10 +33,10 @@
         <td><input type="text" class="i_text" v-model="eneMonto"></td>
         <td><span class="i_diferencia">7.000<!--TODO: replace this something like: {{eneMonto}} - Precio_Paquete --></span></td>
         <td>
-          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_enero" name="l_mes">
-              <span class="mdl-checkbox__label">Enero</span>
+          <label for="c_enero" name="l_mes">
+              <span>Enero</span>
               <!--set month values to numbers to match their values in the database-->
-              <input type="checkbox" id="c_enero" class="mdl-checkbox__input" name="c_mes" value="1" v-model="meses">
+              <input type="checkbox" id="c_enero" name="c_mes" value="1" v-model="meses">
             </label>
         </td>
       </tr>
@@ -45,9 +45,9 @@
         <td><input type="text" class="i_text" v-model="febMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
-          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_febrero" name="l_mes">
-              <span class="mdl-checkbox__label">Febrero</span>
-              <input type="checkbox" id="c_febrero" class="mdl-checkbox__input" name="c_mes" value="2" v-model="meses">
+          <label for="c_febrero" name="l_mes">
+              <span>Febrero</span>
+              <input type="checkbox" id="c_febrero" name="c_mes" value="2" v-model="meses">
             </label>
         </td>
       </tr>
@@ -56,9 +56,9 @@
         <td><input type="text" class="i_text" v-model="marMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
-          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_marzo" name="l_mes">
-              <span class="mdl-checkbox__label">Marzo</span>
-              <input type="checkbox" id="c_marzo" class="mdl-checkbox__input" name="c_mes" value="3" v-model="meses">
+          <label for="c_marzo" name="l_mes">
+              <span>Marzo</span>
+              <input type="checkbox" id="c_marzo" name="c_mes" value="3" v-model="meses">
             </label>
         </td>
       </tr>
@@ -67,9 +67,9 @@
         <td><input type="text" class="i_text" v-model="abrMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
-          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_abril" name="l_mes">
-              <span class="mdl-checkbox__label">Abril</span>
-              <input type="checkbox" id="c_abril" class="mdl-checkbox__input" name="c_mes" value="4" v-model="meses">
+          <label for="c_abril" name="l_mes">
+              <span>Abril</span>
+              <input type="checkbox" id="c_abril" name="c_mes" value="4" v-model="meses">
             </label>
         </td>
       </tr>
@@ -78,9 +78,9 @@
         <td><input type="text" class="i_text" v-model="mayMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
-          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_mayo" name="l_mes">
-              <span class="mdl-checkbox__label">Mayo</span>
-              <input type="checkbox" id="c_mayo" class="mdl-checkbox__input" name="c_mes" value="5" v-model="meses">
+          <label for="c_mayo" name="l_mes">
+              <span>Mayo</span>
+              <input type="checkbox" id="c_mayo" name="c_mes" value="5" v-model="meses">
             </label>
         </td>
       </tr>
@@ -89,9 +89,9 @@
         <td><input type="text" class="i_text" v-model="junMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
-          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_junio" name="l_mes">
-              <span class="mdl-checkbox__label">Junio</span>
-              <input type="checkbox" id="c_junio" class="mdl-checkbox__input" name="c_mes" value="6" v-model="meses">
+          <label for="c_junio" name="l_mes">
+              <span>Junio</span>
+              <input type="checkbox" id="c_junio" name="c_mes" value="6" v-model="meses">
             </label>
         </td>
       </tr>
@@ -100,9 +100,9 @@
         <td><input type="text" class="i_text" v-model="julMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
-          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_julio" name="l_mes">
-              <span class="mdl-checkbox__label">Julio</span>
-              <input type="checkbox" id="c_julio" class="mdl-checkbox__input" name="c_mes" value="7" v-model="meses">
+          <label for="c_julio" name="l_mes">
+              <span>Julio</span>
+              <input type="checkbox" id="c_julio" name="c_mes" value="7" v-model="meses">
             </label>
         </td>
       </tr>
@@ -111,9 +111,9 @@
         <td><input type="text" class="i_text" v-model="agoMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
-          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_agosto" name="l_mes">
-              <span class="mdl-checkbox__label">Agosto</span>
-              <input type="checkbox" id="c_agosto" class="mdl-checkbox__input" name="c_mes" value="8" v-model="meses">
+          <label for="c_agosto" name="l_mes">
+              <span>Agosto</span>
+              <input type="checkbox" id="c_agosto" name="c_mes" value="8" v-model="meses">
             </label>
         </td>
       </tr>
@@ -122,9 +122,9 @@
         <td><input type="text" class="i_text" v-model="setMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
-          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_setiembre" name="l_mes">
-              <span class="mdl-checkbox__label">Setiembre</span>
-              <input type="checkbox" id="c_setiembre" class="mdl-checkbox__input" name="c_mes" value="9" v-model="meses">
+          <label for="c_setiembre" name="l_mes">
+              <span>Setiembre</span>
+              <input type="checkbox" id="c_setiembre" name="c_mes" value="9" v-model="meses">
             </label>
         </td>
       </tr>
@@ -133,9 +133,9 @@
         <td><input type="text" class="i_text" v-model="octMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
-          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_octubre" name="l_mes">
-              <span class="mdl-checkbox__label">Octubre</span>
-              <input type="checkbox" id="c_octubre" class="mdl-checkbox__input" name="c_mes" value="10" v-model="meses">
+          <label for="c_octubre" name="l_mes">
+              <span>Octubre</span>
+              <input type="checkbox" id="c_octubre" name="c_mes" value="10" v-model="meses">
             </label>
         </td>
       </tr>
@@ -144,9 +144,9 @@
         <td><input type="text" class="i_text" v-model="novMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
-          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_noviembre" name="l_mes">
-              <span class="mdl-checkbox__label">Noviembre</span>
-              <input type="checkbox" id="c_noviembre" class="mdl-checkbox__input" name="c_mes" value="11" v-model="meses">
+          <label for="c_noviembre" name="l_mes">
+              <span>Noviembre</span>
+              <input type="checkbox" id="c_noviembre" name="c_mes" value="11" v-model="meses">
             </label>
         </td>
       </tr>
@@ -155,9 +155,9 @@
         <td><input type="text" class="i_text" v-model="dicMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
-          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="c_diciembre" name="l_mes">
-              <span class="mdl-checkbox__label">Diciembre</span>
-              <input type="checkbox" id="c_diciembre" class="mdl-checkbox__input" name="c_mes" value="12" v-model="meses">
+          <label for="c_diciembre" name="l_mes">
+              <span>Diciembre</span>
+              <input type="checkbox" id="c_diciembre" name="c_mes" value="12" v-model="meses">
             </label>
         </td>
       </tr>
