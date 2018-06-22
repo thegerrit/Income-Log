@@ -38,8 +38,32 @@
           <label class="mdl-textfield__label">Correo Electrónico</label>
         </label>
       </div>
-      <div class="row">
-        <div class="mdl-textfield mdl-js-textfield getmdl-select">
+
+        <div>
+          <select>
+            <option>Deporte</option>
+            <option>Carrera de Fondo</option>
+            <option>Ciclismo</option>
+            <option>Triatlón</option>
+          </select>
+        </div>
+        <div>
+          <select>
+            <option>Paquete</option>
+            <option>Bronce</option>
+            <option>Plata</option>
+          </select>
+        </div>
+        <div>
+          <select>
+            <option>Entrenador</option>
+            <option>Entrenador1</option>
+            <option>Entrenador2</option>
+            <option>Entrenador3</option>
+          </select>
+        </div>
+        <!--<div class="row">
+          <div class="mdl-textfield mdl-js-textfield getmdl-select">
             <input type="text" value="" class="mdl-textfield__input" id="Deporte-select" readonly>
             <input type="hidden" value="" name="Deporte-select">
             <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
@@ -72,7 +96,7 @@
               <li class="mdl-menu__item" data-val="2">Entrenador2</li>
               <li class="mdl-menu__item" data-val="3">Entrenador3</li>
           </ul>
-      </div>
+      </div>-->
       <div class="save-or-clear">
         <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect save-button" title="Guardar atleta">
           <i class="material-icons">save</i>
