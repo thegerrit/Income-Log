@@ -18,7 +18,15 @@
 
       <div class="filters">
         <div class="row">
-          <div class="mdl-textfield mdl-js-textfield getmdl-select">
+          <div>
+            <select value="" v-model="ventrenadorfiltro">
+              <option disabled>Entrenador</option>
+              <option>Entrenador1</option>
+              <option>Entrenador2</option>
+              <option>Entrenador3</option>
+            </select>
+          </div>
+          <!--<div class="mdl-textfield mdl-js-textfield getmdl-select">
               <input type="text" value="" class="mdl-textfield__input" id="Entrenador-filter" readonly>
               <input type="hidden" value="" name="Entrenador-filter">
               <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
@@ -28,7 +36,7 @@
                   <li class="mdl-menu__item" data-val="2">Entrenador2</li>
                   <li class="mdl-menu__item" data-val="3">Entrenador3</li>
               </ul>
-          </div>
+          </div>-->
           <div class="inactive">
             <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
               <input type="checkbox" class="mdl-checkbox__input" v-model="inactivos">
@@ -44,7 +52,7 @@
         <div class="row">
           <div class="date-filter">
             <span>Desde</span>
-            <div class="mdl-textfield mdl-js-textfield getmdl-select">
+            <!--<div class="mdl-textfield mdl-js-textfield getmdl-select">
                 <input type="text" value="" class="mdl-textfield__input" id="desde-mes" readonly>
                 <input type="hidden" value="" name="desde-mes">
                 <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
@@ -63,9 +71,26 @@
                     <li class="mdl-menu__item" data-val="11">Noviembre</li>
                     <li class="mdl-menu__item" data-val="12">Diciembre</li>
                 </ul>
+            </div>-->
+            <div>
+              <select value="" v-model="vdesdemes">
+                <option disabled>Mes</option>
+                <option>Enero</option>
+                <option>Febrero</option>
+                <option>Marzo</option>
+                <option>April</option>
+                <option>Mayo</option>
+                <option>Junio</option>
+                <option>Julio</option>
+                <option>Agosto</option>
+                <option>Setiembre</option>
+                <option>Octubre</option>
+                <option>Noviembre</option>
+                <option>Diciembre</option>
+              </select>
             </div>
 
-            <div class="mdl-textfield mdl-js-textfield getmdl-select">
+            <!--<div class="mdl-textfield mdl-js-textfield getmdl-select">
                 <input type="text" value="" class="mdl-textfield__input" id="desde-año" readonly>
                 <input type="hidden" value="" name="desde-año">
                 <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
@@ -82,12 +107,27 @@
                     <li class="mdl-menu__item" data-val="2024">2024</li>
                     <li class="mdl-menu__item" data-val="2025">2025</li>
                 </ul>
+            </div>-->
+            <div>
+              <select value="" v-model="vdesdeano">
+                <option disabled>Mes</option>
+                <option>2016</option>
+                <option>2017</option>
+                <option>2018</option>
+                <option>2019</option>
+                <option>2020</option>
+                <option>2021</option>
+                <option>2022</option>
+                <option>2023</option>
+                <option>2024</option>
+                <option>2025</option>
+              </select>
             </div>
           </div>
 
           <div class="date-filter">
             <span>Hasta</span>
-            <div class="mdl-textfield mdl-js-textfield getmdl-select">
+            <!--<div class="mdl-textfield mdl-js-textfield getmdl-select">
                 <input type="text" value="" class="mdl-textfield__input" id="hasta-mes" readonly>
                 <input type="hidden" value="" name="hasta-mes">
                 <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
@@ -106,8 +146,40 @@
                     <li class="mdl-menu__item" data-val="11">Noviembre</li>
                     <li class="mdl-menu__item" data-val="12">Diciembre</li>
                 </ul>
+            </div>-->
+            <div>
+              <select value="" v-model="vhastames">
+                <option disabled default>Mes</option>
+                <option>Enero</option>
+                <option>Febrero</option>
+                <option>Marzo</option>
+                <option>April</option>
+                <option>Mayo</option>
+                <option>Junio</option>
+                <option>Julio</option>
+                <option>Agosto</option>
+                <option>Setiembre</option>
+                <option>Octubre</option>
+                <option>Noviembre</option>
+                <option>Diciembre</option>
+              </select>
             </div>
-            <div class="mdl-textfield mdl-js-textfield getmdl-select">
+            <div>
+              <select value="" v-model="vhastaano">
+                <option disabled>Mes</option>
+                <option>2016</option>
+                <option>2017</option>
+                <option>2018</option>
+                <option>2019</option>
+                <option>2020</option>
+                <option>2021</option>
+                <option>2022</option>
+                <option>2023</option>
+                <option>2024</option>
+                <option>2025</option>
+              </select>
+            </div>
+            <!--<div class="mdl-textfield mdl-js-textfield getmdl-select">
                 <input type="text" value="" class="mdl-textfield__input" id="hasta-año" readonly>
                 <input type="hidden" value="" name="hasta-año">
                 <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
@@ -124,7 +196,7 @@
                     <li class="mdl-menu__item" data-val="2024">2024</li>
                     <li class="mdl-menu__item" data-val="2025">2025</li>
                 </ul>
-            </div>
+            </div>-->
           </div>
         </div>
       </div>
@@ -148,7 +220,12 @@ export default {
     return {
       atletaFiltros: '1',
       inactivos: false,
-      retirados: false
+      retirados: false,
+      ventrenadorfiltro: '',
+      vdesdemes: '',
+      vdesdeano: '',
+      vhastames: '',
+      vhastaano: ''
     }
   },
 };
