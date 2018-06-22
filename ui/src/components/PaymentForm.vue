@@ -183,7 +183,7 @@ export default {
   },
   data () {
     return {
-      meses: [],
+      meses: [2,4],
       eneMonto: '',
       febMonto: '',
       marMonto: '',
@@ -209,7 +209,7 @@ export default {
       }
     },
     checkAll: function () {
-      if (this.meses == [1,2,3,4,5,6,7,8,9,10,11,12]){
+      if (this.meses === [1,2,3,4,5,6,7,8,9,10,11,12]){
         this.meses = [];
       }
       else {
