@@ -6,11 +6,8 @@
         <tr>
           <th v-for="vcells0 in vheader"> {{vcells0.text}}</th>
         </tr>
-        <tr>
-          <td v-for="vcells1 in vrow1"> {{vcells1.text}}</td>
-        </tr>
-        <tr>
-          <td v-for="vcells2 in vrow2"> {{vcells2.text}}</td>
+        <tr v-for="row in rows">
+          <td v-for="cell in row">{{cell.text}}</td>
         </tr>
       </table>
     </div>
@@ -36,31 +33,46 @@ export default {
         { text: 'Entrenador_apellidos' },
         { text: 'Entrenador_nombre' }
       ],
-      vrow1: [
-        { text:'Alexander' },
-        { text: 'Jason' },
-        { text: 567891234 },
-        { text: 'jason@sample' },
-        { text: 'Cobie Smolders' },
-        { text: false },
-        { text: 'cobie@sample.com' },
-        { text: 'Carrera de Fondo' },
-        { text: 'Bronce' },
-        { text: 'Cox' },
-        { text: 'Courtney' }
-      ],
-      vrow2: [
-        { text: 'David' },
-        { text: 'Larry' },
-        { text: 345678912 },
-        { text: 'larry@sample' },
-        { text: 'How I Met Your Mother' },
-        { text: true },
-        { text: 'HIMYM@sample.com' },
-        { text: 'Carrera de Fondo' },
-        { text: 'Plata' },
-        { text: 'Aniston' },
-        { text: 'Jennifer' }
+      rows: [
+        [
+          { text:'Alexander' },
+          { text: 'Jason' },
+          { text: 567891234 },
+          { text: 'jason@sample' },
+          { text: 'Cobie Smolders' },
+          { text: false },
+          { text: 'cobie@sample.com' },
+          { text: 'Carrera de Fondo' },
+          { text: 'Bronce' },
+          { text: 'Cox' },
+          { text: 'Courtney' }
+        ],
+        [
+          { text: 'David' },
+          { text: 'Larry' },
+          { text: 345678912 },
+          { text: 'larry@sample' },
+          { text: 'How I Met Your Mother' },
+          { text: true },
+          { text: 'HIMYM@sample.com' },
+          { text: 'Carrera de Fondo' },
+          { text: 'Plata' },
+          { text: 'Aniston' },
+          { text: 'Jennifer' }
+        ],
+        [
+          { text: 'David' },
+          { text: 'Larry' },
+          { text: 345678912 },
+          { text: 'larry@sample' },
+          { text: 'How I Met Your Mother' },
+          { text: true },
+          { text: 'HIMYM@sample.com' },
+          { text: 'Carrera de Fondo' },
+          { text: 'Plata' },
+          { text: 'Aniston' },
+          { text: 'Jennifer' }
+        ]
       ]
     }
   }
