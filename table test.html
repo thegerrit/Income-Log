@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+</html>
+<script>
+  var info = [
+    ['a1','a2', 'a3', 'a4'],
+    ['b1','b2', 'b3', 'b4'],
+    ['c1','c2', 'c3', 'c4'],
+    ['d1','d2', 'd3', 'd4']
+  ];
+  document.write('<table>');
+
+  for (var i=0; i < info.length; i++){
+    document.write('<tr>');
+    for (var j=0; j < info[i].length; j++){
+      if (i===0){
+        document.write('<th>' + info[i][j] + '</th>')
+      }
+      else {
+        document.write('<td>' + info[i][j] + '</td>');
+      };
+    };
+    document.write('</tr>');
+  };
+</script>
+<style>
+  td {
+    border: 1px solid green;
+  }
+</style>
