@@ -1,7 +1,7 @@
 <template>
   <div class="content-area">
     <aside v-bind:class="[isDetailsExpanded ? 'expanded' : 'collapsed']" id="details">
-      <AthleteForm></AthleteForm>
+      <AthleteForm :disciplines="disciplines" />
       <SponsorForm></SponsorForm>
       <PaymentForm></PaymentForm>
     </aside>
@@ -42,7 +42,21 @@ export default {
   },
   data () {
     return {
-      panel2: false
+      panel2: false,
+      disciplines: [
+        {
+          label: 'Carrera de Fondo',
+          value: 1,
+        },
+        {
+          label: 'Ciclismo',
+          value: 2,
+        },
+        {
+          label: 'Triatlón',
+          value: 3,
+        }
+      ],
     }
   }
 };

@@ -39,64 +39,18 @@
         </label>
       </div>
 
-        <div>
-          <select value="" v-model="vdeporte">
-            <option disabled>Deporte</option>
-            <option>Carrera de Fondo</option>
-            <option>Ciclismo</option>
-            <option>Triatlón</option>
-          </select>
-        </div>
-        <div>
-          <select value="" v-model="vpaquete">
-            <option disabled>Paquete</option>
-            <option>Bronce</option>
-            <option>Plata</option>
-          </select>
-        </div>
-        <div>
-          <select value="" v-model="ventrenador">
-            <option disabled>Entrenador</option>
-            <option>Entrenador1</option>
-            <option>Entrenador2</option>
-            <option>Entrenador3</option>
-          </select>
-        </div>
-        <!--<div class="row">
-          <div class="mdl-textfield mdl-js-textfield getmdl-select">
-            <input type="text" value="" class="mdl-textfield__input" id="Deporte-select" readonly>
-            <input type="hidden" value="" name="Deporte-select">
-            <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
-            <label for="Deporte-select" class="mdl-textfield__label">Disciplina</label>
-            <ul for="Deporte-select" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
-                <li class="mdl-menu__item" data-val="CAR">Carrera de Fondo</li>
-                <li class="mdl-menu__item" data-val="CIC">Ciclismo</li>
-                <li class="mdl-menu__item" data-val="TRI">Triatlón</li>
-            </ul>
-        </div>
-
-        <div class="mdl-textfield mdl-js-textfield getmdl-select">
-            <input type="text" value="" class="mdl-textfield__input" id="Paquete-select" readonly>
-            <input type="hidden" value="" name="Paquete-select">
-            <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
-            <label for="Paquete-select" class="mdl-textfield__label">Paquete</label>
-            <ul for="Paquete-select" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
-                <li class="mdl-menu__item" data-val="BRO">Bronce</li>
-                <li class="mdl-menu__item" data-val="PLA">Plata</li>
-            </ul>
-        </div>
+      <div class="row">
+        <v-select v-model="selectedDiscipline" :options="disciplines" placeholder="Deporte"></v-select>
       </div>
-      <div class="mdl-textfield mdl-js-textfield getmdl-select">
-          <input type="text" value="" class="mdl-textfield__input" id="Entrenador-select" readonly>
-          <input type="hidden" value="" name="Entrenador-select">
-          <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
-          <label for="Entrenador-select" class="mdl-textfield__label">Entrenador</label>
-          <ul for="Entrenador-select" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
-              <li class="mdl-menu__item" data-val="1">Entrenador1</li>
-              <li class="mdl-menu__item" data-val="2">Entrenador2</li>
-              <li class="mdl-menu__item" data-val="3">Entrenador3</li>
-          </ul>
-      </div>-->
+
+      <div class="row">
+        <v-select v-model="selectedProgram" :options="programs" placeholder="Paquete"></v-select>
+      </div>
+
+      <div class="row">
+        <v-select v-model="selectedCoach" :options="coaches" placeholder="Entrenador"></v-select>
+      </div>
+
       <div class="save-or-clear">
         <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect save-button" title="Guardar atleta">
           <i class="material-icons">save</i>
@@ -112,10 +66,17 @@
 
 <script>
 import Vue from "vue";
+import VueSelect from "vue-select";
+
+Vue.component('v-select', VueSelect);
+
 export default {
   name: "AthleteForm",
   props: {
-    msg: String
+    disciplines: {
+      type: Array,
+      required: true
+    }
   },
   data () {
     return {
@@ -125,7 +86,46 @@ export default {
       Correo: '',
       vdeporte: '',
       vpaquete: '',
-      ventrenador: ''
+      ventrenador: '',
+      selectedDiscipline: '',
+      selectedProgram: '',
+      selectedCoach: '',
+      programs: [
+        {
+          label: 'Bronze',
+          value: 10,
+        },
+        {
+          label: 'Silver',
+          value: 20,
+        },
+        {
+          label: 'Gold',
+          value: 30,
+        },
+      ],
+      coaches: [
+        {
+          label: 'Jorge Luis Pinto',
+          value: 100
+        },
+        {
+          label: 'Zinedine Zidane',
+          value: 110
+        },
+        {
+          label: 'Oscar Ramírez',
+          value: 200
+        },
+        {
+          label: 'Jurgen Klinsmann',
+          value: 210
+        },
+        {
+          label: 'Pepe Guardiola',
+          value: 210
+        }
+      ]
     }
   },
   methods: {
@@ -140,10 +140,9 @@ export default {
     }
   }
 }
-/* BUG: adding this makes pago go blank*/
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style scoped lang="scss">
 /*Shared styles*/
 section {
