@@ -3,20 +3,10 @@
     <form action="#" class="content">
       <div class="flex-container">
         <div class="flex-filter">
-          <div class="mdl-textfield mdl-js-textfield getmdl-select">
-              <input type="text" value="" class="mdl-textfield__input" id="Buscar-por" readonly>
-              <input type="hidden" value="" name="Buscar-por" onchange="showEntrenador(data-val)">
-              <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
-              <label for="Buscar-por" class="mdl-textfield__label">Buscar atleta por</label>
-              <ul for="Buscar-por" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
-                  <li class="mdl-menu__item" data-val="NOM">Nombre</li>
-                  <li class="mdl-menu__item" data-val="ENT">Entrenador</li>
-                  <li class="mdl-menu__item" data-val="PAT">Patrocinador</li>
-              </ul>
-          </div>
+          <v-select v-model="selectedFilter" :options="filters" placeholder="Buscar atleta por"></v-select>
         </div>
         <div class="flex-search">
-          <div id="buscar-atleta">
+          <div id="buscar-atleta" v-bind:class={hidden:filterNOM}>
           <label class="mdl-textfield mdl-js-textfield">
             <input class="mdl-textfield__input" type="text" v-model="buscarAtleta">
             <span class="mdl-textfield__label">Buscar Atleta</span>
@@ -26,26 +16,17 @@
           </button>
         </div>
 
-          <div id="buscar-patrocinador" class="hidden">
+          <div id="buscar-patrocinador" v-bind:class={hidden:filterPAT}> <!--hide me-->
           <label class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" v-model="buscarPatrocinador">
-            <span class="mdl-textfield__label" >Buscar Patrocinador</span>
-            </label>
-          <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect" title="Buscar">
-            <i class="material-icons">search</i>
-          </button>
-        </div>
-
-          <div id="buscar-entrenador" class="mdl-textfield mdl-js-textfield getmdl-select hidden">
-              <input type="text" value="" class="mdl-textfield__input" id="Entrenador-bt" readonly>
-              <input type="hidden" value="" name="Entrenador-bt">
-              <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
-              <label for="Entrenador-bt" class="mdl-textfield__label">Entrenador</label>
-              <ul for="Entrenador-bt" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
-                  <li class="mdl-menu__item" data-val="1">Entrenador1</li>
-                  <li class="mdl-menu__item" data-val="2">Entrenador2</li>
-                  <li class="mdl-menu__item" data-val="3">Entrenador3</li>
-              </ul>
+              <input class="mdl-textfield__input" type="text" v-model="buscarPatrocinador">
+              <span class="mdl-textfield__label" >Buscar Patrocinador</span>
+              </label>
+            <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect" title="Buscar">
+              <i class="material-icons">search</i>
+            </button>
+          </div>
+          <div v-bind:class={hidden:filterENT}>
+            <v-select v-model="selectedCoach" :options="coaches" placeholder="Entrenador"></v-select><!--hide me-->
           </div>
         </div>
       </div>
@@ -85,7 +66,47 @@ export default {
     return {
       buscarAtleta: '',
       buscarPatrocinador: '',
-
+      selectedFilter: '',
+      filters: [
+        {
+          label: 'Nombre',
+          value: 'NOM'
+        },
+        {
+          label: 'Entrenador',
+          value: 'ENT'
+        },
+        {
+          label: 'Patrocinador',
+          value: 'PAT'
+        }
+      ],
+      filterNOM: false,
+      filterENT: true,
+      filterPAT: true,
+      selectedCoach: '',
+      coaches: [
+        {
+          label: 'Jorge Luis Pinto',
+          value: 100
+        },
+        {
+          label: 'Zinedine Zidane',
+          value: 110
+        },
+        {
+          label: 'Oscar Ramírez',
+          value: 200
+        },
+        {
+          label: 'Jurgen Klinsmann',
+          value: 210
+        },
+        {
+          label: 'Pepe Guardiola',
+          value: 210
+        }
+      ]
     }
   }
 };
