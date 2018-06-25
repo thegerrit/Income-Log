@@ -154,13 +154,6 @@ section {
       text-transform: uppercase;
       margin-right: auto;
     }
-    v-select {
-      float: left;
-      width: 46%;
-    }
-    v-select + v-select {
-      float: right;
-    }
     .actions {
     margin-right: 20px;
     margin-left: auto;
@@ -183,13 +176,13 @@ section {
       .mdl-textfield + .mdl-textfield {
         float: right;
       }
-      v-select {
+      /*v-select {
         float: left;
         width: 46%;
       }
       v-select + v-select {
         float: right;
-      }
+      }*/
     }
     .mdl-textfield {
     width: 85%;
