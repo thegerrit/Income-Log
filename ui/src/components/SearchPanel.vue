@@ -6,7 +6,7 @@
           <v-select v-model="selectedFilter" :options="filters" placeholder="Buscar atleta por"></v-select>
         </div>
         <div class="flex-search">
-          <div id="buscar-atleta" v-bind:class={hidden:filterNOM}>
+          <div id="buscar-atleta" v-bind:class={hidden:hideNOM}>
           <label class="mdl-textfield mdl-js-textfield">
             <input class="mdl-textfield__input" type="text" v-model="buscarAtleta">
             <span class="mdl-textfield__label">Buscar Atleta</span>
@@ -16,7 +16,7 @@
           </button>
         </div>
 
-          <div id="buscar-patrocinador" v-bind:class={hidden:filterPAT}> <!--hide me-->
+          <div id="buscar-patrocinador" v-bind:class={hidden:hidePAT}>
           <label class="mdl-textfield mdl-js-textfield">
               <input class="mdl-textfield__input" type="text" v-model="buscarPatrocinador">
               <span class="mdl-textfield__label" >Buscar Patrocinador</span>
@@ -25,7 +25,7 @@
               <i class="material-icons">search</i>
             </button>
           </div>
-          <div v-bind:class={hidden:filterENT}>
+          <div v-bind:class={hidden:hideENT}>
             <v-select v-model="selectedCoach" :options="coaches" placeholder="Entrenador"></v-select><!--hide me-->
           </div>
         </div>
@@ -81,9 +81,9 @@ export default {
           value: 'PAT'
         }
       ],
-      filterNOM: false,
-      filterENT: true,
-      filterPAT: true,
+      hideNOM: false,
+      hideENT: true,
+      hidePAT: true,
       selectedCoach: '',
       coaches: [
         {
