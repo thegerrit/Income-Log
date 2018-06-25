@@ -1,5 +1,5 @@
 <template>
-  <div id="content-area">
+  <div class="content-area">
     <aside v-bind:class="[isDetailsExpanded ? 'expanded' : 'collapsed']" id="details">
       <AthleteForm></AthleteForm>
       <SponsorForm></SponsorForm>
@@ -28,7 +28,10 @@ import ResultsPanel from "./ResultsPanel.vue";
 export default {
   name: "ContentArea",
   props: {
-    isDetailsExpanded: Boolean
+    isDetailsExpanded: {
+      type: Boolean,
+      required: true
+    }
   },
   components: {
     AthleteForm,
@@ -43,26 +46,42 @@ export default {
     }
   }
 };
-
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-#content-area {
+.content-area {
   height: calc(100vh - var(--header-height));
   display: flex;
-}
-aside {
-  max-width: 500px;
-  height: calc(100vh - var(--header-height));
-  overflow: auto;
-  box-shadow: 1px 0px 6px grey;
-  /* expanded and collapsed are defined styled in App.vue */
-}
 
-main {
-  flex: 1;
-  overflow: hidden;
-}
+  aside {
+    max-width: 500px;
+    height: calc(100vh - var(--header-height));
+    overflow: auto;
+    box-shadow: 1px 0px 6px grey;
 
+    &.collapsed {
+      width: 0;
+      transition: width 0.3s ease-in 0.2s;  /* wait for elements to fade in */
+      & > * {
+        opacity: 0;
+        transition: opacity 0.2s;
+      }
+    }
+
+    &.expanded {
+      width: var(--aside-width);
+      transition: width 0.4s;
+      overflow: auto;
+      & > * {
+        opacity: 1;
+        transition: opacity 0.3s ease 0.2s;
+      }
+    }
+  }
+
+  main {
+    flex: 1;
+    overflow: hidden;
+  }
+}
 </style>

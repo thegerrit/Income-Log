@@ -24,7 +24,10 @@
 export default {
   name: 'AppHeader',
   props: {
-    showSidebar: Boolean
+    showSidebar: {
+      type: Boolean,
+      required: true
+    } 
   }
 };
 </script>
