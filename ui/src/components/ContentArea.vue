@@ -8,12 +8,12 @@
     <main>
       <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
         <div class="mdl-tabs__tab-bar">
-          <a href="#search-panel" class="mdl-tabs__tab" v-on:click="panel2=true">Búsqueda</a> <!--v-on:click="panel2=true"-->
-          <a href="#reports-panel" class="mdl-tabs__tab is-active" v-on:click="panel2=false">Reportes</a>  <!--v-on:click="panel2=false"-->
+          <a href="#search-panel" class="mdl-tabs__tab" v-on:click="panel2=true, panel1=false">Búsqueda</a> <!--v-on:click="panel2=true"-->
+          <a href="#reports-panel" class="mdl-tabs__tab is-active" v-on:click="panel2=false, panel1=true">Reportes</a>  <!--v-on:click="panel2=false"-->
         </div>
       </div>
-      <SearchPanel v-if="panel2"></SearchPanel>
-      <ResultsPanel v-else></ResultsPanel>
+      <SearchPanel v-bind:class={hidden:panel1}></SearchPanel>
+      <ResultsPanel v-bind:class={hidden:panel2}></ResultsPanel>
     </main>
   </div>
 </template>
@@ -43,6 +43,7 @@ export default {
   data () {
     return {
       panel2: false,
+      panel1: true,
       disciplines: [
         {
           label: 'Carrera de Fondo',
