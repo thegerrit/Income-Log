@@ -19,24 +19,10 @@
       <div class="filters">
         <div class="row">
           <div>
-            <select value="" v-model="ventrenadorfiltro">
-              <option disabled>Entrenador</option>
-              <option>Entrenador1</option>
-              <option>Entrenador2</option>
-              <option>Entrenador3</option>
-            </select>
+            <div class="row">
+              <v-select v-model="selectedCoach" :options="coaches" placeholder="Entrenador"></v-select>
+            </div>
           </div>
-          <!--<div class="mdl-textfield mdl-js-textfield getmdl-select">
-              <input type="text" value="" class="mdl-textfield__input" id="Entrenador-filter" readonly>
-              <input type="hidden" value="" name="Entrenador-filter">
-              <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
-              <label for="Entrenador-filter" class="mdl-textfield__label">Entrenador</label>
-              <ul for="Entrenador-filter" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
-                  <li class="mdl-menu__item" data-val="1">Entrenador1</li>
-                  <li class="mdl-menu__item" data-val="2">Entrenador2</li>
-                  <li class="mdl-menu__item" data-val="3">Entrenador3</li>
-              </ul>
-          </div>-->
           <div class="inactive">
             <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
               <input type="checkbox" class="mdl-checkbox__input" v-model="inactivos">
@@ -52,151 +38,14 @@
         <div class="row">
           <div class="date-filter">
             <span>Desde</span>
-            <!--<div class="mdl-textfield mdl-js-textfield getmdl-select">
-                <input type="text" value="" class="mdl-textfield__input" id="desde-mes" readonly>
-                <input type="hidden" value="" name="desde-mes">
-                <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
-                <label for="desde-mes" class="mdl-textfield__label">Mes</label>
-                <ul for="desde-mes" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
-                    <li class="mdl-menu__item" data-val="1">Enero</li>
-                    <li class="mdl-menu__item" data-val="2">Febrero</li>
-                    <li class="mdl-menu__item" data-val="3">Marzo</li>
-                    <li class="mdl-menu__item" data-val="4">Abril</li>
-                    <li class="mdl-menu__item" data-val="5">Mayo</li>
-                    <li class="mdl-menu__item" data-val="6">Junio</li>
-                    <li class="mdl-menu__item" data-val="7">Julio</li>
-                    <li class="mdl-menu__item" data-val="8">Agosto</li>
-                    <li class="mdl-menu__item" data-val="9">Setiembre</li>
-                    <li class="mdl-menu__item" data-val="10">Octubre</li>
-                    <li class="mdl-menu__item" data-val="11">Noviembre</li>
-                    <li class="mdl-menu__item" data-val="12">Diciembre</li>
-                </ul>
-            </div>-->
-            <div>
-              <select value="" v-model="vdesdemes">
-                <option disabled>Mes</option>
-                <option>Enero</option>
-                <option>Febrero</option>
-                <option>Marzo</option>
-                <option>April</option>
-                <option>Mayo</option>
-                <option>Junio</option>
-                <option>Julio</option>
-                <option>Agosto</option>
-                <option>Setiembre</option>
-                <option>Octubre</option>
-                <option>Noviembre</option>
-                <option>Diciembre</option>
-              </select>
-            </div>
-
-            <!--<div class="mdl-textfield mdl-js-textfield getmdl-select">
-                <input type="text" value="" class="mdl-textfield__input" id="desde-año" readonly>
-                <input type="hidden" value="" name="desde-año">
-                <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
-                <label for="desde-año" class="mdl-textfield__label">Año</label>
-                <ul for="desde-año" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
-                    <li class="mdl-menu__item" data-val="2016">2016</li>
-                    <li class="mdl-menu__item" data-val="2017">2017</li>
-                    <li class="mdl-menu__item" data-val="2018">2018</li>
-                    <li class="mdl-menu__item" data-val="2019">2019</li>
-                    <li class="mdl-menu__item" data-val="2020">2020</li>
-                    <li class="mdl-menu__item" data-val="2021">2021</li>
-                    <li class="mdl-menu__item" data-val="2022">2022</li>
-                    <li class="mdl-menu__item" data-val="2023">2023</li>
-                    <li class="mdl-menu__item" data-val="2024">2024</li>
-                    <li class="mdl-menu__item" data-val="2025">2025</li>
-                </ul>
-            </div>-->
-            <div>
-              <select value="" v-model="vdesdeano">
-                <option disabled>Mes</option>
-                <option>2016</option>
-                <option>2017</option>
-                <option>2018</option>
-                <option>2019</option>
-                <option>2020</option>
-                <option>2021</option>
-                <option>2022</option>
-                <option>2023</option>
-                <option>2024</option>
-                <option>2025</option>
-              </select>
-            </div>
+            <v-select v-model="startMonth" :options="months" placeholder="Mes"></v-select>
+            <v-select v-model="startYear" :options="years" placeholder="Año"></v-select>
           </div>
 
           <div class="date-filter">
             <span>Hasta</span>
-            <!--<div class="mdl-textfield mdl-js-textfield getmdl-select">
-                <input type="text" value="" class="mdl-textfield__input" id="hasta-mes" readonly>
-                <input type="hidden" value="" name="hasta-mes">
-                <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
-                <label for="hasta-mes" class="mdl-textfield__label">Mes</label>
-                <ul for="hasta-mes" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
-                    <li class="mdl-menu__item" data-val="1">Enero</li>
-                    <li class="mdl-menu__item" data-val="2">Febrero</li>
-                    <li class="mdl-menu__item" data-val="3">Marzo</li>
-                    <li class="mdl-menu__item" data-val="4">Abril</li>
-                    <li class="mdl-menu__item" data-val="5">Mayo</li>
-                    <li class="mdl-menu__item" data-val="6">Junio</li>
-                    <li class="mdl-menu__item" data-val="7">Julio</li>
-                    <li class="mdl-menu__item" data-val="8">Agosto</li>
-                    <li class="mdl-menu__item" data-val="9">Setiembre</li>
-                    <li class="mdl-menu__item" data-val="10">Octubre</li>
-                    <li class="mdl-menu__item" data-val="11">Noviembre</li>
-                    <li class="mdl-menu__item" data-val="12">Diciembre</li>
-                </ul>
-            </div>-->
-            <div>
-              <select value="" v-model="vhastames">
-                <option disabled default>Mes</option>
-                <option>Enero</option>
-                <option>Febrero</option>
-                <option>Marzo</option>
-                <option>April</option>
-                <option>Mayo</option>
-                <option>Junio</option>
-                <option>Julio</option>
-                <option>Agosto</option>
-                <option>Setiembre</option>
-                <option>Octubre</option>
-                <option>Noviembre</option>
-                <option>Diciembre</option>
-              </select>
-            </div>
-            <div>
-              <select value="" v-model="vhastaano">
-                <option disabled>Mes</option>
-                <option>2016</option>
-                <option>2017</option>
-                <option>2018</option>
-                <option>2019</option>
-                <option>2020</option>
-                <option>2021</option>
-                <option>2022</option>
-                <option>2023</option>
-                <option>2024</option>
-                <option>2025</option>
-              </select>
-            </div>
-            <!--<div class="mdl-textfield mdl-js-textfield getmdl-select">
-                <input type="text" value="" class="mdl-textfield__input" id="hasta-año" readonly>
-                <input type="hidden" value="" name="hasta-año">
-                <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
-                <label for="hasta-año" class="mdl-textfield__label">Año</label>
-                <ul for="hasta-año" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
-                    <li class="mdl-menu__item" data-val="2016">2016</li>
-                    <li class="mdl-menu__item" data-val="2017">2017</li>
-                    <li class="mdl-menu__item" data-val="2018">2018</li>
-                    <li class="mdl-menu__item" data-val="2019">2019</li>
-                    <li class="mdl-menu__item" data-val="2020">2020</li>
-                    <li class="mdl-menu__item" data-val="2021">2021</li>
-                    <li class="mdl-menu__item" data-val="2022">2022</li>
-                    <li class="mdl-menu__item" data-val="2023">2023</li>
-                    <li class="mdl-menu__item" data-val="2024">2024</li>
-                    <li class="mdl-menu__item" data-val="2025">2025</li>
-                </ul>
-            </div>-->
+            <v-select v-model="endMonth" :options="months" placeholder="Mes"></v-select>
+            <v-select v-model="endYear" :options="years" placeholder="Año"></v-select>
           </div>
         </div>
       </div>
@@ -208,6 +57,8 @@
   </section>
 </template>
 <script>
+import VueSelect from "vue-select";
+
 export default {
   name: "ResultsPanel",
   components: {
@@ -221,7 +72,107 @@ export default {
       atletaFiltros: '1',
       inactivos: false,
       retirados: false,
-      ventrenadorfiltro: '',
+      selectedCoach: '',
+      startMonth: '',
+      startYear: '',
+      endMonth: '',
+      endYear: '',
+      coaches: [
+        {
+          label: 'Jorge Luis Pinto',
+          value: 100
+        },
+        {
+          label: 'Zinedine Zidane',
+          value: 110
+        },
+        {
+          label: 'Oscar Ramírez',
+          value: 200
+        },
+        {
+          label: 'Jurgen Klinsmann',
+          value: 210
+        },
+        {
+          label: 'Pepe Guardiola',
+          value: 210
+        }
+      ],
+      months: [
+        {
+          label: 'Enero',
+          value: 1
+        },
+        {
+          label: 'Febrero',
+          value: 2
+        },
+        {
+          label: 'Marzo',
+          value: 3
+        },
+        {
+          label: 'Abril',
+          value: 4
+        },
+        {
+          label: 'Mayo',
+          value: 5
+        },
+        {
+          label: 'Junio',
+          value: 6
+        },{
+          label: 'Julio',
+          value: 7
+        },{
+          label: 'Agosto',
+          value: 8
+        },{
+          label: 'Setiembre',
+          value: 9
+        },{
+          label: 'Octubre',
+          value: 10
+        },{
+          label: 'Noviembre',
+          value: 11
+        },{
+          label: 'Diciembre',
+          value: 12
+        },
+      ],
+      years: [
+        {
+          label: '2016',
+          value: 2016
+        },{
+          label: '2017',
+          value: 2017
+        },{
+          label: '2018',
+          value: 2018
+        },{
+          label: '2019',
+          value: 2019
+        },{
+          label: '2020',
+          value: 2020
+        },{
+          label: '2021',
+          value: 2021
+        },{
+          label: '2022',
+          value: 2022
+        },{
+          label: '2023',
+          value: 2023
+        },{
+          label: '2024',
+          value: 2024
+        }
+      ],
       vdesdemes: '',
       vdesdeano: '',
       vhastames: '',
