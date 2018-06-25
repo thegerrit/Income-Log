@@ -40,11 +40,8 @@
       </div>
 
       <div class="row">
-        <v-select v-model="selectedDiscipline" :options="disciplines" placeholder="Deporte"></v-select>
-      </div>
-
-      <div class="row">
-        <v-select v-model="selectedProgram" :options="programs" placeholder="Paquete"></v-select>
+        <v-select v-model="selectedDiscipline" :options="disciplines" placeholder="Deporte" style="width: 46%; float: left;"></v-select>
+        <v-select v-model="selectedProgram" :options="programs" placeholder="Paquete" style="width: 46%; float: right;"></v-select>
       </div>
 
       <div class="row">
@@ -157,6 +154,13 @@ section {
       text-transform: uppercase;
       margin-right: auto;
     }
+    v-select {
+      float: left;
+      width: 46%;
+    }
+    v-select + v-select {
+      float: right;
+    }
     .actions {
     margin-right: 20px;
     margin-left: auto;
@@ -177,6 +181,13 @@ section {
         width: 46%;
       }
       .mdl-textfield + .mdl-textfield {
+        float: right;
+      }
+      v-select {
+        float: left;
+        width: 46%;
+      }
+      v-select + v-select {
         float: right;
       }
     }
