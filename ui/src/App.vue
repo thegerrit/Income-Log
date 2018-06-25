@@ -1,7 +1,7 @@
 <template>
-  <div id="app">
-    <AppHeader />
-    <ContentArea></ContentArea>
+  <div class="app">
+    <AppHeader v-bind:showSidebar="isSidebarVisible" v-on:toggle-drawer="onTogglerDrawer" />
+    <ContentArea v-bind:isDetailsExpanded="isSidebarVisible" />
     <!-- <img src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   </div>
@@ -16,7 +16,17 @@ export default {
   components: {
     AppHeader,
     ContentArea
-  }
+  },
+  data () {
+    return {
+      isSidebarVisible: true
+    }
+  },
+  methods: {
+    onTogglerDrawer: function() {
+      this.isSidebarVisible = !this.isSidebarVisible;
+    }
+  },
 };
 </script>
 
@@ -37,7 +47,7 @@ export default {
 
   --tg-border: #76efef;
 }
-#app {
+.il-app {
   height: calc(100vh - var(--header-height));
 }
 /*SCSS for drawer (start)*/
