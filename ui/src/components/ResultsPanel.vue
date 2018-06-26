@@ -64,9 +64,7 @@ export default {
   components: {
     DataTable,
   },
-  props: {
-    msg: String
-  },
+  props: ['coaches'],
   data () {
     return {
       atletaFiltros: '1',
@@ -77,7 +75,7 @@ export default {
       startYear: '',
       endMonth: '',
       endYear: '',
-      coaches: [
+      /*coaches: [
         {
           label: 'Jorge Luis Pinto',
           value: 100
@@ -98,7 +96,7 @@ export default {
           label: 'Pepe Guardiola',
           value: 210
         }
-      ],
+      ],*/
       months: [
         {
           label: 'Enero',

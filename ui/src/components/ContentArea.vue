@@ -58,6 +58,28 @@ export default {
           value: 3,
         }
       ],
+      coaches: [
+        {
+          label: 'Jorge Luis Pinto',
+          value: 100
+        },
+        {
+          label: 'Zinedine Zidane',
+          value: 110
+        },
+        {
+          label: 'Oscar Ramírez',
+          value: 200
+        },
+        {
+          label: 'Jurgen Klinsmann',
+          value: 210
+        },
+        {
+          label: 'Pepe Guardiola',
+          value: 210
+        }
+      ]
     }
   }
 };

@@ -85,7 +85,7 @@ export default {
       hideENT: true,
       hidePAT: true,
       selectedCoach: '',
-      coaches: [
+      /*coaches: [
         {
           label: 'Jorge Luis Pinto',
           value: 100
@@ -106,7 +106,7 @@ export default {
           label: 'Pepe Guardiola',
           value: 210
         }
-      ]
+      ]*/
     }
   },
   methods: {
