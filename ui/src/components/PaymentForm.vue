@@ -176,6 +176,7 @@
 </template>
 
 <script>
+import Datepicker from 'vuejs-datepicker';
 export default {
   name: "PaymentForm",
   props: {
