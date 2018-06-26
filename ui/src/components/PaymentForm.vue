@@ -29,7 +29,7 @@
         </th>
       </tr>
       <tr>
-        <td><input type="date" class="i_date"></td>
+        <td><!--<input type="date" class="i_date">--><datepicker :language="es"></datepicker></td>
         <td><input type="text" class="i_text" v-model="eneMonto"></td>
         <td><span class="i_diferencia"><!--TODO: replace this something like: {{eneMonto}} - Precio_Paquete --></span></td>
         <td>
@@ -41,7 +41,7 @@
         </td>
       </tr>
       <tr>
-        <td><input type="date" class="i_date"></td>
+        <td><datepicker :language="es"></datepicker></td> <!--why doesn't language change here-->
         <td><input type="text" class="i_text" v-model="febMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
@@ -52,7 +52,7 @@
         </td>
       </tr>
       <tr>
-        <td><input type="date" class="i_date"></td>
+        <td><datepicker :language="es"></datepicker></td>
         <td><input type="text" class="i_text" v-model="marMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
@@ -63,7 +63,7 @@
         </td>
       </tr>
       <tr>
-        <td><input type="date" class="i_date"></td>
+        <td><datepicker :language="es"></datepicker></td>
         <td><input type="text" class="i_text" v-model="abrMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
@@ -74,7 +74,7 @@
         </td>
       </tr>
       <tr>
-        <td><input type="date" class="i_date"></td>
+        <td><datepicker :language="es"></datepicker></td>
         <td><input type="text" class="i_text" v-model="mayMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
@@ -85,7 +85,7 @@
         </td>
       </tr>
       <tr>
-        <td><input type="date" class="i_date"></td>
+        <td><datepicker :language="es"></datepicker></td>
         <td><input type="text" class="i_text" v-model="junMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
@@ -96,7 +96,7 @@
         </td>
       </tr>
       <tr>
-        <td><input type="date" class="i_date"></td>
+        <td><datepicker :language="es"></datepicker></td>
         <td><input type="text" class="i_text" v-model="julMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
@@ -107,7 +107,7 @@
         </td>
       </tr>
       <tr>
-        <td><input type="date" class="i_date"></td>
+        <td><datepicker :language="es"></datepicker></td>
         <td><input type="text" class="i_text" v-model="agoMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
@@ -118,7 +118,7 @@
         </td>
       </tr>
       <tr>
-        <td><input type="date" class="i_date"></td>
+        <td><datepicker :language="es"></datepicker></td>
         <td><input type="text" class="i_text" v-model="setMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
@@ -129,7 +129,7 @@
         </td>
       </tr>
       <tr>
-        <td><input type="date" class="i_date"></td>
+        <td><datepicker :language="es"></datepicker></td>
         <td><input type="text" class="i_text" v-model="octMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
@@ -140,7 +140,7 @@
         </td>
       </tr>
       <tr>
-        <td><input type="date" class="i_date"></td>
+        <td><datepicker :language="es"></datepicker></td>
         <td><input type="text" class="i_text" v-model="novMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
@@ -151,7 +151,7 @@
         </td>
       </tr>
       <tr>
-        <td><input type="date" class="i_date"></td>
+        <td><datepicker :language="es"></datepicker></td>
         <td><input type="text" class="i_text" v-model="dicMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
@@ -177,8 +177,12 @@
 
 <script>
 import Datepicker from 'vuejs-datepicker';
+import {en, es} from 'vuejs-datepicker/dist/locale';
 export default {
   name: "PaymentForm",
+  components: {
+    Datepicker
+  },
   props: {
     msg: String
   },
@@ -197,7 +201,9 @@ export default {
       octMonto: '40000',
       novMonto: '40000',
       dicMonto: '45000',
-      precioPaquete: '37000'
+      precioPaquete: '37000',
+      en: en, /*languages for datepicker*/
+      es: es
     }
   },
   methods: {
