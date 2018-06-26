@@ -64,9 +64,9 @@ export default {
   },
   data () {
     return {
-      buscarAtleta: '',
+      buscarAtleta: 'Navas',
       buscarPatrocinador: '',
-      selectedFilter: '',
+      selectedFilter: 'Nombre',
       filters: [
         {
           label: 'Nombre',
@@ -84,7 +84,7 @@ export default {
       hideNOM: false,
       hideENT: true,
       hidePAT: true,
-      selectedCoach: '',
+      selectedCoach: 'Oscar Ramírez',
       /*coaches: [
         {
           label: 'Jorge Luis Pinto',

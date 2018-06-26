@@ -68,13 +68,13 @@ export default {
   data () {
     return {
       atletaFiltros: '1',
-      inactivos: false,
+      inactivos: true,
       retirados: false,
-      selectedCoach: '',
-      startMonth: '',
-      startYear: '',
-      endMonth: '',
-      endYear: '',
+      selectedCoach: 'Oscar Ramírez',
+      startMonth: 'Enero',
+      startYear: '2017',
+      endMonth: 'Junio',
+      endYear: '2018',
       /*coaches: [
         {
           label: 'Jorge Luis Pinto',
