@@ -5,15 +5,17 @@
       <SponsorForm></SponsorForm>
       <PaymentForm></PaymentForm>
     </aside>
-    <main>
+    <main class="mdl-layout__content">
       <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
         <div class="mdl-tabs__tab-bar">
-          <a href="#search-panel" class="mdl-tabs__tab" v-on:click="panel2=true, panel1=false">Búsqueda</a> <!--v-on:click="panel2=true"-->
-          <a href="#reports-panel" class="mdl-tabs__tab is-active" v-on:click="panel2=false, panel1=true">Reportes</a>  <!--v-on:click="panel2=false"-->
+          <a href="#search-panel" class="mdl-tabs__tab">Búsqueda</a>
+          <a href="#reports-panel" class="mdl-tabs__tab is-active">Reportes</a>
         </div>
+
+          <SearchPanel id="search-panel"></SearchPanel>
+          <ResultsPanel id="reports-panel" ></ResultsPanel>
+
       </div>
-      <SearchPanel v-bind:class={hidden:panel1}></SearchPanel>
-      <ResultsPanel v-bind:class={hidden:panel2}></ResultsPanel>
     </main>
   </div>
 </template>
@@ -42,8 +44,6 @@ export default {
   },
   data () {
     return {
-      panel2: false,
-      panel1: true,
       disciplines: [
         {
           label: 'Carrera de Fondo',
