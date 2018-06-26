@@ -126,10 +126,15 @@ export default {
     accordion: function () {
       var panel= event.target.parentElement.parentElement.nextElementSibling;
       if (panel.style.maxHeight !== "0px"){
+        panel.style.overflow = "hidden";
         panel.style.maxHeight = 0;
       }
       else {
+        /*function makeVisible(){
+          panel.style.overflow = "visible";
+        };*/
         panel.style.maxHeight = panel.scrollHeight + "px";
+        setTimeout(function(){ panel.style.overflow = "visible"; }, 500);;
       }
     }
   }
@@ -140,7 +145,6 @@ export default {
 <style scoped lang="scss">
 /*Shared styles*/
 section {
-  overflow: hidden;
   header{
     background-color: var(--color-section-title);
     box-shadow: 0px 2px 4px grey;
@@ -166,7 +170,6 @@ section {
     padding-top: 0;
     padding: 0px 20px 0px 20px;
     transition: max-height 0.5s ease-out;
-    overflow: hidden;
     .row {
       clear: both;
       .mdl-textfield {
@@ -212,7 +215,7 @@ section {
 
   .accordion {
     max-height: 550px;
-    overflow: hidden;
+    overflow: visible;
     transition: max-height 0.5s ease-out;
   }
 }
