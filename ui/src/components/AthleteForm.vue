@@ -40,8 +40,8 @@
       </div>
 
       <div class="row">
-        <v-select v-model="selectedDiscipline" :options="disciplines" placeholder="Deporte" style="width: 46%; float: left;"></v-select>
-        <v-select v-model="selectedProgram" :options="programs" placeholder="Paquete" style="width: 46%; float: right;"></v-select>
+        <v-select class="small-select" v-model="selectedDiscipline" :options="disciplines" placeholder="Deporte"></v-select>
+        <v-select class="small-select"v-model="selectedProgram" :options="programs" placeholder="Paquete"></v-select>
       </div>
 
       <div class="row">
@@ -49,10 +49,12 @@
       </div>
 
       <div class="save-or-clear">
-        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect save-button" title="Guardar atleta">
+        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect save-button"
+        title="Guardar atleta" v-bind:class={visible:Cedula}>
           <i class="material-icons">save</i>
         </button>
-        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect clear-button" title="Borrar atleta">
+        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect clear-button"
+        title="Borrar atleta" v-bind:class={visible:Cedula}>
           <i class="material-icons">clear</i>
         </button>
       </div>
@@ -179,13 +181,18 @@ section {
       .mdl-textfield + .mdl-textfield {
         float: right;
       }
-      /*v-select {
+      .small-select {
         float: left;
         width: 46%;
+        input{
+          .form-control{
+            display: inline;
+          }
+        }
       }
-      v-select + v-select {
+      .small-select + .small-select {
         float: right;
-      }*/
+      }
     }
     .mdl-textfield {
     width: 85%;
@@ -198,6 +205,8 @@ section {
         background-color: var(--color-cancel-button);
         color: white;
         margin-left: 10px;
+        opacity: 0;
+        transition: opacity 0.3s ease-in;
         &:hover{
           background-color: var(--color-cancel-button-hover);
         }
@@ -206,9 +215,13 @@ section {
         background-color: #207d7d;
         color: white;
         align-self: flex-end;
+        transition: opacity 2s ease-in;
         &:hover {
           background-color:#2bbbca;
         }
+      }
+      .visible{
+        opacity: 1 !important;
       }
     }
   }
