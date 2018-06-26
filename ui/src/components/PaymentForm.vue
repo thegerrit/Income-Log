@@ -217,7 +217,13 @@ export default {
       }
     },
     checkAll: function () {
-      if(this.meses.length===12){
+      /*var masterbox = document.getElementById('c_inactivo')
+      var checkboxes = document.getElementsByName('c_mes');
+      for (var i = 0, n = checkboxes.length; i < n; i++) {
+        checkboxes[i].checked = masterbox.checked;
+      }*/
+      var masterbox = document.getElementById('c_inactivo')
+      if(this.meses.length===12, masterbox.checked===false){
         this.meses = [];
       }
       else {
