@@ -77,13 +77,13 @@ export default {
   },
   data () {
     return {
-      Cedula: '',
-      Nombre: '',
-      Apellidos: '',
-      Correo: '',
-      selectedDiscipline: '',
-      selectedProgram: '',
-      selectedCoach: '',
+      Cedula: '123456789',
+      Nombre: 'Kaylor',
+      Apellidos: 'Navas',
+      Correo: 'kaylor@sample',
+      selectedDiscipline: 'Carrerra de Fondo',
+      selectedProgram: 'Bronce',
+      selectedCoach: 'Oscar Ramírez',
       programs: [
         {
           label: 'Bronze',

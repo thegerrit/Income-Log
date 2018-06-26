@@ -56,9 +56,9 @@ export default {
   },
   data () {
     return {
-      Nombre: '',
-      Correo: '',
-      tipoPat: ''
+      Nombre: 'Selección Nacional',
+      Correo: 'lasele@sample.com',
+      tipoPat: '1'
     }
   },
   methods: {

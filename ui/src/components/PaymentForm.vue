@@ -31,7 +31,7 @@
       <tr>
         <td><input type="date" class="i_date"></td>
         <td><input type="text" class="i_text" v-model="eneMonto"></td>
-        <td><span class="i_diferencia">7.000<!--TODO: replace this something like: {{eneMonto}} - Precio_Paquete --></span></td>
+        <td><span class="i_diferencia"><!--TODO: replace this something like: {{eneMonto}} - Precio_Paquete --></span></td>
         <td>
           <label for="c_enero" name="l_mes">
               <span>Enero</span>
@@ -183,19 +183,20 @@ export default {
   },
   data () {
     return {
-      meses: [2,4],
-      eneMonto: '',
-      febMonto: '',
-      marMonto: '',
-      abrMonto: '',
-      mayMonto: '',
-      junMonto: '',
+      meses: [7,8],
+      eneMonto: '50000',
+      febMonto: '50000',
+      marMonto: '37000',
+      abrMonto: '50000',
+      mayMonto: '37000',
+      junMonto: '50000',
       julMonto: '',
       agoMonto: '',
-      setMonto: '',
-      octMonto: '',
-      novMonto: '',
-      dicMonto: ''
+      setMonto: '40000',
+      octMonto: '40000',
+      novMonto: '40000',
+      dicMonto: '45000',
+      precioPaquete: '37000'
     }
   },
   methods: {
@@ -215,7 +216,12 @@ export default {
         checkboxes[i].checked = masterbox.checked;
       }
     }
-  }
+  }/*,
+  computed: {
+    dicDiff: function () {
+      return Number(dicMonto) - Number(precioPaquete);
+    }
+  }*/   /*TODO: add computed property to automatically calculate diferencia*/
 };
 
 </script>
