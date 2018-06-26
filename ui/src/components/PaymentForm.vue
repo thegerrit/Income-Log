@@ -24,7 +24,7 @@
         <th>
           <label for="c_inactivo">
               <span>Inactivo</span>
-              <input type="checkbox" id="c_inactivo" v-on:click="checkAll"> <!-- TODO: add  v-on:change="checkAll" once you figure event handlers-->
+              <input type="checkbox" id="c_inactivo" v-on:click="checkAll()"> <!-- TODO: add  v-on:change="checkAll" once you figure event handlers-->
             </label>
         </th>
       </tr>
@@ -217,10 +217,11 @@ export default {
       }
     },
     checkAll: function () {
-      var masterbox = document.getElementById('c_inactivo')
-      var checkboxes = document.getElementsByName('c_mes');
-      for (var i = 0, n = checkboxes.length; i < n; i++) {
-        checkboxes[i].checked = masterbox.checked;
+      if(this.meses.length===12){
+        this.meses = [];
+      }
+      else {
+        this.meses = [1,2,3,4,5,6,7,8,9,10,11,12];
       }
     }
   }/*,
