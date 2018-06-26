@@ -3,7 +3,7 @@
     <form action="#" class="content">
       <div class="flex-container">
         <div class="flex-filter">
-          <v-select v-model="selectedFilter" :options="filters" placeholder="Buscar atleta por" v-on:change="onChange"></v-select>
+          <v-select v-model="selectedFilter" :options="filters" placeholder="Buscar atleta por" @change="hideFilters"></v-select>
         </div>
         <div class="flex-search">
           <div id="buscar-atleta" v-bind:class={hidden:hideNOM}>
@@ -110,7 +110,7 @@ export default {
     }
   },
   methods: {
-    onChange: function (chosen) {
+    hideFilters: function (chosen) {
       if (chosen==='ENT'){
         hideNOM= true,
         hideENT= false,
