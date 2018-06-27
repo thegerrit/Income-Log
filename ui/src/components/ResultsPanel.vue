@@ -58,6 +58,7 @@
 </template>
 <script>
 import VueSelect from "vue-select";
+import DataTable from "./DataTable.vue";
 
 export default {
   name: "ResultsPanel",
@@ -215,7 +216,6 @@ export default {
     }
   },
 };
-import DataTable from "./DataTable.vue";
 
 </script>
 

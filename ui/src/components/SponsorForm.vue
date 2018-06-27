@@ -16,21 +16,21 @@
     <form action="#" class="content">
       <div class="pat-checkboxes">
       <label>
-        <input type="radio" name="patrocinador" value="1" v-model="tipoPat">
+        <input type="radio" name="patrocinador" value="1" v-model="sponsor.tipoPat">
         <span>Organización</span>
       </label>
       <label>
-        <input type="radio" name="patrocinador" value="2" v-model="tipoPat">
+        <input type="radio" name="patrocinador" value="2" v-model="sponsor.tipoPat">
         <span>Individuo</span>
       </label>
     </div>
 
       <div class="mdl-textfield mdl-js-textfield">
-        <input class="mdl-textfield__input" type="text" v-model="Nombre">
+        <input class="mdl-textfield__input" type="text" v-model="sponsor.Nombre">
         <label class="mdl-textfield__label">Nombre</label>
       </div>
       <div class="mdl-textfield mdl-js-textfield">
-        <input class="mdl-textfield__input" type="text" v-model="Correo">
+        <input class="mdl-textfield__input" type="text" v-model="sponsor.Correo">
         <label class="mdl-textfield__label">Correo Electrónico</label>
       </div>
     <div class="save-or-clear">
@@ -52,13 +52,13 @@
 export default {
   name: "SponsorForm",
   props: {
-    msg: String
+    sponsor: {
+      type: Object
+    }
   },
   data () {
     return {
-      Nombre: 'Selección Nacional',
-      Correo: 'lasele@sample.com',
-      tipoPat: '1'
+
     }
   },
   methods: {

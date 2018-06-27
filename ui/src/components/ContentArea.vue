@@ -2,7 +2,7 @@
   <div class="content-area">
     <aside v-bind:class="[isDetailsExpanded ? 'expanded' : 'collapsed']" id="details">
       <AthleteForm :disciplines="disciplines" :coaches="coaches" :athlete="athlete"/>
-      <SponsorForm></SponsorForm>
+      <SponsorForm :sponsor="sponsor"></SponsorForm>
       <PaymentForm></PaymentForm>
     </aside>
     <main class="mdl-layout__content">
@@ -80,7 +80,7 @@ export default {
           value: 210
         }
       ],
-      athlete : {
+      athlete: {
         Cedula: '123456789',
         Nombre: 'Kaylor',
         Apellidos: 'Navas',
@@ -88,6 +88,11 @@ export default {
         selectedDiscipline: 'Carrerra de Fondo',
         selectedProgram: 'Bronce',
         selectedCoach: 'Oscar Ramírez'
+      },
+      sponsor: {
+        Nombre: 'Selección Nacional',
+        Correo: 'lasele@sample.com',
+        tipoPat: '1'
       }
     }
   }
