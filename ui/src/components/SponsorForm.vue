@@ -15,13 +15,13 @@
     <div class="accordion">
     <form action="#" class="content">
       <div class="pat-checkboxes">
-      <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
-        <input type="radio" class="mdl-radio__button" name="patrocinador" value="1" v-model="tipoPat">
-        <span class="mdl-radio__label">Organización</span>
+      <label>
+        <input type="radio" name="patrocinador" value="1" v-model="tipoPat">
+        <span>Organización</span>
       </label>
-      <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
-        <input type="radio" class="mdl-radio__button" name="patrocinador" value="2" v-model="tipoPat">
-        <span class="mdl-radio__label">Individuo</span>
+      <label>
+        <input type="radio" name="patrocinador" value="2" v-model="tipoPat">
+        <span>Individuo</span>
       </label>
     </div>
 
