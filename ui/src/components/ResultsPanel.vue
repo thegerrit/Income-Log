@@ -75,28 +75,6 @@ export default {
       startYear: '2017',
       endMonth: 'Junio',
       endYear: '2018',
-      /*coaches: [
-        {
-          label: 'Jorge Luis Pinto',
-          value: 100
-        },
-        {
-          label: 'Zinedine Zidane',
-          value: 110
-        },
-        {
-          label: 'Oscar Ramírez',
-          value: 200
-        },
-        {
-          label: 'Jurgen Klinsmann',
-          value: 210
-        },
-        {
-          label: 'Pepe Guardiola',
-          value: 210
-        }
-      ],*/
       months: [
         {
           label: 'Enero',

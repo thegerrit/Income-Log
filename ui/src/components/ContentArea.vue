@@ -1,7 +1,7 @@
 <template>
   <div class="content-area">
     <aside v-bind:class="[isDetailsExpanded ? 'expanded' : 'collapsed']" id="details">
-      <AthleteForm :disciplines="disciplines" />
+      <AthleteForm :disciplines="disciplines" :coaches="coaches" />
       <SponsorForm></SponsorForm>
       <PaymentForm></PaymentForm>
     </aside>
@@ -12,8 +12,8 @@
           <a href="#reports-panel" class="mdl-tabs__tab is-active">Reportes</a>
         </div>
 
-          <SearchPanel id="search-panel"></SearchPanel>
-          <ResultsPanel id="reports-panel" ></ResultsPanel>
+          <SearchPanel id="search-panel" :coaches="coaches"></SearchPanel>
+          <ResultsPanel id="reports-panel" :coaches="coaches"></ResultsPanel>
 
       </div>
     </main>
