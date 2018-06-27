@@ -185,9 +185,9 @@ section {
     .save-or-clear {
       text-align: right;
       display: block;
-      margin: 5px 20px 5px 0px;
       opacity: 0;
       transition: opacity 1s ease-in;
+      margin: 15px 0px 15px 0px;
       .clear-button {
         background-color: var(--color-cancel-button);
         color: white;
