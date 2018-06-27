@@ -170,6 +170,7 @@ import DataTable from "./DataTable.vue";
       'report-type     filters-row-2'
       '.               report-actions';
     justify-content: center;
+    padding-top: 20px;
     .report-type {
       min-width: 170px;
       grid-area: report-type;

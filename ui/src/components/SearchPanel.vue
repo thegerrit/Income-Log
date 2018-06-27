@@ -112,6 +112,9 @@ export default {
 
 <style lang="scss" scoped>
 #search-panel{
+  .content{
+    padding-top: 20px;
+  }
   .flex-filter{
     display:block;
     margin-left: 25%
