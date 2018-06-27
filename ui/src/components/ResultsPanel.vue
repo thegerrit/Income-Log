@@ -53,7 +53,7 @@
         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary">Generar Reporte</button>
       </div>
     </form>
-    <DataTable />
+    <DataTable :vheader="vheader" :rows="rows"></DataTable>
   </section>
 </template>
 <script>
@@ -64,7 +64,12 @@ export default {
   components: {
     DataTable,
   },
-  props: ['coaches'],
+  props: {
+    coaches: {
+      type: Array,
+      required: true
+    }
+  },
   data () {
     return {
       atletaFiltros: '1',
@@ -152,7 +157,61 @@ export default {
       vdesdemes: '',
       vdesdeano: '',
       vhastames: '',
-      vhastaano: ''
+      vhastaano: '',
+      vheader: [
+        { text: 'Apellidos' },
+        { text: 'Nombre' },
+        { text: 'Cédula' },
+        { text: 'Email' },
+        { text: 'Patrocinador_nombre' },
+        { text: 'Organización' },
+        { text: 'Patrocinador_email' },
+        { text: 'Deporte' },
+        { text: 'Paquete' },
+        { text: 'Entrenador_apellidos' },
+        { text: 'Entrenador_nombre' }
+      ],
+      rows: [
+        [
+          { text:'Alexander' },
+          { text: 'Jason' },
+          { text: 567891234 },
+          { text: 'jason@sample' },
+          { text: 'Cobie Smolders' },
+          { text: false },
+          { text: 'cobie@sample.com' },
+          { text: 'Carrera de Fondo' },
+          { text: 'Bronce' },
+          { text: 'Cox' },
+          { text: 'Courtney' }
+        ],
+        [
+          { text: 'David' },
+          { text: 'Larry' },
+          { text: 345678912 },
+          { text: 'larry@sample' },
+          { text: 'How I Met Your Mother' },
+          { text: true },
+          { text: 'HIMYM@sample.com' },
+          { text: 'Carrera de Fondo' },
+          { text: 'Plata' },
+          { text: 'Aniston' },
+          { text: 'Jennifer' }
+        ],
+        [
+          { text: 'David' },
+          { text: 'Larry' },
+          { text: 345678912 },
+          { text: 'larry@sample' },
+          { text: 'How I Met Your Mother' },
+          { text: true },
+          { text: 'HIMYM@sample.com' },
+          { text: 'Carrera de Fondo' },
+          { text: 'Plata' },
+          { text: 'Aniston' },
+          { text: 'Jennifer' }
+        ]
+      ]
     }
   },
 };

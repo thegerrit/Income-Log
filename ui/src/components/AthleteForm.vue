@@ -75,6 +75,10 @@ export default {
     disciplines: {
       type: Array,
       required: true
+    },
+    coaches: {
+      type: Array,
+      required: true
     }
   },
   data () {

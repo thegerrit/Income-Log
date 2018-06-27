@@ -32,35 +32,20 @@
       </div>
     </form>
     <div class="flex-container">
-    <div class="table-container">
-      <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
-        <tr>
-          <th>Cédula</th>
-          <th>Nombre</th>
-          <th>Correo Electrónico</th>
-        </tr>
-        <tr>
-          <td>123456789</td>
-          <td>Kaylor Navas</td>
-          <td>navas@sele.com</td>
-        </tr>
-        <tr>
-          <td>234567891</td>
-          <td>Bryan Ruiz</td>
-          <td>ruiz@sele.com</td>
-        </tr>
-      </table>
-    </div>
+    <DataTable :vheader="vheader" :rows="rows"></DataTable>
     </div>
   </section>
 </template>
 
 <script>
-
+import DataTable from "./DataTable.vue";
 export default {
   name: "SearchPanel",
   props: {
     msg: String
+  },
+  components: {
+    DataTable
   },
   data () {
     return {
@@ -80,6 +65,23 @@ export default {
           label: 'Patrocinador',
           value: 'PAT'
         }
+      ],
+      vheader: [
+        { text: 'Cédula' },
+        { text: 'Nombre' },
+        { text: 'Correo Electrónico' }
+      ],
+      rows: [
+        [
+          { text: '123456789' },
+          { text: 'Kaylor Navas' },
+          { text: 'navas@sele.com' }
+        ],
+        [
+          { text: '234567891' },
+          { text: 'Bryan Ruiz' },
+          { text: 'ruiz@sele.com' }
+        ]
       ],
       hideNOM: false,
       hideENT: true,
