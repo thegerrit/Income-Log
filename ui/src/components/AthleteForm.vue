@@ -19,7 +19,7 @@
 
       <div class="row">
         <label class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="text" onkeypress="return onlyNumbers(event)" v-model="Cedula">
+          <input class="mdl-textfield__input" type="text" v-model="Cedula" v-on:keypress="buttonShow"><!-- onkeypress="return onlyNumbers(event)"-->
           <label class="mdl-textfield__label">Cédula</label>
         </label>
         <label class="mdl-textfield mdl-js-textfield">
@@ -48,13 +48,13 @@
         <v-select v-model="selectedCoach" :options="coaches" placeholder="Entrenador"></v-select>
       </div>
 
-      <div class="save-or-clear">
+      <div class="save-or-clear" id="a_save-or-clear"> <!--TODO: bind class to cedula so buttons are visible and enabled when cedula has a value-->
         <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect save-button"
-        title="Guardar atleta" v-bind:class={visible:Cedula}>
+        title="Guardar atleta" disabled>
           <i class="material-icons">save</i>
         </button>
         <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect clear-button"
-        title="Borrar atleta" v-bind:class={visible:Cedula}>
+        title="Borrar atleta" disabled>
           <i class="material-icons">clear</i>
         </button>
       </div>
@@ -138,6 +138,13 @@ export default {
         panel.style.maxHeight = panel.scrollHeight + "px";
         setTimeout(function(){ panel.style.overflow = "visible"; }, 500);;
       }
+    },
+    buttonShow: function () {
+      var d = document.getElementById('a_save-or-clear');
+      d.classList.add('visible');
+      for (var i=0; i<d.childNodes.length; i++){
+        d.childNodes[i].disabled=false;
+      }
     }
   }
 }
@@ -201,12 +208,12 @@ section {
       text-align: right;
       display: block;
       margin: 5px 20px 5px 0px;
+      opacity: 0;
+      transition: opacity 1s ease-in;
       .clear-button {
         background-color: var(--color-cancel-button);
         color: white;
         margin-left: 10px;
-        opacity: 0;
-        transition: opacity 0.3s ease-in;
         &:hover{
           background-color: var(--color-cancel-button-hover);
         }
@@ -215,14 +222,13 @@ section {
         background-color: #207d7d;
         color: white;
         align-self: flex-end;
-        transition: opacity 2s ease-in;
         &:hover {
           background-color:#2bbbca;
         }
       }
-      .visible{
-        opacity: 1 !important;
-      }
+    }
+    .visible{
+      opacity: 1 !important;
     }
   }
 
