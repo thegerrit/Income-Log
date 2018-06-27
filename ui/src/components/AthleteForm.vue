@@ -19,33 +19,33 @@
 
       <div class="row">
         <label class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="text" v-model="Cedula" v-on:keypress="buttonShow"><!-- onkeypress="return onlyNumbers(event)"-->
+          <input class="mdl-textfield__input" type="text" v-model="athlete.Cedula" v-on:keypress="buttonShow"><!-- onkeypress="return onlyNumbers(event)"-->
           <label class="mdl-textfield__label">Cédula</label>
         </label>
         <label class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="text" v-model="Nombre">
+          <input class="mdl-textfield__input" type="text" v-model="athlete.Nombre">
           <label class="mdl-textfield__label">Nombre</label>
         </label>
       </div>
 
       <div class="row">
         <label class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="text" v-model="Apellidos">
+          <input class="mdl-textfield__input" type="text" v-model="athlete.Apellidos">
           <label class="mdl-textfield__label">Apellidos</label>
         </label>
         <label class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="text" v-model="Correo">
+          <input class="mdl-textfield__input" type="text" v-model="athlete.Correo">
           <label class="mdl-textfield__label">Correo Electrónico</label>
         </label>
       </div>
 
       <div class="row">
-        <v-select class="small-select" v-model="selectedDiscipline" :options="disciplines" placeholder="Deporte"></v-select>
-        <v-select class="small-select"v-model="selectedProgram" :options="programs" placeholder="Paquete"></v-select>
+        <v-select class="small-select" v-model="athlete.selectedDiscipline" :options="disciplines" placeholder="Deporte"></v-select>
+        <v-select class="small-select" v-model="athlete.selectedProgram" :options="programs" placeholder="Paquete"></v-select>
       </div>
 
       <div class="row">
-        <v-select v-model="selectedCoach" :options="coaches" placeholder="Entrenador"></v-select>
+        <v-select v-model="athlete.selectedCoach" :options="coaches" placeholder="Entrenador"></v-select>
       </div>
 
       <div class="save-or-clear" id="a_save-or-clear"> <!--TODO: bind class to cedula so buttons are visible and enabled when cedula has a value-->
@@ -79,17 +79,13 @@ export default {
     coaches: {
       type: Array,
       required: true
+    },
+    athlete: {
+      type: Object
     }
   },
   data () {
     return {
-      Cedula: '123456789',
-      Nombre: 'Kaylor',
-      Apellidos: 'Navas',
-      Correo: 'kaylor@sample',
-      selectedDiscipline: 'Carrerra de Fondo',
-      selectedProgram: 'Bronce',
-      selectedCoach: 'Oscar Ramírez',
       programs: [
         {
           label: 'Bronze',

@@ -1,7 +1,7 @@
 <template>
   <div class="content-area">
     <aside v-bind:class="[isDetailsExpanded ? 'expanded' : 'collapsed']" id="details">
-      <AthleteForm :disciplines="disciplines" :coaches="coaches" />
+      <AthleteForm :disciplines="disciplines" :coaches="coaches" :athlete="athlete"/>
       <SponsorForm></SponsorForm>
       <PaymentForm></PaymentForm>
     </aside>
@@ -79,7 +79,16 @@ export default {
           label: 'Pepe Guardiola',
           value: 210
         }
-      ]
+      ],
+      athlete : {
+        Cedula: '123456789',
+        Nombre: 'Kaylor',
+        Apellidos: 'Navas',
+        Correo: 'kaylor@sample',
+        selectedDiscipline: 'Carrerra de Fondo',
+        selectedProgram: 'Bronce',
+        selectedCoach: 'Oscar Ramírez'
+      }
     }
   }
 };

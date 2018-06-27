@@ -42,7 +42,10 @@ import DataTable from "./DataTable.vue";
 export default {
   name: "SearchPanel",
   props: {
-    msg: String
+    coaches: {
+      type: Array,
+      required: true
+    }
   },
   components: {
     DataTable
