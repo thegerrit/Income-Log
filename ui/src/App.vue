@@ -47,6 +47,21 @@ export default {
 
   --tg-border: #76efef;
 }
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #135c6d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #0cd2c9;
+}
+
 .app {
   height: calc(100vh - var(--header-height));
 }
