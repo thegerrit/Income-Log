@@ -1,9 +1,11 @@
 <template>
   <div class="content-area">
     <aside v-bind:class="[isDetailsExpanded ? 'expanded' : 'collapsed']" id="details">
-      <AthleteForm :disciplines="disciplines" :coaches="coaches" :athlete="athlete"/>
-      <SponsorForm :sponsor="sponsor"></SponsorForm>
-      <PaymentForm></PaymentForm>
+      <!--<MdContent class="md-scrollbar">-->
+        <AthleteForm :disciplines="disciplines" :coaches="coaches" :athlete="athlete"/>
+        <SponsorForm :sponsor="sponsor"></SponsorForm>
+        <PaymentForm></PaymentForm>
+      <!--</MdContent>-->
     </aside>
     <main class="mdl-layout__content">
       <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
@@ -26,6 +28,8 @@ import SponsorForm from "./SponsorForm.vue";
 import PaymentForm from "./PaymentForm.vue";
 import SearchPanel from "./SearchPanel.vue";
 import ResultsPanel from "./ResultsPanel.vue";
+import { MdContent } from 'vue-material/dist/components';
+
 
 export default {
   name: "ContentArea",
@@ -40,7 +44,8 @@ export default {
     SponsorForm,
     PaymentForm,
     SearchPanel,
-    ResultsPanel
+    ResultsPanel,
+    MdContent,
   },
   data () {
     return {
@@ -103,11 +108,14 @@ export default {
 .content-area {
   height: calc(100vh - var(--header-height));
   display: flex;
-
+.md-content{
+  max-height: calc(100vh - var(--header-height));
+  max-width: 500px;
+  overflow: auto;
+}
   aside {
     max-width: 500px;
     height: calc(100vh - var(--header-height));
-    overflow: auto;
     box-shadow: 1px 0px 6px grey;
 
     &.collapsed {
