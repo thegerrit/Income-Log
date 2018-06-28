@@ -19,7 +19,7 @@
 
       <div class="row">
         <label class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="text" v-model="athlete.Cedula" v-on:keypress="buttonShow"><!-- onkeypress="return onlyNumbers(event)"-->
+          <input class="mdl-textfield__input" type="text" v-model="athlete.Cedula" v-on:input="buttonShow"><!-- onkeypress="return onlyNumbers(event)"-->
           <label class="mdl-textfield__label">Cédula</label>
         </label>
         <label class="mdl-textfield mdl-js-textfield">
@@ -48,13 +48,13 @@
         <v-select v-model="athlete.selectedCoach" :options="coaches" placeholder="Entrenador"></v-select>
       </div>
 
-      <div class="save-or-clear" id="a_save-or-clear"> <!--TODO: bind class to cedula so buttons are visible and enabled when cedula has a value-->
+      <div class="save-or-clear" v-bind:class="{ visible : athlete.Cedula }"> <!--TODO: bind class to cedula so buttons are visible and enabled when cedula has a value-->
         <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect save-button"
-        title="Guardar atleta" disabled>
+        title="Guardar atleta" :disabled="athlete.Cedula == ''">
           <i class="material-icons">save</i>
         </button>
         <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect clear-button"
-        title="Borrar atleta" disabled>
+        title="Borrar atleta" :disabled="athlete.Cedula == ''">
           <i class="material-icons">clear</i>
         </button>
       </div>
@@ -114,14 +114,7 @@ export default {
           panel.style.overflow = "visible";
         };*/
         panel.style.maxHeight = panel.scrollHeight + "px";
-        setTimeout(function(){ panel.style.overflow = "visible"; }, 500);;
-      }
-    },
-    buttonShow: function () {
-      var d = document.getElementById('a_save-or-clear');
-      d.classList.add('visible');
-      for (var i=0; i<d.childNodes.length; i++){
-        d.childNodes[i].disabled=false;
+        setTimeout(function(){ panel.style.overflow = "visible"; }, 500);
       }
     }
   }
