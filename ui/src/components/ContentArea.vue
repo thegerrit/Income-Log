@@ -28,7 +28,7 @@ import SponsorForm from "./SponsorForm.vue";
 import PaymentForm from "./PaymentForm.vue";
 import SearchPanel from "./SearchPanel.vue";
 import ResultsPanel from "./ResultsPanel.vue";
-import { MdContent } from 'vue-material/dist/components';
+import { MdContent } from "vue-material/dist/components";
 
 
 export default {

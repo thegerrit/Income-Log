@@ -29,10 +29,18 @@
         <input class="mdl-textfield__input" type="text" v-model="sponsor.Nombre">
         <label class="mdl-textfield__label">Nombre</label>
       </div>
+      <!--<md-field>
+        <label>Nombre</label>
+        <md-input v-model="sponsor.Nombre"></md-input>
+      </md-field>-->
       <div class="mdl-textfield mdl-js-textfield">
         <input class="mdl-textfield__input" type="text" v-model="sponsor.Correo">
         <label class="mdl-textfield__label">Correo Electrónico</label>
       </div>
+      <!--<md-field>
+        <label>Nombre</label>
+        <md-input v-model="sponsor.Correo"></md-input>
+      </md-field>-->
     <div class="save-or-clear">
 
       <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect save-button"
