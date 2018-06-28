@@ -50,7 +50,7 @@
 
       <div class="save-or-clear" v-bind:class="{ visible : athlete.Cedula }"> <!--TODO: bind class to cedula so buttons are visible and enabled when cedula has a value-->
         <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect save-button"
-        title="Guardar atleta" :disabled="athlete.Cedula == ''">
+        title="Guardar atleta" :disabled="athlete.Cedula == ''" v-on:click="validateAthleteForm">
           <i class="material-icons">save</i>
         </button>
         <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect clear-button"
@@ -116,6 +116,50 @@ export default {
         panel.style.maxHeight = panel.scrollHeight + "px";
         setTimeout(function(){ panel.style.overflow = "visible"; }, 500);
       }
+    },
+    validateAthleteForm: function () {
+      var ced = this.athlete.Cedula;
+      if (ced === ''){
+        alert("Porfavor, inserte la cédula del atleta.")
+        return
+      };
+
+      var nom = this.athlete.Nombre;
+      if (nom === ''){
+        alert("Porfavor, inserte el nombre del atleta.")
+        return
+      };
+
+      var ape = this.athlete.Apellidos;
+      if (ape === ''){
+        alert("Porfavor, inserte el apellido del atleta.")
+        return
+      };
+
+      var cor = this.athlete.Correo;
+      if (cor === ''){
+        alert("Porfavor, inserte el correo electrónico del atleta.")
+        return
+      };
+
+      var dis = this.athlete.selectedDiscipline;
+      if (dis === ''){
+        alert("Porfavor, seleccione el deporte del atleta.")
+        return
+      };
+
+      var pro = this.athlete.selectedProgram;
+      if (pro === ''){
+        alert("Porfavor, seleccione el paquete del atleta.")
+        return
+      };
+
+      var coa = this.athlete.selectedCoach;
+      if (coa === ''){
+        alert("Porfavor, seleccione el entrenador del atleta.")
+        return
+      };
+
     },
     clearAthleteForm: function () {
       this.athlete.Cedula = '';
