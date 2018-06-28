@@ -13,7 +13,7 @@
 
     </header>
     <div class="accordion">
-    <form action="#" class="content">
+    <div class="content"> <!--form action="#" -->
       <div class="pat-checkboxes">
       <label>
         <input type="radio" name="patrocinador" value="1" v-model="sponsor.tipoPat">
@@ -38,11 +38,12 @@
       <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect save-button" title="Guardar">
         <i class="material-icons">save</i>
       </button>
-      <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect clear-button"  title="Borrar">
+      <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect clear-button"
+      title="Borrar" v-on:click="clearSponsorForm">
         <i class="material-icons">clear</i>
       </button>
     </div>
-  </form>
+  </div>
 </div>
   </section>
 
@@ -70,6 +71,11 @@ export default {
       else {
         panel.style.maxHeight = panel.scrollHeight + "px";
       }
+    },
+    clearSponsorForm: function () {
+      this.sponsor.Nombre = '';
+      this.sponsor.Correo = '';
+      this.sponsor.tipoPat = '';
     }
   }
 };
