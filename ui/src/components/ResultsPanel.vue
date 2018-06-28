@@ -2,17 +2,17 @@
   <section class="mdl-tabs__panel is-active" id="reports-panel">
     <form class="controls">
       <div class="report-type">
-        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect block">
-          <input type="radio" class="mdl-radio__button" name="report-type" value="1" v-model="atletaFiltros">
-          <span class="mdl-radio__label">Todos los atletas</span>
+        <label class="block">
+          <input type="radio" name="report-type" value="1" v-model="atletaFiltros">
+          <span>Todos los atletas</span>
         </label>
-        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect block">
-          <input type="radio" class="mdl-radio__button" name="report-type" value="2" v-model="atletaFiltros">
-          <span class="mdl-radio__label">Atletas al día</span>
+        <label class="block">
+          <input type="radio" name="report-type" value="2" v-model="atletaFiltros">
+          <span>Atletas al día</span>
         </label>
-        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect block">
-          <input type="radio" class="mdl-radio__button" name="report-type" value="3" v-model="atletaFiltros">
-          <span class="mdl-radio__label">Atletas morosos</span>
+        <label class="block">
+          <input type="radio" name="report-type" value="3" v-model="atletaFiltros">
+          <span>Atletas morosos</span>
         </label>
       </div>
 
@@ -24,13 +24,13 @@
             </div>
           </div>
           <div class="inactive">
-            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-              <input type="checkbox" class="mdl-checkbox__input" v-model="inactivos">
-              <span class="mdl-checkbox__label">Incluir Inactivos</span>
+            <label>
+              <input type="checkbox" v-model="inactivos">
+              <span>Incluir Inactivos</span>
             </label>
-            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-              <input type="checkbox" class="mdl-checkbox__input" v-model="retirados">
-              <span class="mdl-checkbox__label">Incluir Retirados</span>
+            <label>
+              <input type="checkbox" v-model="retirados">
+              <span>Incluir Retirados</span>
             </label>
           </div>
         </div>
