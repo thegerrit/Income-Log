@@ -19,7 +19,7 @@
 
       <div class="row">
         <label class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="text" v-model="athlete.Cedula" v-on:input="buttonShow"><!-- onkeypress="return onlyNumbers(event)"-->
+          <input class="mdl-textfield__input" type="text" v-model="athlete.Cedula"><!-- onkeypress="return onlyNumbers(event)"-->
           <label class="mdl-textfield__label">Cédula</label>
         </label>
         <label class="mdl-textfield mdl-js-textfield">

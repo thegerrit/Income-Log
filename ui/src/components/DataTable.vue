@@ -6,11 +6,13 @@
         <tr>
           <th v-for="vcells0 in vheader"> {{vcells0.text}}</th>
         </tr>
-        <tr v-for="row in rows">
+        <tr v-for="row in rows" v-on:click="rowClick">
           <td v-for="cell in row">{{cell.text}}</td>
         </tr>
       </table>
+      <span v-if="rowClicked">A row was clicked</span>
     </div>
+
 </template>
 <script>
 export default {
@@ -25,9 +27,14 @@ export default {
       required: true
     }
   },
+  methods: {
+    rowClick: function () {
+      this.rowClicked = true
+    }
+  },
   data () {
     return {
-      
+      rowClicked: false
     }
   }
 };
