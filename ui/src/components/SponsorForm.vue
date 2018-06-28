@@ -35,7 +35,8 @@
       </div>
     <div class="save-or-clear">
 
-      <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect save-button" title="Guardar">
+      <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect save-button"
+      title="Guardar" v-on:click="validateSponsorForm">
         <i class="material-icons">save</i>
       </button>
       <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect clear-button"
@@ -76,6 +77,25 @@ export default {
       this.sponsor.Nombre = '';
       this.sponsor.Correo = '';
       this.sponsor.tipoPat = '';
+    },
+    validateSponsorForm: function () {
+      var tip = this.sponsor.tipoPat;
+      if (tip === ''){
+        alert("Porfavor, indique el tipo de patrocinador.")
+        return
+      };
+
+      var nom = this.sponsor.Nombre;
+      if (nom === ''){
+        alert("Porfavor, inserte el nombre del patrocinador.")
+        return
+      };
+
+      var cor = this.sponsor.Correo;
+      if (cor === ''){
+        alert("Porfavor, inserte el correo electrónico del patrocinador.")
+        return
+      };
     }
   }
 };
