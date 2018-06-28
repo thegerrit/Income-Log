@@ -15,7 +15,7 @@
       </div>
     </header>
     <div class="accordion">
-    <form action="#" class="content">
+    <div class="content"><!-- action="#"-->
 
       <div class="row">
         <label class="mdl-textfield mdl-js-textfield">
@@ -54,11 +54,11 @@
           <i class="material-icons">save</i>
         </button>
         <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect clear-button"
-        title="Borrar atleta" :disabled="athlete.Cedula == ''">
+        title="Borrar atleta" :disabled="athlete.Cedula == ''" v-on:click="clearAthleteForm">
           <i class="material-icons">clear</i>
         </button>
       </div>
-    </form>
+    </div>
   </div>
   </section>
 </template>
@@ -116,6 +116,15 @@ export default {
         panel.style.maxHeight = panel.scrollHeight + "px";
         setTimeout(function(){ panel.style.overflow = "visible"; }, 500);
       }
+    },
+    clearAthleteForm: function () {
+      this.athlete.Cedula = '';
+      this.athlete.Nombre = '';
+      this.athlete.Apellidos = '';
+      this.athlete.Correo = '';
+      this.athlete.selectedDiscipline = '';
+      this.athlete.selectedProgram = '';
+      this.athlete.selectedCoach = '';
     }
   }
 }
