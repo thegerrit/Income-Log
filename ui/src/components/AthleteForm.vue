@@ -156,6 +156,11 @@ export default {
         alert("Porfavor, inserte el correo electrónico del atleta.")
         return
       };
+      var atpos = cor.indexOf("@");
+      var dotpos = cor.lastIndexOf(".");
+      if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 > cor.length){
+        alert("El correo electrónico del atleta es inválido.")
+      }
 
       var dis = this.athlete.selectedDiscipline;
       if (dis === ''){
