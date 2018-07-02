@@ -6,7 +6,8 @@
       </button>
       <h3>Sponsor</h3>
       <div class="actions">
-        <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect" title="Añadir Patrocinador">
+        <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect"
+        title="Añadir Patrocinador"  v-on:click="clearSponsorForm">
           <i class="material-icons">group_add</i>
         </button>
       </div>
@@ -48,7 +49,7 @@
         <i class="material-icons">save</i>
       </button>
       <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect clear-button"
-      title="Borrar" v-on:click="clearSponsorForm">
+      title="Borrar">
         <i class="material-icons">clear</i>
       </button>
     </div>
