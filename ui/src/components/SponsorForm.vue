@@ -16,32 +16,17 @@
     <div class="accordion">
     <div class="content"> <!--form action="#" -->
       <div class="pat-checkboxes">
-      <label>
-        <input type="radio" name="patrocinador" value="1" v-model="sponsor.tipoPat">
-        <span>Organización</span>
-      </label>
-      <label>
-        <input type="radio" name="patrocinador" value="2" v-model="sponsor.tipoPat">
-        <span>Individuo</span>
-      </label>
-    </div>
-
-      <div class="mdl-textfield mdl-js-textfield">
-        <input class="mdl-textfield__input" type="text" v-model="sponsor.Nombre">
-        <label class="mdl-textfield__label">Nombre</label>
+        <md-radio v-model="sponsor.tipoPat" name="patrocinador" value="1">Organización</md-radio>
+        <md-radio v-model="sponsor.tipoPat" name="patrocinador" value="2">Individuo</md-radio>
       </div>
-      <!--<md-field>
+      <md-field>
         <label>Nombre</label>
         <md-input v-model="sponsor.Nombre"></md-input>
-      </md-field>-->
-      <div class="mdl-textfield mdl-js-textfield">
-        <input class="mdl-textfield__input" type="text" v-model="sponsor.Correo">
-        <label class="mdl-textfield__label">Correo Electrónico</label>
-      </div>
-      <!--<md-field>
-        <label>Nombre</label>
+      </md-field>
+      <md-field>
+        <label>Correo Electrónico</label>
         <md-input v-model="sponsor.Correo"></md-input>
-      </md-field>-->
+      </md-field>
     <div class="save-or-clear">
 
       <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect save-button"
@@ -60,6 +45,11 @@
 </template>
 
 <script>
+import Vue from "vue";
+import { MdRadio } from "vue-material/dist/components";
+
+Vue.use(MdRadio);
+
 export default {
   name: "SponsorForm",
   props: {
