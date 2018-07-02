@@ -3,30 +3,41 @@
     <form action="#" class="content">
       <div class="flex-container">
         <div class="flex-filter">
-          <v-select v-model="selectedFilter" :options="filters" placeholder="Buscar atleta por" @change="hideFilters"></v-select>
-        </div>
-        <div class="flex-search">
-          <div id="buscar-atleta" v-bind:class={hidden:hideNOM}>
-          <label class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" v-model="buscarAtleta">
-            <span class="mdl-textfield__label">Buscar Atleta</span>
-            </label>
-          <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect" title="Buscar">
-            <i class="material-icons">search</i>
-          </button>
+          <md-field>
+            <!-- <label for="movie">Movie</label> -->
+            <md-select v-model="selectedFilter" :options="filters" placeholder="Buscar atleta por">
+              <md-option v-for="filter in filters"
+                         v-bind:value="filter.value"
+                         v-bind:key="filter.value">{{ filter.label }}</md-option>
+            </md-select>
+          </md-field>
         </div>
 
-          <div id="buscar-patrocinador" v-bind:class={hidden:hidePAT}>
-          <label class="mdl-textfield mdl-js-textfield">
-              <input class="mdl-textfield__input" type="text" v-model="buscarPatrocinador">
-              <span class="mdl-textfield__label" >Buscar Patrocinador</span>
-              </label>
+        <div class="flex-search">
+          <div id="buscar-atleta" v-if="selectedFilter === 'NOM'">
+            <label class="mdl-textfield mdl-js-textfield">
+              <input class="mdl-textfield__input" type="text" v-model="buscarAtleta">
+              <span class="mdl-textfield__label">Buscar Atleta</span>
+            </label>
             <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect" title="Buscar">
               <i class="material-icons">search</i>
             </button>
           </div>
-          <div v-bind:class={hidden:hideENT}>
-            <v-select v-model="selectedCoach" :options="coaches" placeholder="Entrenador"></v-select><!--hide me-->
+
+          <div id="buscar-patrocinador" v-else-if="selectedFilter === 'PAT'">
+            <label class="mdl-textfield mdl-js-textfield">
+              <input class="mdl-textfield__input" type="text" v-model="buscarPatrocinador">
+              <span class="mdl-textfield__label" >Buscar Patrocinador</span>
+            </label>
+            <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect" title="Buscar">
+              <i class="material-icons">search</i>
+            </button>
+          </div>
+
+          <div v-else>
+            <!-- TODO: replace with md-select -->
+            <span>Select coach</span>
+            <!-- <v-select v-model="selectedCoach" :options="coaches" placeholder="Entrenador"></v-select> -->
           </div>
         </div>
       </div>
@@ -38,7 +49,14 @@
 </template>
 
 <script>
+import Vue from "vue";
 import DataTable from "./DataTable.vue";
+import { MdField, MdMenu, MdList } from "vue-material/dist/components";
+
+Vue.use(MdField);
+Vue.use(MdMenu);
+Vue.use(MdList);
+
 export default {
   name: "SearchPanel",
   props: {
@@ -54,7 +72,7 @@ export default {
     return {
       buscarAtleta: 'Navas',
       buscarPatrocinador: '',
-      selectedFilter: 'Nombre',
+      selectedFilter: 'NOM',
       filters: [
         {
           label: 'Nombre',
@@ -89,28 +107,11 @@ export default {
       hideNOM: false,
       hideENT: true,
       hidePAT: true,
-      selectedCoach: 'Oscar Ramírez'
+      selectedCoach: 'Oscar Ramírez',
+      movie: 'godfather'
     }
   },
-  methods: {
-    hideFilters: function (chosen) {
-      if (chosen==='ENT'){
-        hideNOM= true,
-        hideENT= false,
-        hidePAT= true
-      }
-      else if (chosen==='PAT'){
-        hideNOM= true,
-        hideENT= true,
-        hidePAT= false
-      }
-      else {
-        hideNOM= false,
-        hideENT= true,
-        hidePAT= true
-      }
-    }
-  }
+  methods: {}
 };
 
 </script>
