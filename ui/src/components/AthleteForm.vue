@@ -18,41 +18,25 @@
     <div class="content"><!-- action="#"-->
 
       <div class="row">
-        <label class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="text" v-model="athlete.Cedula"><!-- onkeypress="return onlyNumbers(event)"-->
-          <label class="mdl-textfield__label">Cédula</label>
-        </label>
-        <!--<md-field>
+        <md-field>
           <label>Cédula</label>
           <md-input v-model="athlete.Cedula" type="number"></md-input>
-        </md-field>-->
-        <label class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="text" v-model="athlete.Nombre">
-          <label class="mdl-textfield__label">Nombre</label>
-        </label>
-        <!--<md-field>
+        </md-field>
+        <md-field>
           <label>Nombre</label>
           <md-input v-model="athlete.Nombre"></md-input>
-        </md-field>-->
+        </md-field>
       </div>
 
       <div class="row">
-        <label class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="text" v-model="athlete.Apellidos">
-          <label class="mdl-textfield__label">Apellidos</label>
-        </label>
-        <!--<md-field>
+        <md-field>
           <label>Apellidos</label>
           <md-input v-model="athlete.Apellidos"></md-input>
-        </md-field>-->
-        <label class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="text" v-model="athlete.Correo">
-          <label class="mdl-textfield__label">Correo Electrónico</label>
-        </label>
-        <!--<md-field>
+        </md-field>
+        <md-field>
           <label>Correro Electrónico</label>
           <md-input v-model="athlete.Correo"></md-input>
-        </md-field>-->
+        </md-field>
       </div>
 
       <div class="row">
@@ -84,14 +68,11 @@ import Vue from "vue";
 import VueSelect from "vue-select";
 import { MdField } from "vue-material/dist/components";
 
-
+Vue.use(MdField);
 Vue.component('v-select', VueSelect);
 
 export default {
   name: "AthleteForm",
-  components: {
-    MdField
-  },
   props: {
     disciplines: {
       type: Array,
@@ -226,11 +207,11 @@ section {
     transition: max-height 0.5s ease-out;
     .row {
       clear: both;
-      .mdl-textfield {
+      .md-field {
         float: left;
         width: 46%;
       }
-      .mdl-textfield + .mdl-textfield {
+      .md-field + .md-field {
         float: right;
       }
       .small-select {
