@@ -9,7 +9,8 @@
         <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect" title="Archivar">
             <i class="material-icons">archive</i>
           </button>
-        <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect" title="Añadir Atleta">
+        <button class="mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect"
+        title="Añadir Atleta" v-on:click="clearAthleteForm">
           <i class="material-icons">person_add</i>
         </button>
       </div>
@@ -54,7 +55,7 @@
           <i class="material-icons">save</i>
         </button>
         <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect clear-button"
-        title="Borrar atleta" :disabled="athlete.Cedula == ''" v-on:click="clearAthleteForm">
+        title="Borrar atleta" :disabled="athlete.Cedula == ''">
           <i class="material-icons">clear</i>
         </button>
       </div>
