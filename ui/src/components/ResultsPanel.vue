@@ -73,7 +73,7 @@ export default {
   },
   methods: {
     rowClick: function () {
-      console.log("A row was clicked.");
+      console.log("Row ___ was clicked.");
     }
   },
   data () {
@@ -165,6 +165,7 @@ export default {
       vhastames: '',
       vhastaano: '',
       vheader: [
+        { index: 0 },
         { text: 'Apellidos' },
         { text: 'Nombre' },
         { text: 'Cédula' },
@@ -175,10 +176,12 @@ export default {
         { text: 'Deporte' },
         { text: 'Paquete' },
         { text: 'Entrenador_apellidos' },
-        { text: 'Entrenador_nombre' }
+        { text: 'Entrenador_nombre' },
+        { selected: false}
       ],
       rows: [
         [
+          { index: 1 },
           { text:'Alexander' },
           { text: 'Jason' },
           { text: 567891234 },
@@ -189,9 +192,11 @@ export default {
           { text: 'Carrera de Fondo' },
           { text: 'Bronce' },
           { text: 'Cox' },
-          { text: 'Courtney' }
+          { text: 'Courtney' },
+          { selected: false}
         ],
         [
+          { index: 2 },
           { text: 'David' },
           { text: 'Larry' },
           { text: 345678912 },
@@ -202,20 +207,8 @@ export default {
           { text: 'Carrera de Fondo' },
           { text: 'Plata' },
           { text: 'Aniston' },
-          { text: 'Jennifer' }
-        ],
-        [
-          { text: 'David' },
-          { text: 'Larry' },
-          { text: 345678912 },
-          { text: 'larry@sample' },
-          { text: 'How I Met Your Mother' },
-          { text: true },
-          { text: 'HIMYM@sample.com' },
-          { text: 'Carrera de Fondo' },
-          { text: 'Plata' },
-          { text: 'Aniston' },
-          { text: 'Jennifer' }
+          { text: 'Jennifer' },
+          { selected: false}
         ]
       ]
     }

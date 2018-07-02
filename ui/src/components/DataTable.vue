@@ -6,7 +6,7 @@
         <tr>
           <th v-for="vcells0 in vheader"> {{vcells0.text}}</th>
         </tr>
-        <tr v-for="row in rows" v-on:click="rowClick">
+        <tr v-for="row in rows" v-on:click="rowClick" :key="rows.id">
           <td v-for="cell in row">{{cell.text}}</td>
         </tr>
       </table>
@@ -27,6 +27,11 @@ export default {
     },
     rowClick: {
       type: Function,
+    }
+  },
+  data () {
+    return {
+      selectedRow: ''
     }
   }
 };
