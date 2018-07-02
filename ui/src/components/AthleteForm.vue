@@ -133,7 +133,7 @@ export default {
         return
       };
       for (var i=0; i<nom.length;i++){
-        if (nom.charCodeAt(i) >122 || nom.charCodeAt(i) < 97 && nom.charCodeAt(i) > 90 || nom.charCodeAt(i) < 65 ){
+        if (nom.charCodeAt(i) >122 || nom.charCodeAt(i) < 97 && nom.charCodeAt(i) > 90 || nom.charCodeAt(i) < 65 && nom.charCodeAt(i) != 32){
           alert("El signo '" + nom[i] + "' es inválido para el nombre del atleta.")
           return
         };
@@ -145,7 +145,7 @@ export default {
         return
       };
       for (var i=0; i<ape.length;i++){
-        if (ape.charCodeAt(i) >122 || ape.charCodeAt(i) < 97 && ape.charCodeAt(i) > 90 || ape.charCodeAt(i) < 65 ){
+        if (ape.charCodeAt(i) >122 || ape.charCodeAt(i) < 97 && ape.charCodeAt(i) > 90 || ape.charCodeAt(i) < 65 && ape.charCodeAt(i) != 32){
           alert("El signo '" + ape[i] + "' es inválido para los apellidos del atleta.")
           return
         };
