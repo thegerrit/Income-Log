@@ -185,13 +185,7 @@ export default {
       }
     },
     checkAll: function () {
-      /*var masterbox = document.getElementById('c_inactivo')
-      var checkboxes = document.getElementsByName('c_mes');
-      for (var i = 0, n = checkboxes.length; i < n; i++) {
-        checkboxes[i].checked = masterbox.checked;
-      }*/
-      var masterbox = document.getElementById('c_inactivo')
-      if(this.meses.length===12){
+      if(this.meses.length===12, this.masterbox === false){
         this.meses = [];
       }
       else {
@@ -321,7 +315,7 @@ section {
   /* Not Shared Styles (end) */
   }
   .accordion {
-    max-height: 630px;
+    max-height: 1500px;
     overflow: hidden;
     transition: max-height 0.5s ease-out;
   }
