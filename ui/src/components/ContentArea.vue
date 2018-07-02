@@ -1,11 +1,11 @@
 <template>
   <div class="content-area">
     <aside v-bind:class="[isDetailsExpanded ? 'expanded' : 'collapsed']" id="details">
-      <!--<md-content class="md-scrollbar">-->
+      <md-content class="md-scrollbar">
         <AthleteForm :disciplines="disciplines" :coaches="coaches" :athlete="athlete"/>
         <SponsorForm :sponsor="sponsor"></SponsorForm>
         <PaymentForm></PaymentForm>
-      <!--</md-content>-->
+      </md-content>
     </aside>
     <main class="mdl-layout__content">
       <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
@@ -29,8 +29,8 @@ import PaymentForm from "./PaymentForm.vue";
 import SearchPanel from "./SearchPanel.vue";
 import ResultsPanel from "./ResultsPanel.vue";
 import { MdContent } from "vue-material/dist/components";
-
-/*Vue.use(MdContent);*/
+import Vue from "vue";
+Vue.use(MdContent);
 
 export default {
   name: "ContentArea",

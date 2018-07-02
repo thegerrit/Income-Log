@@ -1,7 +1,7 @@
 <template>
 
 
-    <div class="table-container">
+    <md-content class="table-container md-scrollbar">
       <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
         <tr>
           <th v-for="vcells0 in vheader"> {{vcells0.text}}</th>
@@ -10,10 +10,12 @@
           <td v-for="cell in row">{{cell.text}}</td>
         </tr>
       </table>
-    </div>
+    </md-content>
 
 </template>
 <script>
+import Vue from "vue";
+import { MdContent } from "vue-material/dist/components";
 export default {
   name: "DataTable",
   props: {
