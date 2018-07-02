@@ -22,11 +22,11 @@
         <th> Monto</th>
         <th> Diferencia</th>
         <th>
-          <md-checkbox v-model="meses" id="c_inactivo" v-on:change="checkAll()">Inactivo</md-checkbox>
+          <md-checkbox v-model="masterbox" id="c_inactivo" v-on:change="checkAll()">Inactivo</md-checkbox>
         </th>
       </tr>
       <tr>
-        <td><datepicker :language="es" class="i_date"></datepicker></td>
+        <td><md-datepicker class="i_date"></md-datepicker></td>
         <td><input type="text" class="i_text" v-model="eneMonto"></td>
         <td><span class="i_diferencia"><!--TODO: replace this something like: {{eneMonto}} - Precio_Paquete --></span></td>
         <td>
@@ -46,10 +46,7 @@
         <td><input type="text" class="i_text" v-model="marMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
-          <label for="c_marzo" name="l_mes">
-              <span>Marzo</span>
-              <input type="checkbox" id="c_marzo" name="c_mes" value="3" v-model="meses">
-            </label>
+          <md-checkbox value="3" v-model="meses" name="c_mes">Marzo</md-checkbox>
         </td>
       </tr>
       <tr>
@@ -57,10 +54,7 @@
         <td><input type="text" class="i_text" v-model="abrMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
-          <label for="c_abril" name="l_mes">
-              <span>Abril</span>
-              <input type="checkbox" id="c_abril" name="c_mes" value="4" v-model="meses">
-            </label>
+            <md-checkbox value="4" v-model="meses" name="c_mes">Abril</md-checkbox>
         </td>
       </tr>
       <tr>
@@ -68,10 +62,7 @@
         <td><input type="text" class="i_text" v-model="mayMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
-          <label for="c_mayo" name="l_mes">
-              <span>Mayo</span>
-              <input type="checkbox" id="c_mayo" name="c_mes" value="5" v-model="meses">
-            </label>
+            <md-checkbox value="5" v-model="meses" name="c_mes">Mayo</md-checkbox>
         </td>
       </tr>
       <tr>
@@ -79,10 +70,7 @@
         <td><input type="text" class="i_text" v-model="junMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
-          <label for="c_junio" name="l_mes">
-              <span>Junio</span>
-              <input type="checkbox" id="c_junio" name="c_mes" value="6" v-model="meses">
-            </label>
+          <md-checkbox value="6" v-model="meses" name="c_mes">Junio</md-checkbox>
         </td>
       </tr>
       <tr>
@@ -90,10 +78,7 @@
         <td><input type="text" class="i_text" v-model="julMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
-          <label for="c_julio" name="l_mes">
-              <span>Julio</span>
-              <input type="checkbox" id="c_julio" name="c_mes" value="7" v-model="meses">
-            </label>
+          <md-checkbox value="7" v-model="meses" name="c_mes">Julio</md-checkbox>
         </td>
       </tr>
       <tr>
@@ -101,10 +86,7 @@
         <td><input type="text" class="i_text" v-model="agoMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
-          <label for="c_agosto" name="l_mes">
-              <span>Agosto</span>
-              <input type="checkbox" id="c_agosto" name="c_mes" value="8" v-model="meses">
-            </label>
+            <md-checkbox value="8" v-model="meses" name="c_mes">Agosto</md-checkbox>
         </td>
       </tr>
       <tr>
@@ -112,10 +94,7 @@
         <td><input type="text" class="i_text" v-model="setMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
-          <label for="c_setiembre" name="l_mes">
-              <span>Setiembre</span>
-              <input type="checkbox" id="c_setiembre" name="c_mes" value="9" v-model="meses">
-            </label>
+          <md-checkbox value="9" v-model="meses" name="c_mes">Setiembre</md-checkbox>
         </td>
       </tr>
       <tr>
@@ -123,10 +102,7 @@
         <td><input type="text" class="i_text" v-model="octMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
-          <label for="c_octubre" name="l_mes">
-              <span>Octubre</span>
-              <input type="checkbox" id="c_octubre" name="c_mes" value="10" v-model="meses">
-            </label>
+          <md-checkbox value="10" v-model="meses" name="c_mes">Octubre</md-checkbox>
         </td>
       </tr>
       <tr>
@@ -134,10 +110,7 @@
         <td><input type="text" class="i_text" v-model="novMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
-          <label for="c_noviembre" name="l_mes">
-              <span>Noviembre</span>
-              <input type="checkbox" id="c_noviembre" name="c_mes" value="11" v-model="meses">
-            </label>
+          <md-checkbox value="11" v-model="meses" name="c_mes">Noviembre</md-checkbox>
         </td>
       </tr>
       <tr>
@@ -145,10 +118,7 @@
         <td><input type="text" class="i_text" v-model="dicMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
-          <label for="c_diciembre" name="l_mes">
-              <span>Diciembre</span>
-              <input type="checkbox" id="c_diciembre" name="c_mes" value="12" v-model="meses">
-            </label>
+            <md-checkbox value="12" v-model="meses" name="c_mes">Diciembre</md-checkbox>
         </td>
       </tr>
     </table>
@@ -171,8 +141,9 @@ import Datepicker from 'vuejs-datepicker';
 import {en, es} from 'vuejs-datepicker/dist/locale';
 
 import Vue from "vue";
-import { MdCheckbox } from "vue-material/dist/components";
+import { MdCheckbox, MdDatepicker } from "vue-material/dist/components";
 Vue.use(MdCheckbox);
+Vue.use(MdDatepicker);
 
 export default {
   name: "PaymentForm",
@@ -184,6 +155,7 @@ export default {
   },
   data () {
     return {
+      masterbox: false,
       meses: ["1"], //array values must be strings to work with md-checkboxes.
       eneMonto: '50000',
       febMonto: '50000',
