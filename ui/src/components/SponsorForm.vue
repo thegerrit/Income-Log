@@ -89,12 +89,23 @@ export default {
         alert("Porfavor, inserte el nombre del patrocinador.")
         return
       };
+      for (var i=0; i<nom.length;i++){
+        if (nom.charCodeAt(i) >122 || nom.charCodeAt(i) < 97 && nom.charCodeAt(i) > 90 || nom.charCodeAt(i) < 65 ){
+          alert("El signo '" + nom[i] + "' es inválido para el nombre del patrocinador.")
+          return
+        };
+      };
 
       var cor = this.sponsor.Correo;
       if (cor === ''){
         alert("Porfavor, inserte el correo electrónico del patrocinador.")
         return
       };
+      var atpos = cor.indexOf("@");
+      var dotpos = cor.lastIndexOf(".");
+      if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 > cor.length){
+        alert("El correo electrónico del patrocinador es inválido.")
+      }
     }
   }
 };
