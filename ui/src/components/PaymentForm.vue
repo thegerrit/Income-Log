@@ -29,7 +29,7 @@
         </th>
       </tr>
       <tr>
-        <td><!--<input type="date" class="i_date">--><datepicker :language="es" class="i_date"></datepicker></td>
+        <td><datepicker :language="es" class="i_date"></datepicker></td>
         <td><input type="text" class="i_text" v-model="eneMonto"></td>
         <td><span class="i_diferencia"><!--TODO: replace this something like: {{eneMonto}} - Precio_Paquete --></span></td>
         <td>
@@ -327,12 +327,15 @@ section {
       }
     }
     .i_date {
-      max-width: 150px;
+      /* max-width: 150px; */
       border: 2px solid gray;
       border-radius: 4px;
-      input {
-        width:140px;
+      /*
+      input[type="text"] {
+        display: block;
+        width: 140px;
       }
+      */
     }
     .i_diferencia {
       width: 70%;
