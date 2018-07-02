@@ -2,7 +2,7 @@
   <div class="content-area">
     <aside v-bind:class="[isDetailsExpanded ? 'expanded' : 'collapsed']" id="details">
       <md-content class="md-scrollbar">
-        <AthleteForm :disciplines="disciplines" :coaches="coaches" :athlete="athlete"/>
+        <AthleteForm :disciplines="disciplines" :coaches="coaches" :athlete="athlete" :programs="programs" />
         <SponsorForm :sponsor="sponsor"></SponsorForm>
         <PaymentForm></PaymentForm>
       </md-content>
@@ -84,6 +84,20 @@ export default {
           label: 'Pepe Guardiola',
           value: 210
         }
+      ],
+      programs: [
+        {
+          label: 'Bronze',
+          value: 10,
+        },
+        {
+          label: 'Silver',
+          value: 20,
+        },
+        {
+          label: 'Gold',
+          value: 30,
+        },
       ],
       athlete: {
         Cedula: '123456789',

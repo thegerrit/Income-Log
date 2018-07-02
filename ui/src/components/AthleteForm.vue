@@ -41,12 +41,36 @@
       </div>
 
       <div class="row">
-        <v-select class="small-select" v-model="athlete.selectedDiscipline" :options="disciplines" placeholder="Deporte"></v-select>
-        <v-select class="small-select" v-model="athlete.selectedProgram" :options="programs" placeholder="Paquete"></v-select>
+        <md-field>
+          <md-select v-model="athlete.selectedDiscipline" :options="disciplines" placeholder="Deporte">
+            <md-option v-for="discipline in disciplines"
+              :value="discipline.value"
+              :key="discipline.value">
+                {{ discipline.label }}
+              </md-option>
+          </md-select>
+        </md-field>
+        <md-field>
+          <md-select v-model="athlete.selectedProgram" :options="programs" placeholder="Paquete">
+            <md-option v-for="program in programs"
+              v-bind:value="program.value"
+              v-bind:key="program.value">
+                {{ program.label }}
+              </md-option>
+          </md-select>
+        </md-field>
       </div>
 
       <div class="row">
-        <v-select v-model="athlete.selectedCoach" :options="coaches" placeholder="Entrenador"></v-select>
+        <md-field>
+          <md-select v-model="athlete.selectedCoach" :options="coaches" placeholder="Entrenador">
+            <md-option v-for="coach in coaches"
+              v-bind:value="coach.value"
+              v-bind:key="coach.value">
+                {{ coach.label }}
+              </md-option>
+          </md-select>
+        </md-field>
       </div>
 
       <div class="save-or-clear" v-bind:class="{ visible : athlete.Cedula }"> <!--TODO: bind class to cedula so buttons are visible and enabled when cedula has a value-->
@@ -83,27 +107,13 @@ export default {
       type: Array,
       required: true
     },
+    programs: {
+      type: Array,
+      required: true
+    },
     athlete: {
       type: Object
-    }
-  },
-  data () {
-    return {
-      programs: [
-        {
-          label: 'Bronze',
-          value: 10,
-        },
-        {
-          label: 'Silver',
-          value: 20,
-        },
-        {
-          label: 'Gold',
-          value: 30,
-        },
-      ]
-    }
+    },
   },
   methods: {
     accordion: function () {
