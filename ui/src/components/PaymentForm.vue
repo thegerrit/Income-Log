@@ -22,10 +22,7 @@
         <th> Monto</th>
         <th> Diferencia</th>
         <th>
-          <label for="c_inactivo">
-              <span>Inactivo</span>
-              <input type="checkbox" id="c_inactivo" v-on:click="checkAll()"> <!-- TODO: add  v-on:change="checkAll" once you figure event handlers-->
-            </label>
+          <md-checkbox v-model="meses" id="c_inactivo" v-on:change="checkAll()">Inactivo</md-checkbox>
         </th>
       </tr>
       <tr>
@@ -33,11 +30,7 @@
         <td><input type="text" class="i_text" v-model="eneMonto"></td>
         <td><span class="i_diferencia"><!--TODO: replace this something like: {{eneMonto}} - Precio_Paquete --></span></td>
         <td>
-          <label for="c_enero" name="l_mes">
-              <span>Enero</span>
-              <!--set month values to numbers to match their values in the database-->
-              <input type="checkbox" id="c_enero" name="c_mes" value="1" v-model="meses">
-            </label>
+            <md-checkbox value="1" v-model="meses" name="c_mes">Enero</md-checkbox>
         </td>
       </tr>
       <tr>
@@ -45,10 +38,7 @@
         <td><input type="text" class="i_text" v-model="febMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
-          <label for="c_febrero" name="l_mes">
-              <span>Febrero</span>
-              <input type="checkbox" id="c_febrero" name="c_mes" value="2" v-model="meses">
-            </label>
+            <md-checkbox value="2" v-model="meses" name="c_mes">Febrero</md-checkbox>
         </td>
       </tr>
       <tr>
@@ -163,6 +153,7 @@
       </tr>
     </table>
 
+
     <div class="save-or-clear">
       <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect save-button" title="Guardar">
         <i class="material-icons">save</i>
@@ -178,6 +169,11 @@
 <script>
 import Datepicker from 'vuejs-datepicker';
 import {en, es} from 'vuejs-datepicker/dist/locale';
+
+import Vue from "vue";
+import { MdCheckbox } from "vue-material/dist/components";
+Vue.use(MdCheckbox);
+
 export default {
   name: "PaymentForm",
   components: {
@@ -188,7 +184,7 @@ export default {
   },
   data () {
     return {
-      meses: [7,8],
+      meses: ["1"], //array values must be strings to work with md-checkboxes.
       eneMonto: '50000',
       febMonto: '50000',
       marMonto: '37000',
@@ -223,11 +219,11 @@ export default {
         checkboxes[i].checked = masterbox.checked;
       }*/
       var masterbox = document.getElementById('c_inactivo')
-      if(this.meses.length===12, masterbox.checked===false){
+      if(this.meses.length===12){
         this.meses = [];
       }
       else {
-        this.meses = [1,2,3,4,5,6,7,8,9,10,11,12];
+        this.meses = ["1","2","3","4","5","6","7","8","9","10","11","12"];
       }
     }
   }/*,
