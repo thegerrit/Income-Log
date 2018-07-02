@@ -34,7 +34,7 @@
         </td>
       </tr>
       <tr>
-        <td><datepicker :language="es" class="i_date"></datepicker></td> <!--why doesn't language change here-->
+        <td><md-datepicker class="i_date"></md-datepicker></td> <!--why doesn't language change here-->
         <td><input type="text" class="i_text" v-model="febMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
@@ -42,7 +42,7 @@
         </td>
       </tr>
       <tr>
-        <td><datepicker :language="es" class="i_date"></datepicker></td>
+        <td><md-datepicker class="i_date"></md-datepicker></td>
         <td><input type="text" class="i_text" v-model="marMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
@@ -50,7 +50,7 @@
         </td>
       </tr>
       <tr>
-        <td><datepicker :language="es" class="i_date"></datepicker></td>
+        <td><md-datepicker class="i_date"></md-datepicker></td>
         <td><input type="text" class="i_text" v-model="abrMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
@@ -58,7 +58,7 @@
         </td>
       </tr>
       <tr>
-        <td><datepicker :language="es" class="i_date"></datepicker></td>
+        <td><md-datepicker class="i_date"></md-datepicker></td>
         <td><input type="text" class="i_text" v-model="mayMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
@@ -66,7 +66,7 @@
         </td>
       </tr>
       <tr>
-        <td><datepicker :language="es" class="i_date"></datepicker></td>
+        <td><md-datepicker class="i_date"></md-datepicker></td>
         <td><input type="text" class="i_text" v-model="junMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
@@ -74,7 +74,7 @@
         </td>
       </tr>
       <tr>
-        <td><datepicker :language="es" class="i_date"></datepicker></td>
+        <td><md-datepicker class="i_date"></md-datepicker></td>
         <td><input type="text" class="i_text" v-model="julMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
@@ -82,7 +82,7 @@
         </td>
       </tr>
       <tr>
-        <td><datepicker :language="es" class="i_date"></datepicker></td>
+        <td><md-datepicker class="i_date"></md-datepicker></td>
         <td><input type="text" class="i_text" v-model="agoMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
@@ -90,7 +90,7 @@
         </td>
       </tr>
       <tr>
-        <td><datepicker :language="es" class="i_date"></datepicker></td>
+        <td><md-datepicker class="i_date"></md-datepicker></td>
         <td><input type="text" class="i_text" v-model="setMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
@@ -98,7 +98,7 @@
         </td>
       </tr>
       <tr>
-        <td><datepicker :language="es" class="i_date"></datepicker></td>
+        <td><md-datepicker class="i_date"></md-datepicker></td>
         <td><input type="text" class="i_text" v-model="octMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
@@ -106,7 +106,7 @@
         </td>
       </tr>
       <tr>
-        <td><datepicker :language="es" class="i_date"></datepicker></td>
+        <td><md-datepicker class="i_date"></md-datepicker></td>
         <td><input type="text" class="i_text" v-model="novMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
@@ -114,7 +114,7 @@
         </td>
       </tr>
       <tr>
-        <td><datepicker :language="es" class="i_date"></datepicker></td>
+        <td><md-datepicker class="i_date"></md-datepicker></td>
         <td><input type="text" class="i_text" v-model="dicMonto"></td>
         <td><span class="i_diferencia"></span></td>
         <td>
