@@ -10,7 +10,6 @@
           <td v-for="cell in row">{{cell.text}}</td>
         </tr>
       </table>
-      <span v-if="rowClicked">A row was clicked</span>
     </div>
 
 </template>
@@ -25,16 +24,9 @@ export default {
     rows: {
       type: Array,
       required: true
-    }
-  },
-  methods: {
-    rowClick: function () {
-      this.rowClicked = true
-    }
-  },
-  data () {
-    return {
-      rowClicked: false
+    },
+    rowClick: {
+      type: Function,
     }
   }
 };

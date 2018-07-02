@@ -53,7 +53,7 @@
         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary">Generar Reporte</button>
       </div>
     </form>
-    <DataTable :vheader="vheader" :rows="rows"></DataTable>
+    <DataTable :vheader="vheader" :rows="rows" :rowClick="rowClick"></DataTable>
   </section>
 </template>
 <script>
@@ -69,6 +69,11 @@ export default {
     coaches: {
       type: Array,
       required: true
+    }
+  },
+  methods: {
+    rowClick: function () {
+      console.log("A row was clicked.");
     }
   },
   data () {
