@@ -2,18 +2,9 @@
   <section class="mdl-tabs__panel is-active" id="reports-panel">
     <form class="controls">
       <div class="report-type">
-        <label class="block">
-          <input type="radio" name="report-type" value="1" v-model="atletaFiltros">
-          <span>Todos los atletas</span>
-        </label>
-        <label class="block">
-          <input type="radio" name="report-type" value="2" v-model="atletaFiltros">
-          <span>Atletas al día</span>
-        </label>
-        <label class="block">
-          <input type="radio" name="report-type" value="3" v-model="atletaFiltros">
-          <span>Atletas morosos</span>
-        </label>
+        <md-radio v-model="atletaFiltros" name="report-type" value="1">Todos los atletas</md-radio>
+        <md-radio v-model="atletaFiltros" name="patrocinador" value="2">Atletas al día</md-radio>
+        <md-radio v-model="atletaFiltros" name="patrocinador" value="3">Atletas morosos</md-radio>
       </div>
 
       <div class="filters">
@@ -24,14 +15,8 @@
             </div>
           </div>
           <div class="inactive">
-            <label>
-              <input type="checkbox" v-model="inactivos">
-              <span>Incluir Inactivos</span>
-            </label>
-            <label>
-              <input type="checkbox" v-model="retirados">
-              <span>Incluir Retirados</span>
-            </label>
+            <md-checkbox v-model="inactivos">Incluir inactivos</md-checkbox>
+            <md-checkbox v-model="retirados">Incluir retirados</md-checkbox>
           </div>
         </div>
 
@@ -59,6 +44,11 @@
 <script>
 import VueSelect from "vue-select";
 import DataTable from "./DataTable.vue";
+import Vue from "vue";
+import { MdRadio, MdCheckbox } from "vue-material/dist/components";
+
+Vue.use(MdRadio);
+Vue.use(MdCheckbox);
 
 export default {
   name: "ResultsPanel",
@@ -231,9 +221,9 @@ export default {
     .report-type {
       min-width: 170px;
       grid-area: report-type;
+      margin-left: 15px;
       label {
         display: block;
-        margin-bottom: 5px;
       }
     }
     .filters{
