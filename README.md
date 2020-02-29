@@ -1,5 +1,4 @@
-A showcase of the work completed by Garrett Van Beek with David Quirós as an
-instructor/leader.
+A showcase of the work completed by Garrett Van Beek with David Quirós as a mentor.
 
 Features:
 * HTML, CSS, and Javascript front-end created with Vue.js and vue-material.
